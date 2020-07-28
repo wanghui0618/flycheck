@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Restrict Date Range in DateBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Restrict Date Range in DateBox</h2>
+	<p>This example shows how to restrict the user to select only ten days from now.</p>
+	<div style="margin:20px 0;"></div>
+	<input id="dd"></input>
+	<script>
+		$(function(){
+			$CommonUI.getDateBox('#dd').datebox().datebox('calendar').calendar({
+				validator: function(date){
+					var now = new Date();
+					var d1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+					var d2 = new Date(now.getFullYear(), now.getMonth(), now.getDate()+10);
+					return d1<=date && date<=d2;
+				}
+			});
+		});
+	</script>
+</body>
+</html>

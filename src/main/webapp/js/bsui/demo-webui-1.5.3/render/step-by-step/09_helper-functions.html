@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link href="../resources/demos.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/movielist.css" rel="stylesheet" type="text/css" />
+	<script src="../../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<h3>Helper functions</h3>
+
+<pre>
+{{>~format(name, "upper")}}
+
+$.views.helpers({
+
+    format: function( val, format ) {
+        ...
+        return val.toUpperCase();
+        ...
+    },
+
+    ...
+});
+</pre>
+
+<!--=================== Demo ===================-->
+
+<!------------------ Templates ------------------>
+
+<script id="movieTemplate" type="text/x-jsrender">
+	<tr>
+		<td>{{>~format(title, "upper")}}</td>
+		<td>
+			{{for languages}}
+				{{>~format(name, "lower")}}
+			{{/for}}
+		</td>
+	</tr>
+</script>
+
+<table>
+	<thead><tr><th>Title</th><th>Languages</th></tr></thead>
+	<tbody id="movieList"></tbody>
+</table>
+
+<!------------------ Script ------------------>
+
+<script type="text/javascript">
+	var movie = {
+			title: "Eyes Wide Shut",
+			languages: [
+				{ name: "French" },
+				{ name: "German" },
+				{ name: "Spanish" }
+			]
+		};
+
+	$CommonUI.jsrender({
+		obj: "#movieList",
+		tmpl: "#movieTemplate",
+		data: movie,
+		onLoadSuccess: function() {
+			$.views.helpers({
+				format: function( val, format ) {
+					var ret;
+					switch( format ) {
+						case "upper":
+							return val.toUpperCase();
+						case "lower":
+							return val.toLowerCase();
+					}
+				}
+			});
+		}
+	});
+
+</script>
+
+</body>
+</html>

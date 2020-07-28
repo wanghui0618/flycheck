@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link href="../resources/demos.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/movielist.css" rel="stylesheet" type="text/css" />
+	<script src="../../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<h3>Comparison tests</h3>
+
+<pre>
+{{if !(languages && languages.length)}}...{{/if}}
+
+{{if languages==null}}...{{/if}}
+</pre>
+
+<!--================ Demo ================-->
+
+<script id="movieTemplate" type="text/x-jsrender">
+	<tr>
+		<td>{{>title}}</td>
+		<td>
+			{{if !(languages && languages.length) tmpl="#messageTmpl"/}}
+		</td>
+		<td>
+			{{if languages==null tmpl="#messageTmpl"/}}
+		</td>
+	</tr>
+</script>
+
+<script id="messageTmpl" type="text/x-jsrender">
+	<b>Warning:</b> <em>No alternate languages</em>
+</script>
+
+<table>
+	<thead><tr><th>Title</th><th>{{if !(languages && languages.length)}}</th><th>{{if a==null}}</th></tr></thead>
+	<tbody id="movieList"></tbody>
+</table>
+
+<script type="text/javascript">
+	var movies = [
+		{
+			title: "Meet Joe Black",
+			languages: null
+		},
+		{
+			title: "The Mighty",
+			languages: []
+		},
+		{
+			title: "Eyes Wide Shut",
+			languages: [
+				{ name: "French" },
+				{ name: "German" },
+				{ name: "Spanish" }
+			]
+		}
+	];
+
+	$CommonUI.jsrender({
+		obj: "#movieList",
+		tmpl: "#movieTemplate",
+		data: movies
+	});
+
+</script>
+
+</body>
+</html>

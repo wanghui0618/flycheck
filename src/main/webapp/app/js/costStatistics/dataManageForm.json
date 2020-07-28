@@ -1,0 +1,70 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 30
+  ,"data": [{
+    "itemName": "0202000201512"
+    ,"itemCode": "0000000203711"
+    ,"itemStandard": "xx医院"
+    ,"itemPrice": "2015-12-30 15:12"
+    ,"itemNum": "统账退休"
+    ,"itemCost": "一般门诊"
+    ,"drugType": " "
+    ,"billingNo": " "
+    ,"applyPayLevel": "赵xx"
+    ,"isInsuranceProject": "内诊门科"
+    ,"doseForm": "1152.90"
+  },
+  { "itemName": "0202000201513"
+    ,"itemCode": "0000000203712"
+    ,"itemStandard": "xx医院"
+    ,"itemPrice": "2015-12-30 15:12"
+    ,"itemNum": "统账退休"
+    ,"itemCost": "一般门诊"
+    ,"drugType": "4"
+    ,"billingNo": "0"
+    ,"applyPayLevel": "0"
+    ,"isInsuranceProject": "0"
+    ,"doseForm": "0"
+  },
+  {
+    "itemName": "0202000201512"
+    ,"itemCode": "0000000203713"
+    ,"itemStandard": "xx医院"
+    ,"itemPrice": "2015-12-30 15:12"
+    ,"itemNum": "统账退休"
+    ,"itemCost": "一般门诊"
+    ,"drugType": "4"
+    ,"billingNo": "0"
+    ,"applyPayLevel": "0"
+    ,"isInsuranceProject": "0"
+    ,"doseForm": "0"
+  },
+  {
+    "itemName": "0202000201514"
+    ,"itemCode": "0000000203714"
+    ,"itemStandard": "xx医院"
+    ,"itemPrice": "2015-12-30 15:12"
+    ,"itemNum": "统账退休"
+    ,"itemCost": "一般门诊"
+    ,"drugType": "4"
+    ,"billingNo": "0"
+    ,"applyPayLevel": "0"
+    ,"isInsuranceProject": "0"
+    ,"doseForm": "0"
+  },
+  {
+    "itemName": "0202000201515"
+    ,"itemCode": "0000000203715"
+    ,"itemStandard": "xx医院"
+    ,"itemPrice": "2015-12-30 15:12"
+    ,"itemNum": "统账退休"
+    ,"itemCost": "一般门诊"
+    ,"drugType": "4"
+    ,"billingNo": "0"
+    ,"applyPayLevel": "0"
+    ,"isInsuranceProject": "0"
+    ,"doseForm": "0"
+  }]
+}  

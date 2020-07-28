@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+		<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<table id="tt"></table>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+            $CommonUI.datagridgroup($('#tt'), 'datagrid_data4.json', {}, 'productid', function(value, rows){
+				return value + ' - ' + rows.length + ' Item(s)';
+			}, [[
+				{field:'productid',title:'Product ID',width:100,sortable:true},
+				{field:'listprice',title:'List Price',width:80,align:'right',sortable:true},
+				{field:'unitcost',title:'Unit Cost',width:80,align:'right',sortable:true},
+				{field:'attr1',title:'Attribute',width:150,sortable:true},
+				{field:'status',title:'Status',width:60,align:'center'}
+			]], '', '', {title:'DataGrid - GroupView',
+			width:800,
+			height:450,
+			method: 'get',
+			rownumbers:true,
+			remoteSort:false,
+			nowrap:false,
+			fitColumns:true});
+		});
+	</script>
+</html>

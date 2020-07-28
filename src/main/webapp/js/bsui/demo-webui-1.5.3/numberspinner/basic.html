@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic NumberSpinner - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/tooltip.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic NumberSpinner</h2>
+	<p>Click spinner button to change value.</p>
+	<div style="margin:20px 0;"></div>
+	<input class="bsui-numberspinner" style="width:80px;" data-options="
+				onChange: function(value){
+					$('#vv').text(value);
+				}
+			"></input>
+	<div style="margin:10px 0;">
+		Value: <span id="vv"></span>
+	</div>
+</body>
+</html>

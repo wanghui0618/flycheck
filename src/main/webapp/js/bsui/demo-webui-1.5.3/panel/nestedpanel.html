@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Nested Panel - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Nested Panel</h2>
+	<p>The panel can be placed inside containers and can contain other components.</p>
+	<div style="margin:20px 0 10px 0;"></div>
+	<div class="bsui-panel" title="Nested Panel" style="width:700px;height:200px;padding:10px;">
+		<div class="bsui-layout" data-options="fit:true">
+			<div data-options="region:'west',split:true" style="width:100px;padding:10px">
+				Left Content
+			</div>
+			<div data-options="region:'east'" style="width:100px;padding:10px">
+				Right Content
+			</div>
+			<div data-options="region:'center'" style="padding:10px">
+				Center Content
+			</div>
+		</div>
+	</div>
+</body>
+</html>

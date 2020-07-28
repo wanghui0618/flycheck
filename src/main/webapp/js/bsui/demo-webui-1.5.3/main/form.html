@@ -1,0 +1,111 @@
+<div class="bsui-panel" title="user info">
+	<form id="user" class="form-horizontal" method="post">
+		<label class="col-xs-4 col-sm-3 col-md-2 col-lg-2 control-label">姓名：</label>
+		<div class="col-xs-8 col-sm-7 col-md-4 col-lg-4" style="margin-bottom: .8em">
+			<input id="username" class="bsui-validatebox" data-options="required:true,validType:'length[1,10]'" name="dto.user.username">
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom: .8em">
+			<input id="password" class="bsui-passwordbox" data-options="width:'90%',label:'密码：',labelPosition:'left',labelAlign:'right',prompt:'Password',iconWidth:'28'" name="dto.user.password">
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom: .8em">
+			<input id="sex" class="bsui-combobox" label="性别：" labelAlign="right" name="dto.user.sex" data-options="width:'90%',valueField:'value',textField:'label',
+								data:[{label:'男',value:'male'},{label:'女',value:'female'}]" />
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom:.8em">
+			<input id="birthday" class="bsui-datebox" label="生日：" labelAlign="right" name="dto.user.birthday" style="width:90%">
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom:.8em">
+			<input id="age" class="bsui-numberbox" data-options="label:'年龄：',labelAlign:'right',width:'90%'" name="dto.user.age" />
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom:.8em">
+			<input id="email" class="bsui-textbox" label="邮箱：" labelAlign="right" data-options="prompt:'输入邮箱',validType:'email',width:'90%'" name="dto.user.email">
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom:.8em">
+			<input id="photo" class="bsui-filebox" data-options="label:'照片：',labelAlign:'right',prompt:'选择文件',width:'90%'" name="dto.user.photo">
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom:.8em">
+			<input class="bsui-combobox" label="多选：" labelAlign="right" name="dto.user.sport" data-options="width:'90%',valueField:'value',textField:'label',multiple:true,
+								data:[{label:'篮球',value:'basketball'},{label:'足球',value:'football'},{label:'乒乓球',value:'pingpong'},{label:'羽毛球',value:'badminton'}]" />
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom:.8em">
+			<input class="bsui-textbox" label="手机号1：" labelAlign="right" name="dto.user.mobiles[0]" style="width: 90%;" />
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom:.8em">
+			<input class="bsui-textbox" label="手机号2：" labelAlign="right" name="dto.user.mobiles[1]" style="width: 90%;" />
+		</div>
+		<label class="col-xs-4 col-sm-3 col-md-2 col-lg-2 control-label">描述：</label>
+		<div class="col-xs-8 col-sm-7 col-md-10 col-lg-10" style="margin-bottom: .8em">
+			<textarea class="form-control" name="dto.user.desc" rows="2" cols="5"></textarea>
+		</div>
+		<label class="col-xs-4 col-sm-3 col-md-2 col-lg-2 control-label">单选按钮：</label>
+		<div class="col-xs-8 col-sm-7 col-md-4 col-lg-4" style="margin-bottom: 3em;padding-top: .5em;">
+			<input type="radio" name="dto.user.skill" value="java" /> Java
+			<input type="radio" name="dto.user.skill" value="c" /> C/C++
+			<input type="radio" name="dto.user.skill" value="ruby" /> Ruby
+		</div>
+		<label class="col-xs-4 col-sm-3 col-md-2 col-lg-2 control-label">多选按钮：</label>
+		<div class="col-xs-8 col-sm-7 col-md-4 col-lg-4" style="margin-bottom: 3em;padding-top: .5em;">
+			<input type="checkbox" name="dto.user.language" value="english" /> 英语
+			<input type="checkbox" name="dto.user.language" value="franch" /> 法语
+			<input type="checkbox" name="dto.user.language" value="chinese" /> 汉语
+		</div>
+		<div class="col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1" style="margin-bottom:.8em">
+			<!--<input type="checkbox" name="dto.user.remember" value="miss"/> 记住我&nbsp;&nbsp;&nbsp;&nbsp;-->
+			<input class="bsui-switchbutton" data-options="onText:'Yes',offText:'No'" name="dto.user.switch"><br />
+		</div>
+		<div class="col-md-6 col-lg-6" style="margin-bottom:.8em">
+			<input id="slider" class="bsui-slider" name="dto.user.range" data-options="
+								showTip: true,
+								range: true,
+								rule: [0,'|',25,'|',50,'|',75,'|',100]">
+		</div>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$.parser.parse();
+	setTimeout(function() {
+		var data = {
+			"dto.user": {
+				"username": "张三",
+				"password": "111111",
+				"sex": "male",
+				"birthday": "1998-03-21",
+				"age": 19,
+				"email": "zhangsan@qq.com",
+				"photo": "a.jpg",
+				"sport": "basketball,pingpong",
+				"mobiles": ['13876543212', '13098730348'],
+				"desc": "我的名字叫张三。",
+				"skill": "c",
+				"language": "english,chinese",
+				"remember": "miss",
+				"range": "10,50"
+			}
+		};
+		$CommonUI.fillBlock("#user", data);
+		var json = $CommonUI.loopBlock("#user");
+		console.log(json);
+		/*var json = $CommonUI.loopBlock("#user", ['dto.user.language']);
+		console.log(json);*/
+		/*var json = $CommonUI.loopBlock("#user", null, true);
+		console.log(json);*/
+		var json = $CommonUI.loopBlock("#user", null, false, true);
+		console.log(json);
+
+		/*$CommonUI.setUIValue('#username', 'zhangsan');
+		$CommonUI.setUIValue('#sex', 'male');
+		$CommonUI.setUIValue('#birthday', '1998-03-21');
+		$CommonUI.setUIValue('#age', 18);
+		$CommonUI.setUIValue("#email", "test@qq.com");
+		$CommonUI.setUIValue("#photo", "a.jpg");
+		$CommonUI.setUIValue("#check", "miss");
+		$CommonUI.setUIValue("#slider", ['10','50']);*/
+
+		/*alert($CommonUI.getUIValue("#check"));*/
+	}, 100);
+	/*setTimeout(function() {
+		var json = $CommonUI.loopBlock("#user");
+		console.log(json);
+	}, 5000);*/
+</script>

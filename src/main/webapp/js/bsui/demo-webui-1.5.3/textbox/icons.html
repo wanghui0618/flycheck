@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TextBox with Icons - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>TextBox with Icons</h2>
+	<p>Click the icons on textbox to perform actions.</p>
+	<div style="margin:20px 0 40px 0;"></div>
+    <div style="margin:10px 0 20px 0">
+        <span>Select Icon Align: </span>
+        <select onchange="$('#tt').textbox({iconAlign:this.value})">
+            <option value="right">Right</option>
+            <option value="left">Left</option>
+            <!--<option value="top">Top</option>
+            <option value="bottom">Bottom</option>-->
+        </select>
+    </div>
+	<input id="tt" class="bsui-textbox" style="width:400px" data-options="
+			prompt: 'Input something here!',
+			iconWidth: 22,
+			icons: [{
+				iconCls:'icon-add',
+				handler: function(e){
+					$(e.data.target).textbox('setValue', 'Something added!');
+				}
+			},{
+				iconCls:'icon-remove',
+				handler: function(e){
+					$(e.data.target).textbox('clear');
+				}
+			},{
+				iconCls:'icon-search',
+				handler: function(e){
+					var v = $(e.data.target).textbox('getValue');
+					$CommonUI.alert('The inputed value is ' + (v ? v : 'empty'));
+				}
+			}]
+			">
+</body>
+</html>

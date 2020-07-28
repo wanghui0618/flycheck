@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Display Seconds - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/tooltip.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Display Seconds</h2>
+	<p>The user can decide to display seconds part or not.</p>
+	<div style="margin:20px 0;">
+		<span>Show Seconds: </span>
+		<input type="checkbox" checked onchange="$CommonUI.getDateTimeBox('#dt').datetimebox({showSeconds:$(this).is(':checked')})">
+	</div>
+	<input id="dt" class="bsui-datetimebox" style="width:200px">
+	
+</body>
+</html>

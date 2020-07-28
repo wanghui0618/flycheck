@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Multiple ComboTree - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Multiple ComboTree</h2>
+	<p>Click the right arrow button to show the tree panel and select multiple nodes.</p>
+	<div style="margin:20px 0">
+		<span>Cascade Check: </span>
+		<input type="checkbox" checked onclick="$CommonUI.getComboTree('#cc').combotree({cascadeCheck:$(this).is(':checked')})">
+	</div>
+	<select id="cc" class="bsui-combotree" data-options="url:'tree_data1.json',method:'get'" multiple style="width:200px;"></select>
+
+</body>
+</html>

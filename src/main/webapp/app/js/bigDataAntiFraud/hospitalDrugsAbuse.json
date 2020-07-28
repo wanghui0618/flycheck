@@ -1,0 +1,118 @@
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 7
+  ,"data": [{
+    "id": "10001"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "25213"
+    ,"money1": "15433"
+    ,"findTime": "2018-09-10"
+    ,"hosp": "第一人民医院"
+    ,"drugs": "低血糖"
+    ,"propect": "葡萄糖注射液"
+    ,"month": "2018年底三季度"
+    ,"renci": "3"
+    ,"biLi": "11%"
+    ,"biLi1": "1%"
+    
+  },
+  {
+    "id": "10002"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "43412"
+    ,"money1": "23211"
+    ,"findTime": "2017-05-29"
+    ,"hosp": "中心医院"
+    ,"drugs": "病毒性疱症"
+    ,"propect": "静脉注射"
+    ,"month": "2017年第二季度"
+    ,"renci": "1"
+    ,"biLi": "17%"
+    ,"biLi1": "2%"
+   
+  },
+  {
+    "id": "10003"
+   ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "76543"
+    ,"money1": "12341"
+    ,"findTime": "2019-09-22"
+    ,"hosp": "军区总医院"
+    ,"drugs": "急性肠炎"
+    ,"propect": "静脉滴注"
+    ,"month": "2019年第三季度"
+    ,"renci": "2"
+    ,"biLi": "21%"
+    ,"biLi1": "4%"
+   
+  },
+  {
+    "id": "10003"
+   ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "23131"
+    ,"money1": "15141"
+    ,"findTime": "2016-10-22"
+    ,"hosp": "北京大学第一医院"
+    ,"drugs": "急性肠炎"
+    ,"propect": "静脉滴注"
+    ,"month": "2016年第三季度"
+    ,"renci": "65"
+    ,"biLi": "5%"
+    ,"biLi1": "1%"
+   
+  },
+  {
+    "id": "10004"
+   ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "12312"
+    ,"money1": "4123"
+    ,"findTime": "2016-10-22"
+    ,"hosp": "第二军医大学长海医院"
+    ,"drugs": "急性肠炎"
+    ,"propect": "静脉滴注"
+    ,"month": "2016年第三季度"
+    ,"renci": "41"
+    ,"biLi": "10%"
+    ,"biLi1": "2%"
+   
+  },
+  {
+    "id": "10005"
+   ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "23756"
+    ,"money1": "12341"
+    ,"findTime": "2019-05-22"
+    ,"hosp": "军分区医院"
+    ,"drugs": "急性肠炎"
+    ,"propect": "静脉滴注"
+    ,"month": "2019年第二季度"
+    ,"renci": "2"
+    ,"biLi": "14%"
+    ,"biLi1": "3%"
+   
+  },
+  {
+    "id": "10005"
+   ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "23756"
+    ,"money1": "12341"
+    ,"findTime": "2016-09-29"
+    ,"hosp": "南方医科大学南方医院"
+    ,"drugs": "急性肠炎"
+    ,"propect": "静脉滴注"
+    ,"month": "2019年第三季度"
+    ,"renci": "76"
+    ,"biLi": "11%"
+    ,"biLi1": "3%"
+   
+  }
+  ]
+}  

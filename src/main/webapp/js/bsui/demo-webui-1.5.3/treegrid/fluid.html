@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Fluid TreeGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Fluid TreeGrid</h2>
+	<p>This example shows how to assign percentage width to a column in TreeGrid.</p>
+	<div style="margin:20px 0;"></div>
+	<table title="Fluid Browser" class="bsui-treegrid" style="width:700px;height:250px"
+			data-options="
+				url: 'treegrid_data1.json',
+				method: 'get',
+				idField: 'id',
+				treeField: 'name'
+			">
+		<thead>
+			<tr>
+				<th data-options="field:'name'" width="50%">Name(50%)</th>
+				<th data-options="field:'size'" width="20%" align="right">Size(20%)</th>
+				<th data-options="field:'date'" width="30%">Modified Date(30%)</th>
+			</tr>
+		</thead>
+	</table>
+
+</body>
+</html>

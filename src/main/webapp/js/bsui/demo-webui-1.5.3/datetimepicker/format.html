@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic datetimepicker - bsui Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body  class="container">
+	<h2>datetimepick</h2>
+	<p>此组件与datebox及datetimebox组件类似</p>
+		
+	<div style="margin:20px 0"></div>
+	<div class="row">
+		<div class="col-lg-3 col-sm-4 col-xs-6">
+			<input id="dt1" type="text" name="name" size="16"/>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-xs-6">
+			<input id="dt2" type="text" name="name" size="16"/>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-xs-6">
+			<input id="dt3" type="text" name="name" size="16"/>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-xs-6">
+			<input id="dt4" type="text" name="name" size="16"/>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(function() {
+			$CommonUI.datetimepicker('dt1');
+			$CommonUI.datetimepicker('dt2', null, 40, {
+				format: 'mm/dd/yyyy'
+			});
+			$CommonUI.datetimepicker('dt3', null, 45, {
+				format: 'yyyy-mm-ddThh:ii'
+			});
+			$CommonUI.datetimepicker('dt4', 220, 50, {
+				format: 'yyyy-mm-ddThh:ii:ssZ'
+			});
+		});
+	</script>
+</body>
+</html>

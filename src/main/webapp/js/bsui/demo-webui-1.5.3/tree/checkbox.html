@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CheckBox Tree - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>CheckBox Tree</h2>
+	<p>Tree nodes with check boxes.</p>
+	
+	<div style="margin:20px 0;">
+		<a href="#" class="bsui-linkbutton" onclick="getChecked()">GetChecked</a> 
+	</div>
+	<div style="margin:10px 0">
+		<input type="checkbox" checked onchange="$('#tt').tree({cascadeCheck:$(this).is(':checked')})">CascadeCheck 
+		<input type="checkbox" onchange="$('#tt').tree({onlyLeafCheck:$(this).is(':checked')})">OnlyLeafCheck
+	</div>
+	<div class="bsui-panel" style="padding:5px">
+		<ul id="tt" class="bsui-tree" data-options="url:'tree_data1.json',method:'get',animate:true,checkbox:true"></ul>
+	</div>
+	<script type="text/javascript">
+		function getChecked(){
+			var nodes = $CommonUI.getTree('#tt').tree('getChecked');
+			var s = '';
+			for(var i=0; i<nodes.length; i++){
+				if (s != '') s += ',';
+				s += nodes[i].text;
+			}
+			$CommonUI.alert(s,'info');
+		}
+	</script>
+</body>
+</html>

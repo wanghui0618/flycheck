@@ -1,0 +1,204 @@
+[{
+	"text": "主页",
+	"url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+	"imgUrl": "fa fa-home",
+	"level":"1"
+ 	},{
+	"text": "门户维护",
+	"url": null,
+	"imgUrl": "menu-suitcase",
+	"level":"1",
+	"children": [{
+		 "text": "轮播图",
+		 "url": "null",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},
+	{
+		"text": "新闻中心",
+		 "url": "maintainportal/newscenter.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},{
+		"text": "行业动态",
+		 "url": "null",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},{
+		"text": "交流互动",
+		 "url": "null",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},{
+		"text": "最新发布",
+		 "url": "null",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	}]
+ },{
+	"text": "编码管理",
+	"url": null,
+	"imgUrl": "menu-suitcase",
+	"level":"1",
+	"children": [{
+		 "text": "ICD-10维护",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},
+	{
+		"text": "ICD-9-CM-3维护",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	}]
+ }, {
+	"text": "规范管理",
+	"url": null,
+	"imgUrl": "menu-suitcase",
+	"level":"1",
+	"children": [{
+		 "text": "首页填写规范",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},
+	{
+		"text": "首页校验规范",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},
+	{
+		"text": "诊断选择",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	}]
+ },{
+	"text": "数据采集",
+	"url": null,
+	"imgUrl": "menu-suitcase",
+	"level":"1",
+	"children": [{
+		 "text": "病案首页",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},
+	{
+		"text": "医嘱明细",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},
+	{
+		"text": "收费明细",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	}]
+ },{
+	"text": "数据质控",
+	"url": null,
+	"imgUrl": "menu-suitcase",
+	"level":"1",
+	"children": [{
+		 "text": "统计分析",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},
+	{
+		"text": "问题反馈",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	}]
+ },{
+	"text": "样本管理",
+	"url": null,
+	"imgUrl": "menu-suitcase",
+	"level":"1",
+	"children": [{
+		 "text": "训练样本管理",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	},
+	{
+		"text": "测试样本管理",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	}]
+ },{
+	 "text": "分组方案管理",
+	 "url": null,
+	 "imgUrl": "menu-archive",
+	 "level": "1",
+	 "children": [{
+		 "text": "方案查看",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	 },{
+		 "text": "规则调整",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	 },{
+		 "text": "结果校验",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	 }]
+ }, {
+	 "text": "指标管理",
+	 "url": null,
+	 "imgUrl": "menu-calendar",
+	 "level": "1",
+	 "children": [{
+		 "text": "常规指标",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	 },{
+		 "text": "自定义指标",
+		 "url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		 "imgUrl": "fa fa-cog",
+		 "level": "2"
+	 }]
+ }, {
+	 "text": "系统管理",
+	 "url": null,
+	 "imgUrl": "menu-monitor",
+	 "level": "1",
+	 "children": [{
+		"text": "用户管理",
+		"url":"js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		"imgUrl": "fa fa-cog",
+		"level": "2"
+		}, {
+	 	"text": "角色管理",
+		"url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		"imgUrl": "fa fa-cog",
+		"level": "2"
+		}, {
+	 	"text": "权限管理",
+		"url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		"imgUrl": "fa fa-cog",
+		"level": "2"
+	}, {
+	 	"text": "工作流管理",
+		"url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		"imgUrl": "fa fa-cog",
+		"level": "2"
+	}, {
+	 	"text": "日志管理",
+		"url": "js/bsui/demo-webui-1.5.3/mainPage/childPage/homePage.jsp",
+		"imgUrl": "fa fa-cog",
+		"level": "2"
+		
+	}]
+ }]

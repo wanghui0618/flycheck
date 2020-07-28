@@ -1,0 +1,55 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 3
+  ,"data": [{
+    "id": "10001"
+    ,"cityName": "成都"
+    ,"orgName": "第一人民医院"
+    ,"orgLevel": "3"
+    ,"abnormalType": "超期住院"
+    ,"superviseItem": "患者"
+    ,"findTime": "2018-11-15"
+    ,"superviseCost": "8790.86"
+    ,"supervisePay": "5578.24"
+    ,"patientId": "1543286712"
+    ,"diagnose": "高血压3级"
+    ,"age": "67"
+    ,"stayDay": "110天"
+    ,"stayNumber": "9"
+  },
+  {
+      "id": "10002"
+    ,"cityName": "西安"
+    ,"orgName": "西安空军医院"
+    ,"orgLevel": "3"
+    ,"abnormalType": "超期住院"
+    ,"superviseItem": "患者"
+    ,"findTime": "2018-07-23"
+    ,"superviseCost": "1433.86"
+    ,"supervisePay": "1433.86"
+    ,"patientId": "213432122"
+    ,"diagnose": "胃出血"
+    ,"age": "45"
+    ,"stayDay": "89天"
+    ,"stayNumber": "5"
+  },
+  {
+      "id": "10003"
+    ,"cityName": "北京"
+    ,"orgName": "首都医科大学附属医院"
+    ,"orgLevel": "3"
+    ,"abnormalType": "超期住院"
+    ,"superviseItem": "患者"
+    ,"findTime": "2018-06-18"
+    ,"superviseCost": "12390.86"
+    ,"supervisePay": "7865.23"
+    ,"patientId": "41223286712"
+    ,"diagnose": "胆囊发炎"
+    ,"age": "52"
+    ,"stayDay": "69天"
+    ,"stayNumber": "4"
+  }
+ ]
+}  

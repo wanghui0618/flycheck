@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Tree - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic Tree</h2>
+	<p>Click the arrow on the left to expand or collapse nodes.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<div class="bsui-panel" style="padding:5px">
+		<ul id="tree" class="bsui-tree">
+			<li>
+				<span>My Documents</span>
+				<ul>
+					<li data-options="state:'closed'">
+						<span>Photos</span>
+						<ul>
+							<li>
+								<span>Friend</span>
+							</li>
+							<li>
+								<span>Wife</span>
+							</li>
+							<li>
+								<span>Company</span>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Program Files</span>
+						<ul>
+							<li>Intel</li>
+							<li>Java</li>
+							<li>Microsoft Office</li>
+							<li>Games</li>
+						</ul>
+					</li>
+					<li>index.html</li>
+					<li>about.html</li>
+					<li>welcome.html</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<!--<script type="text/javascript">
+		$CommonUI.getTree("#tree").tree({});
+	</script>-->
+
+</body>
+</html>

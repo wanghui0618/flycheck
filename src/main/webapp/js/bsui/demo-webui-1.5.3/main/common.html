@@ -1,0 +1,178 @@
+<table class="table table-bordered">
+<tr>
+    <th>属性/方法</th>
+    <th>描述</th>
+    <th>示例</th>
+</tr>
+<tr>
+    <td>$WEB_ROOT_PATH</td>
+    <td>系统根路径，形如http://www.xxxxxxxx.com/<span style="color:red;">sysName</span></td>
+    <td>var url = $WEB_ROOT_PATH+"/menuInfomation/<br>menuInfomationCtrl!menuinfomation.htm?dto.accountId="+id;</td>
+</tr>
+<tr>
+    <td>_SYS_ERRS</td>
+    <td>当前系统使用的错误提示信息(必须以ERR或者MSG开始后跟数字)</td>
+    <td>
+    后台返回形如{cbb:{msg:’ERR0001’,tourl:’’}}格式数据,前台取到数据直接处理,也可直接写消息内容而不用代号(ERR/MSG)等.
+    <pre>
+    _SYS_ERRS = {<span style="color:red;">
+      "ERR0001":"系统错误1，请联系管理员",
+      "ERR0002":"系统错误2，请联系管理员",
+      "MSG0001":"消息提示1，请联系管理员",
+      "MSG0002":"消息提示2，请联系管理员",
+      "MSG0003":"消息提示3，请联系管理员",</span>
+    }
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>getJqueryDomElement</td>
+    <td>
+ * 获取dom元素值<br />
+ * @param obj dom元素的id | jQuery选择器 | dom对象 | jQuery对象<br />
+ * @returns 没有获取到值时返回null<br />
+    </td>
+    <td>getJqueryDomElement("#dom_id")</td>
+</tr>
+<tr>
+    <td>addCookie</td>
+    <td>
+ * 添加cookie变量<br />
+ * @param name 变量名<br />
+ * @param value 变量值<br />
+ * @param expires 过期时间（天）<br />
+ * @param path 指定可访问cookie的路径<br /><br />
+ function addCookie(name, value, expires, path)
+    </td>
+    <td>addCookie('cookie_name', 'hello', 7)</td>
+</tr>
+<tr>
+    <td>getCookie</td>
+    <td>
+ * 获取cookie<br />
+ * @param cookie_name 变量名<br />
+ * @returns<br /><br />
+ function getCookie(cookie_name)
+    </td>
+    <td>getCookie('cookie_name')</td>
+</tr>
+<tr>
+    <td>delCookie</td>
+    <td>
+ * 删除cookie<br />
+ * @param name 变量名<br /><br />
+ function delCookie(cookie_name)
+    </td>
+    <td>delCookie('cookie_name')</td>
+</tr>
+<tr>
+    <td>getReq</td>
+    <td>
+ * Ajax的Get方式请求<br />
+ * @param url 提交地址<br />
+ * @param container 数据所在的dom容器，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象<br />
+ * @param successHandler 成功处理事件 （可选，一般都要设置）<br />
+ * @param errorHandler 出错处理事件 （可选，一般都要设置）<br />
+ * @param options jQuery ajax选项，传入后将覆盖默认设置（可选，扩展增加自定义属性，skipNames[default=[]],skipHidden[default=false],skipDisabled[default=true]）<br />
+ * @param dataSource 提交数据源（支持按优先级进行数据覆盖，优先级：dataSource > formData（container中获取的数据） > options.data)<br /><br />
+ function getReq(url, container, successHandler, errorHandler, options, dataSource)
+    </td>
+    <td>
+
+<pre>
+//新增或更新成功的回调函数
+function succ(data){
+    var organId=$('#detail input[name="dto.organ.organId"]').val(); 
+    if(organId){
+        $CommonUI.alert("更新机构信息成功");
+    }else{
+        $CommonUI.alert("新增机构信息成功");
+    }
+    $("#datagrid").datagrid('reload');
+    $("#organInfo").dialog('close');
+}
+//新增或更新失败的回调函数
+function err(xhr,textStatus,errorThrown){
+    $CommonUI.alert("更新机构信息失败");    
+}
+
+$(function() {  
+    $CommonUI.datagrid("datagrid", url, queryParams, columns, pageOpts, sortOpts,options);
+    $CommonUI.textarea($("textarea"),400,60,true);
+    $CommonUI.getDateBox('#buildDate').datebox('setValue', null);
+    
+    $("#submitBtn").on('click', function() {
+        getReq($WEB_ROOT_PATH+'/healthResManager/organCtrl!saveOrUpdate.htm','detail',succ,err);
+    });
+    $("#cancelBtn").on('click', function() {
+        $("#organInfo").dialog('close');
+    });
+});
+</pre>
+</td>
+</tr>
+<tr>
+    <td>postReq</td>
+    <td>
+ * Ajax的Post方式请求<br />
+ * @param url 提交地址<br />
+ * @param container 数据所在的dom容器，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象<br />
+ * @param successHandler 成功处理事件 （可选，一般都要设置）<br />
+ * @param errorHandler 出错处理事件 （可选，一般都要设置）<br />
+ * @param options jQuery ajax选项，传入后将覆盖默认设置（可选，扩展增加自定义属性，skipNames[default=[]],skipHidden[default=false],skipDisabled[default=true]）<br />
+ * @param dataSource 提交数据源（支持按优先级进行数据覆盖，优先级：dataSource > formData（container中获取的数据） > options.data)<br /><br />
+function postReq(url, container, successHandler, errorHandler, options, dataSource)
+    </td>
+    <td>
+<pre>
+//新增或更新成功的回调函数
+function succ(data){
+    ......
+}
+//新增或更新失败的回调函数
+function err(xhr,textStatus,errorThrown){
+    ......  
+}
+
+$(function() {  
+    $("#submitBtn").on('click', function() {
+        postReq($WEB_ROOT_PATH+'/healthResManager/organCtrl!saveOrUpdate.htm','detail',succ,err);
+    });
+});
+</pre>
+</td>
+</tr>
+<tr>
+    <td>ajaxReq</td>
+    <td>
+ * Ajax的方式请求（默认get）<br />
+ * @param url 提交地址<br />
+ * @param data 提交数据源<br />
+ * @param successHandler 成功处理事件 （可选，一般都要设置）<br />
+ * @param errorHandler 出错处理事件 （可选，一般都要设置）<br />
+ * @param options jQuery ajax选项，传入后将覆盖默认设置<br /><br />
+function ajaxReq(url, data, successHandler, errorHandler, options)
+    </td>
+    <td>
+    <pre>
+    var url,data,succ,err;
+    ajaxReq(url, data, succ, err, {
+        url : url,
+        async : true,
+        dataType : "json",
+        type : "GET",
+        data : data
+    });
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>useTheme</td>
+    <td>
+ * 改变页面皮肤<br />
+ * @param 皮肤名<br /><br />
+function useTheme(theme)
+    </td>
+    <td>useTheme('default')</td>
+</tr>
+</table>

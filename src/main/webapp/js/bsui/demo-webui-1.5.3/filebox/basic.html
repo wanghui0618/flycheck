@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic FileBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic FileBox</h2>
+	<p>The filebox component represents a file field of the forms.</p>
+	<div style="margin:20px 0;"></div>
+	<div class="bsui-panel" title="Upload File" style="width:400px;padding:30px 70px 50px 70px">
+		<div style="margin-bottom:20px">
+			<div>Name:</div>
+			<input class="bsui-textbox" style="width:100%">
+		</div>
+		<div style="margin-bottom:20px">
+			<div>File1:</div>
+			<input id="file1" class="bsui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+		</div>
+		<div style="margin-bottom:20px">
+			<div>File2:</div>
+			<input id="file2" name="file2" data-options="btnCls:'success',prompt:'Choose another file...'" style="width:100%">
+		</div>
+		<div>
+			<a href="#" class="bsui-linkbutton" style="width:100%">Upload</a>
+		</div>
+		
+		<script type="text/javascript">
+			setTimeout(function() {
+				$CommonUI.getFileBox("#file2").filebox();
+			}, 100);
+		</script>
+	</div>
+</body>
+</html>

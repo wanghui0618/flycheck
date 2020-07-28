@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Clone DateBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Clone DateBox</h2>
+	<p>Click the 'Clone' button to clone datebox components from the exiting datebox.</p>
+	<div style="margin:20px 0;">
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="cloneDatebox()">Clone</a>
+	</div>
+	<input id="dt" class="bsui-datebox"></input>
+	<div id="cc" style="margin-top:10px"></div>
+	<script type="text/javascript">
+		function cloneDatebox(){
+			var dt = $('<input>').appendTo('#cc');
+			dt.datebox('cloneFrom', '#dt');
+		}
+	</script>
+</body>
+</html>

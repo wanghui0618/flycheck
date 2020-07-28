@@ -1,0 +1,150 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 3
+  ,"data": [{
+    "id": "10001"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "546755"
+    ,"money1": "432422"
+    ,"findTime": "2018-09-10"
+    ,"hosp": "第一人民医院"
+    ,"drugs": "骨髓移植"
+    ,"propect": "手术移植"
+    ,"month": "2018年底三季度"
+    ,"renci": "3"
+    ,"biLi": "15%"
+    ,"biLi1": "2%"
+   
+  },
+  {
+    "id": "10002"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "241413"
+    ,"money1": "32213"
+    ,"findTime": "2018-10-29"
+    ,"hosp": "中国医学科学院肿瘤医院"
+    ,"drugs": "肿瘤手术"
+    ,"propect": "手术移植"
+    ,"month": "2018年第四季度"
+    ,"renci": "3"
+    ,"biLi": "13%"
+    ,"biLi1": "1%"
+   
+  },
+  {
+    "id": "10002"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "65436"
+    ,"money1": "12312"
+    ,"findTime": "2017-06-29"
+    ,"hosp": "北京安定医院"
+    ,"drugs": "偏头痛"
+    ,"propect": "红光治疗"
+    ,"month": "2018年第一季度"
+    ,"renci": "176"
+    ,"biLi": "23%"
+    ,"biLi1": "3%"
+   
+  },
+  {
+    "id": "10002"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "64132"
+    ,"money1": "10051"
+    ,"findTime": "2019-04-29"
+    ,"hosp": "复旦大学附属儿科医院"
+    ,"drugs": "先天性畸形"
+    ,"propect": "接骨"
+    ,"month": "2019年第二季度"
+    ,"renci": "2"
+    ,"biLi": "8%"
+    ,"biLi1": "2%"
+   
+  },
+  {
+    "id": "10002"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "434322"
+    ,"money1": "232311"
+    ,"findTime": "2015-09-29"
+    ,"hosp": "第三儿童医院"
+    ,"drugs": "发烧"
+    ,"propect": "静脉滴注"
+    ,"month": "2015年第三季度"
+    ,"renci": "65"
+    ,"biLi": "15%"
+    ,"biLi1": "2%"
+   
+  },
+  {
+    "id": "10002"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "434322"
+    ,"money1": "232311"
+    ,"findTime": "2018-07-29"
+    ,"hosp": "市中医院"
+    ,"drugs": "小儿麻痹症"
+    ,"propect": "静脉滴注"
+    ,"month": "2018年第三季度"
+    ,"renci": "3"
+    ,"biLi": "11%"
+    ,"biLi1": "1%"
+   
+  },
+  {
+    "id": "10002"
+    ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "434322"
+    ,"money1": "232311"
+    ,"findTime": "2018-11-19"
+    ,"hosp": "三医院"
+    ,"drugs": "胃癌"
+    ,"propect": "切除手术"
+    ,"month": "2018年第四季度"
+    ,"renci": "5"
+    ,"biLi": "32%"
+    ,"biLi1": "2%"
+   
+  },
+  {
+    "id": "10003"
+   ,"wenTiType": "医院项目滥用"
+    ,"jianguan": "医院"
+    ,"money": "76543"
+    ,"money1": "12341"
+    ,"findTime": "2019-03-22"
+    ,"hosp": "军区总医院"
+    ,"drugs": "脑淤血"
+    ,"propect": "开颅手术"
+    ,"month": "2019年第一季度"
+    ,"renci": "2"
+    ,"biLi": "3%"
+    ,"biLi1": "1%"
+   
+  }]
+}  

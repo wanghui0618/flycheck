@@ -1,0 +1,734 @@
+<table class="table table-bordered">
+<tr>
+    <th>属性/方法</th>
+    <th>描述</th>
+    <th>示例</th>
+</tr>
+<tr>
+    <td>version</td>
+    <td>CommonUI版本</td>
+    <td>alert($CommonUI.version)</td>
+</tr>
+<tr>
+    <td>_AJAX_DEBUG</td>
+    <td>是否开启ajax_debug功能(默认true)</td>
+    <td>$CommonUI._AJAX_DEBUG=true;</td>
+</tr>
+<tr>
+    <td>_AJAX_SUCC</td>
+    <td>是否开启AJAX成功提示(默认true)</td>
+    <td>$CommonUI._AJAX_SUCC=true;</td>
+</tr>
+<tr>
+    <td>_AJAX_ERROR</td>
+    <td>是否开启AJAX错误提示(默认true)</td>
+    <td>$CommonUI._AJAX_ERROR=true;</td>
+</tr>
+<tr>
+    <td>_PUBLIC_DICT_SERVICE_URL</td>
+    <td>公用字典服务的URL</td>
+    <td>$CommonUI._PUBLIC_DICT_SERVICE_URL=''</td>
+</tr>
+<tr>
+    <td>_CUSTOM_DICT_SERVICE_URL</td>
+    <td>自定义字典服务的URL</td>
+    <td>$CommonUI._CUSTOM_DICT_SERVICE_URL=''</td>
+</tr>
+<tr>
+    <td>alert</td>
+    <td>
+     * 消息提示框，用于替换原生alert<br />
+     * @param message 消息<br />
+     * @param alertType 提示图标类型（可选,应在下列值之间：error|question|info|warning）<br />
+     * @param title 标题（可选，默认为消息）<br />
+     * @param okText （可选，按钮文本）<br />
+     * @param okFunc (可选，确定按钮处理函数)<br />
+     * @param hasCloseCross 有关闭按钮（可选，默认true）<br /><br />
+    function (message, alertType, title, okText, okFunc, hasCloseCross)
+    </td>
+    <td>
+    <pre>
+    var message,title,okFunc;
+    $CommonUI.alert(message, 'error', title, 'ok', okFunc, false);
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>confirm</td>
+    <td>
+     * 消息确认框，用于替换原生confirm<br />
+     * @param message 消息<br />
+     * @param alertType 提示图标类型（可选,应在下列值之间：error|question|info|warning）<br />
+     * @param okText 确定按钮文本（可选，有默认）<br />
+     * @param okFunc 确定按钮处理函数（可选）<br />
+     * @param cancelText 取消按钮文本（可选，有默认）<br />
+     * @param cancelFunc 取消按钮处理函数（可选）<br />
+     * @param title 标题（可选，有默认）<br />
+     * @param hasCloseCross 有关闭按钮（可选，默认true）<br /><br />
+    function (message, alertType, okText, okFunc, cancelText, cancelFunc, title, hasCloseCross)
+    </td>
+    <td>
+    <pre>
+    var message,title,okFunc,cancelFunc;
+    $CommonUI.confirm(message, 'error', 'ok', okFunc, 'cancel', cancelFunc, title, false);
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>autoCloseCenterMessage</td>
+    <td>
+     * 自动关闭的消息提示框（中间显示）
+     * @param message 消息
+     * @param alertType 提示图标类型（可选,应在下列值之间：error|question|info|warning）
+     * @param title 标题（可选）
+     * @param timeout 自动关闭时间（毫秒，默认1500）
+    function(message, alertType, title, timeout)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.autoCloseCenterMessage('出错了','info','警告',3000)
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>autoCloseRightBottomMessage</td>
+    <td>
+     * 自动关闭的消息提示框（右下角显示）
+     * @param message 消息
+     * @param title 标题（可选）
+     * @param timeout 自动关闭时间（毫秒，默认1500）
+     * @param showType 显示方式（可选,应在下列值之间：fade|slide|show）
+    function(message, title, timeout, showType)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.autoCloseRightBottomMessage('出错了','info','警告',3000)
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>showModalMessage</td>
+    <td>
+     * 显示模态消息
+     * @param message 消息
+     * @param alertType 提示图标类型（可选,应在下列值之间：error|question|info|warning）
+     * @param title 标题（可选，默认为消息）
+     * @param timeout 自动关闭时间（毫秒，默认1500）
+     * @param autoClose 是否自动关闭（可选，默认为false）
+    function(message, alertType, title, timeout, autoClose)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.showModalMessage('error','warning','title',3000,true)
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>showMessage</td>
+    <td>
+     * 显示消息（提供高级选项，中间显示）
+     * @param message 消息
+     * @param alertType 提示图标类型（可选,应在下列值之间：error|question|info|warning）
+     * @param title 标题（可选，默认为消息）
+     * @param timeout 自动关闭时间（可选，毫秒，默认1500）
+     * @param autoClose 是否自动关闭（可选，默认为false）
+     * @param modal 是否是模态对话框（可选，默认为false）
+     * @param okText（可选，按钮1文本）
+     * @param okFunc（可选，按下按钮1后的回调函数）
+     * @param cancelText（可选，按钮2文本，设置此参数将创建2个按钮）
+     * @param cancelFunc（可选，按下按钮2后的回调函数，仅当设置了按钮2时才可用）
+     * @param hasCloseCross（可选，有关闭x按钮，默认true）
+    function(message, alertType, title, timeout, autoClose, modal, okText, okFunc, cancelText, cancelFunc, hasCloseCross)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.showMessage('msg', 'error', 'title', 3000, true, true, '确定', function(){}, '不', function(){}, false);
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>showUnCloseDialog</td>
+    <td>
+     * 显示用户无法关闭的对话框
+     * @param message 消息
+     * @param alertType 提示类型（可选，默认为""）
+     * @param title 标题(可选，默认为消息)
+     * @param buttonText 关闭按钮文字（可选，如果没有或为空字符串，则不创建此按钮）
+     * @param callback 关闭按钮回调事件
+     * @param buttonText2 非关闭按钮文字（可选，如果没有或为空字符串，则不创建此按钮）
+     * @param callback2 非关闭按钮回调函数
+    function(message, alertType, title, okText, okFunc, cancelText, cancelFunc)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.showUnCloseDialog('message', 'info', 'title', 'okText', function(){}, 'cancelText', function(){})
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>datebox</td>
+    <td>
+     * 构造日期控件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param value 初始值
+     * @param required 是否必须（可选，默认为false）
+     * @param options 扩展选项（可选）
+    function(obj, value, required, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.datebox("#d1", (new Date()).format("yyyy-MM-dd"), true);
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>timespinner</td>
+    <td>
+     * 构造时间控件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param value 初始值
+     * @param required 是否必须（可选，默认为false）
+     * @param showSeconds 是否显示秒（可选，默认为false）
+     * @param min 最小值（可选）
+     * @param max 最大值（可选）
+     * @param options 扩展选项（可选）
+    function(obj, value, required, showSeconds, min, max, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.timespinner("#tsper", (new Date()).format("HH:mm:ss"), true)
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td></td>
+    <td>
+     * 构造日期时间控件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param value 初始值
+     * @param required 是否必须（可选，默认为false）
+     * @param showSeconds 显示秒（可选，默认为false）
+     * @param options 扩展选项（可选）
+    function(obj, value, required, showSeconds, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.datetimebox("#dtb", (new Date()).format("yyyy-MM-dd HH:mm:ss"), true);
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>datagrid</td>
+    <td>
+     * 构造DataGrid组件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param url 数据来源
+     * @param queryParams 参数(例：{page:1,rows:10})
+     * @param columns 表头选项
+     * @param pageOpts 分页选项（可选）
+     * @param sortOpts 排序选项（可选）
+     * @param options 扩展选项（可选）
+    function(obj, url, queryParams, columns, pageOpts, sortOpts, options)
+    </td>
+    <td>
+    <pre>
+    var columns = [
+// title|field|width|rowspan|colspan|align|sortable|resizable|hidden|checkbox|formatter|styler|sorter|editor
+[// 表头
+{
+    title : '医院',
+    field : 'organzationName',
+    width : "114",
+    sortable : true
+}, {
+    title : '职称',
+    field : 'jobTitleName',
+    width : "80",
+    sortable : true
+}, {
+    title : '平均手术人次',
+    field : 'droprNum',
+    width : "104",
+    sortable : true
+}
+
+] ];
+var url = $WEB_ROOT_PATH
+        + "/averoperationcount/averOperationCountCtrl!yearBasisOperationList.htm?dto.chartQuery.hosValue=H001&dto.chartQuery.year=2013";
+
+var queryParams = {
+    page : 1,
+    rows : 15
+};
+var pageOpts = {
+    // pagination: true,
+    pageNumber : 1,
+    pageSize : 8
+};
+var sortOpts = {
+    remoteSort : false, // 服务器端排序
+    sortName : '', //
+    sortOrder : 'asc', //
+};
+var options = {
+    // title: '科室',
+    singleSelect : true,
+    idField : 'id',
+    method : 'get',
+    collapsible : false,
+    striped : false,
+    rownumbers : false,
+    // width: 300,
+    height : 300
+};
+$(function(){
+$CommonUI.datagrid("ctlocgrid", url, queryParams, columns, pageOpts,
+            sortOpts, options);
+});
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>queryForDataGrid</td>
+    <td>
+     * 按条件加载DataGrid数据
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param params 条件
+    function(obj, params)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.queryForDataGrid("#dt1",{page:2,rows:30});
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>datagriddetail</td>
+    <td>
+     * 构造有详细内容的DataGrid组件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param url 数据来源
+     * @param queryParams 参数
+     * @param detailURL 取得详细内容URL（字符串|函数，函数传递index和record参数）
+     * @param columns 表头选项
+     * @param pageOpts 分页选项（可选）
+     * @param sortOpts 排序选项（可选）
+     * @param options 扩展选项（可选）
+    this.datagriddetail = function(obj, url, queryParams, detailURL, columns, pageOpts, sortOpts, options)
+    </td>
+    <td>
+    <pre>
+    
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>tree</td>
+    <td>
+     * 构造树组件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param options 扩展选项（可选）
+    function(obj, url, data, onClick, onDblClick, checkbox, onlyLeafCheck, options)
+    </td>
+    <td>
+    <pre>
+    
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>getUIType</td>
+    <td>
+     * 取得指定id对象的类型
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * 
+     * @return string
+    function(obj)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.getUIType("#d1")
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>getUIValue</td>
+    <td>
+     * 取得指定对象值
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+    function(obj)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.getUIValue("#d1")
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>setUIValue</td>
+    <td>
+     * 设置指定ID值
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+    function(obj, value)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.setUIValue("#d1","2013-01-02")
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>loopBlock</td>
+    <td>
+     * 遍历区块数据组装成JSON对象
+     * @param container dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param skipNames 跳过的name数组
+     * @param skipHidden 是否跳过HTML标准组件里的hidden字段
+     * @param skipDisabled 是否跳过disable字段
+    function(container, skipNames, skipHidden, skipDisabled)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.loopBlock("#d1",['dto.aa'])
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>fillBlock</td>
+    <td>
+     * 通过JSON设置区块数据
+     * @param container dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param data json字符串或JSON对象
+    function(container, data)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.fillBlock("#d1",{"dto":{"a":"a","b":"b"}});
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>poshytip</td>
+    <td>
+     * 创建悬浮提示信息
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param message 提示消息
+     * @param options poshytip选项
+     function(obj, message, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.poshytip("#d1","必填");
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>destoryPoshytip</td>
+    <td>
+     * 销毁悬浮提示信息
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+    function(obj)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.destoryPoshytip("#d1");
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>textarea</td>
+    <td>
+     * 创建textarea组件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param width textarea组件的宽度,默认为100
+     * @param height textarea组件的高度,默认为100
+     * @param required textarea组件是否为必填项,默认为false
+    function(obj,width,height,required)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.textarea("#d1",300,200,true);
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>imageTransfer</td>
+    <td>
+     * 创建图片查看组件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param myWidth 悬浮层宽度,默认为600
+     * @param myHeight 悬浮层高度,默认为350
+     * @param url 当前页面与js的相对路径
+     * @param component 工具栏组件
+     * @param component.Vertical 垂直翻转，true显示，false不显示,默认为false
+     * @param component.Horizontal 水平翻转，true显示，false不显示,默认为false
+     * @param component.Left 左旋转，true显示，false不显示,默认为false
+     * @param component.Right 右旋转，true显示，false不显示,默认为false
+     * @param component.ZoomBig 放大，true显示，false不显示,默认为false
+     * @param component.ZoomSmall 缩小，true显示，false不显示,默认为false
+     * @param component.Reset 复位，true显示，false不显示,默认为false
+     * @param component.Close 关闭，true显示，false不显示,默认为true
+    function(obj,url,myWidth,myHeight,component)
+    </td>
+    <td>
+    <pre>
+    $("#testImage").bind("dblclick",function(){
+        $CommonUI.imageTransfer("testImage","../../js",800,400,{
+            Left:true,
+            Right:true,
+            Vertical:true,
+            Horizontal:true,
+            ZoomBig:true,
+            ZoomSmall:true,
+            Reset:true,
+            Close:true
+        });
+    });
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>imageZoom</td>
+    <td>
+     * 创建图片放大镜组件
+     * @param obj dom对象，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param title 放大后的图片说明
+     * @param options.lens 放大位置阴影是否显示，true为显示，false为不显示,默认为true
+     * @param options.zoomWidth 放大位置阴影宽度，默认为200
+     * @param options.zoomHeight 放大位置阴影高度，默认为200
+     * @param options.alwaysOn 放大的图片是否一直显示，true为一直显示，false为鼠标触发显示,默认为false 
+     * @param options.xOffset 左右偏移量,默认为10
+     * @param options.yOffset 上下偏移量,默认为0
+     * @param options.position 偏移方位,可选值为'left','right','bottom','top',默认为'left'
+    function(obj,title,options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.imageZoom("jqzoom","放大图片的说明"
+    , {
+        lens:true,
+        zoomWidth:300,
+        zoomHeight:300,
+        alwaysOn:false,
+        xOffset:10,
+        yOffset:0,
+        position:'left'
+    });
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>getMultiSelect2Side</td>
+    <td>
+     * 取得左右选择框对象
+     * @param obj 进度条dom元素，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象(必须是select的)
+    function(obj)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.getMultiSelect2Side('#sl')
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>multiselect2side</td>
+    <td>
+     * 左右选择框
+     * @param obj 进度条dom元素，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象(必须是select的)
+     * @param labelsx 源选择框头（可选，默认为空）
+     * @param labeldx 目标选择框头（可选，默认为空）
+     * @param options 扩展选项（可选）
+    function(obj, labelsx, labeldx, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.multiselect2side('#multiselect2side', '药品','医嘱',{
+        labelsx:'请选择', // 覆盖“药品”
+        labeldx:'已选中'
+    });
+    $CommonUI.getMultiSelect2Side('multiselect2side').multiselect2side('addOption', {
+        "name": "地瓜",
+        "value": "地瓜",
+        "selected": false
+    });
+    $CommonUI.getMultiSelect2Side('multiselect2side').multiselect2side('addOption', {
+        "name": "洋葱",
+        "value": "洋葱",
+        "selected": false
+    });
+    $CommonUI.getMultiSelect2Side('multiselect2side').multiselect2side('addOption', {
+        "name": "阿莫西林",
+        "value": "阿莫西林",
+        "selected": false
+    });
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>progressbar</td>
+    <td>
+     * 进度条
+     * @param obj 进度条dom元素，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param progressValue 进度值（参考范围[0-100]）
+     * @param text 显示文本（可选，默认{value}%）
+     * @param color 填充颜色（可选）
+     * @param bordercolor 边框颜色（可选）
+     * @param options 扩展选项（可选）
+    function(obj, progressValue, text, color, bordercolor, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.progressbar("#ipt1",20);
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>popWin</td>
+    <td>
+     * 弹窗
+     * @param obj dom元素，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param href 值（url|object）
+     * @param title 窗口标题（可选）
+     * @param mode 是否模式窗口（可选）
+     * @param closed 是否可手动关闭（可选）
+     * @param cache 是否缓存（可选）
+     * @param options 扩展选项（可选）
+    function(obj, href, title, mode, closed, cache, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.popWin('#div1', './demo.html', '新窗口', true, true, false)
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>combobox</td>
+    <td>
+     * 下拉列表
+     * @param obj dom元素，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象
+     * @param value 值（url|object）
+     * @param textField 显示值（可选，textField）
+     * @param valueField 保存值（可选，valueField）
+     * @param options 扩展选项（可选）
+    function(obj, value, textField, valueField, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.combobox("#cbx001",'2');
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>initCharts</td>
+    <td>
+     * FusionCharts 初始化
+    function()
+    </td>
+    <td>
+    <pre>
+    $CommonUI.initCharts();
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>Charts</td>
+    <td>
+     * FusionCharts
+     * @param chartID 图表ID（唯一）
+     * @param type 图表类型
+     * @param wrapper 图表所在容器ID
+     * @param dataurl 数据或URL（数据或者指向数据的URL）
+     * @param format 数据格式（可选xml|xmlurl|json|jsonurl，默认json）
+     * @param width 宽（可选，默认值400）
+     * @param height 高（可选，默认值300）
+     * @param renderer 显示方式（可选flash|javascript，默认值flash）
+     * @param options 扩展选项（可选）
+    function(chartID, type, wrapper, dataurl, format, width, height, renderer, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.initCharts();
+    $CommonUI.Charts('yearBasisOperationView', 'Column2D',
+            'yearBasisOperation', yearJSONURLOperation, 'jsonurl', "100%", 300);
+    $CommonUI.Charts('yearBasisOperationCountView', 'Column2D',
+            'yearBasisOperationCount', yearJSONURLOperationCount, 'jsonurl',
+            "100%", 300);
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>formValidation</td>
+    <td>
+     * 表单验证弹出对象
+     * @param obj dom元素，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象(表单id)
+    function(obj)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.formValidation("#frm001")
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>getCharts</td>
+    <td>
+     * 取得图表对象
+     * @param id 生成的图表的ID
+    function(id)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.getCharts("#ct1")
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>sparkline</td>
+    <td>
+     * 行图
+     * @param obj dom元素，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象(表单id)
+     * @param values 加载值
+     * @param options 选项
+    function(obj, values, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.getSparkLine('.sparklineA').sparkline();
+
+    $CommonUI.getSparkLine('#sparkline1').sparkline([1,4,6,6,8,5,3,5]);
+    $CommonUI.getSparkLine('#sparkline2').sparkline([1,4,6,null,null,5,3,5]);
+    
+    $CommonUI.getSparkLine('.sparklineB').sparkline();
+    
+    $CommonUI.getSparkLine('.sparklineC').sparkline([ [1,1], [2.7,4], [3.4,6], [5,6], [6,8], [8.7,5], [9,3], [10,5] ]);
+    
+    // 'line', 'bar', 'tristate', 'bullet', 'discrete', 'pie' or 'box'
+    $CommonUI.getSparkLine('.sparklineD').sparkline([1,2,3,4], {type: 'line', barWidth: '10'});
+    
+    $CommonUI.getSparkLine('.sparklineE').sparkline([1,2,3,4], {enableTagOptions: true});
+
+    </pre>
+    </td>
+</tr>
+<tr>
+    <td>printArea</td>
+    <td>
+     * 局部打印
+     * @param obj dom元素，可以是：dom元素的id | jQuery选择器 | dom对象 | jQuery对象(表单id)
+     * @param options 选项 {mode:"",popTitle:""……}
+     *       *  @mode     | [string]  | ("iframe"),"popup"
+     *       *  @popHt    | [number]  | (500)             
+     *       *  @popWd    | [number]  | (400)             
+     *       *  @popX     | [number]  | (500)             
+     *       *  @popY     | [number]  | (500)             
+     *       *  @popTitle | [string]  | ('')              
+     *       *  @popClose | [boolean] | (false),true      
+    function(obj, options)
+    </td>
+    <td>
+    <pre>
+    $CommonUI.printArea("#div",{mode:"popup",popTitle:"新窗口"});
+    </pre>
+    </td>
+</tr>
+</table>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Column Group - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Column Group</h2>
+	<p>The header cells can be merged. Useful to group columns under a category.</p>
+	<div style="margin:20px 0;"></div>
+	<table class="bsui-datagrid" title="Column Group" style="width:700px;height:250px"
+		data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get',
+		    columns:[[
+        {field:'itemid',title:'Item ID',rowspan:2,width:80,sortable:true},
+        {field:'productid',title:'Product ID',rowspan:2,width:100,sortable:true},
+        {title:'Item Details',colspan:4}
+    ],[
+        {field:'listprice',title:'List Price',width:80,align:'right',sortable:true},
+        {field:'unitcost',title:'Unit Cost',width:80,align:'right',sortable:true},
+        {field:'attr1',title:'Attribute',width:240},
+        {field:'status',title:'Status',width:60}
+    ]]">
+		<!--<thead>
+			<tr>
+				<th data-options="field:'itemid',width:80" rowspan="2">Item ID</th>
+				<th data-options="field:'productid',width:100" rowspan="2">Product</th>
+				<th colspan="4">Item Details</th>
+			</tr>
+			<tr>
+				<th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+				<th data-options="field:'attr1',width:240">Attribute</th>
+				<th data-options="field:'status',width:60,align:'center'">Status</th>
+			</tr>
+		</thead>-->
+	</table>
+
+</body>
+</html>

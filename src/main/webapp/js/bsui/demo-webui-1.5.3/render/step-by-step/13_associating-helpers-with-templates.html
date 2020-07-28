@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link href="../resources/demos.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/movielist.css" rel="stylesheet" type="text/css" />
+	<script src="../../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<h3>Associating specific contextual helpers with templates</h3>
+
+<div class="subhead">Including helpers in a template definition.</div>
+<pre>
+$.templates({
+    appTmpl: {
+        markup:"#appTmpl",
+        helpers: {
+            supplierUtils: ...
+        }
+    }
+});
+</pre>
+
+<div class="subhead">Passing different helpers to a sub-template based on the context where it is used.</div>
+<pre>
+{{for suppliers tmpl="personTmpl" ~utils=~supplierUtils/}}
+</pre>
+
+<div class="subhead">Accessing helper from nested template:</div>
+<pre>
+&lt;b>ID:&lt;/b> &lt;em>{{:~utils.format(id)}}&lt;/em>
+</pre>
+
+<!--================ Demo ================-->
+
+<div id="target"></div>
+
+<script id="appTmpl" type="text/x-jsrender">
+	<h3>Suppliers</h3>
+	<table><tbody>
+		{{for suppliers tmpl="personTmpl" ~utils=~supplierUtils/}}
+	</tbody></table>
+
+	<h3>Customers</h3>
+	<table><tbody>
+		{{for customers tmpl="personTmpl" ~utils=~customerUtils/}}
+	</tbody></table>
+</script>
+
+<script id="personTmpl" type="text/x-jsrender">
+	<tr>
+		<td><b>ID:</b> <em>{{:~utils.format(id)}}</em></td>
+		<td>{{:firstName}} {{:lastName}}</td>
+	</tr>
+</script>​
+
+<script type='text/javascript'>//<![CDATA[
+	var people = [
+		{
+			id: "abc22",
+			firstName: "Jeff",
+			lastName: "Johnson"
+		},
+		{
+			id: "pq44",
+			firstName: "Rachel",
+			lastName: "Roberts"
+		},
+		{
+			id: "xyz99",
+			firstName: "Jacques",
+			lastName: "Bertin"
+		}
+	];
+
+	var model = {
+		suppliers: [people[0], people[2]],
+		customers: [people[1], people[2]]
+	}
+
+	$CommonUI.getJsRender({
+		personTmpl: "#personTmpl",
+		appTmpl: {
+			markup:"#appTmpl",
+			helpers: {
+				supplierUtils: {
+					format:function(val){return "Supplier:" + val.toUpperCase();}
+				},
+				customerUtils: {
+					format:function(val){return "Customer:" + val.toLowerCase();}
+				}
+			}
+		}
+	});
+
+	$("#target").html( $.render.appTmpl( model ));
+</script>
+
+</body>
+</html>
+

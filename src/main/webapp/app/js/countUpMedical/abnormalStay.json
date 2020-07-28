@@ -1,0 +1,78 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 10
+  ,"data": [
+    {
+      "id": "10010"
+    ,"cityName": "晋城市"
+    ,"orgName": "山西晋城无烟煤矿业集团有限责任公司总医院"
+    ,"violationTimes": "886"
+    ,"totalAmount": "95757.08"
+  },{
+    "id": "10001"
+    ,"cityName": "晋城市"
+    ,"orgName": "晋城市妇幼保健院"
+    ,"violationTimes": "842"
+    ,"totalAmount": "31816.98"
+  },
+  {
+      "id": "10002"
+    ,"cityName": "晋城市"
+    ,"orgName": "泽州县人民医院"
+    ,"violationTimes": "566"
+    ,"totalAmount": "37835.44"
+  },
+  {
+      "id": "10003"
+    ,"cityName": "晋城市"
+    ,"orgName": "泽州县妇幼保健院"
+    ,"violationTimes": "488"
+    ,"totalAmount": "48471.74"
+  },
+  {
+      "id": "10004"
+    ,"cityName": "晋城市"
+    ,"orgName": "晋城市人民医院"
+    ,"violationTimes": "318"
+    ,"totalAmount": "19785.85"
+  },
+  {
+      "id": "10005"
+    ,"cityName": "晋城市"
+    ,"orgName": "山西省晋城市人民医院"
+    ,"violationTimes": "311"
+    ,"totalAmount": "43207.36"
+  },
+  {
+      "id": "10006"
+    ,"cityName": "晋城市"
+    ,"orgName": "山西省阳城县人民医院"
+    ,"violationTimes": "283"
+    ,"totalAmount": "7424.06"
+  },
+  {
+      "id": "10007"
+    ,"cityName": "晋城市"
+    ,"orgName": "泽州县康复医院"
+    ,"violationTimes": "216"
+    ,"totalAmount": "19228.87"
+  },
+  {
+      "id": "10008"
+    ,"cityName": "晋城市"
+    ,"orgName": "陵川县人民医院"
+    ,"violationTimes": "160"
+    ,"totalAmount": "12718.4"
+  },
+  {
+      "id": "10008"
+    ,"cityName": "晋城市"
+    ,"orgName": "高平市人民医院"
+    ,"violationTimes": "159"
+    ,"totalAmount": "14194.87"
+  }
+
+ ]
+}  

@@ -1,0 +1,81 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 30
+  ,"data": [{
+    "id": "10001"
+    ,"orgName": "张成"
+    ,"userTimeCost": "慢性咽炎"
+    ,"userTime": "2"
+    ,"timeCost": "86"
+    ,"accounted": "7"
+    ,"growthRate": "4"
+    ,"weigui": "0"
+    ,"weigui1": "0"
+    ,"yisiweigui": "0"
+    ,"yisiweigui1": "0"
+    ,"weiweigui": "2"
+    ,"weiweigui1": "100"
+  },
+  {
+    "id": "10001"
+    ,"orgName": "孙科"
+    ,"userTimeCost": "胃炎"
+    ,"userTime": "4"
+    ,"timeCost": "243"
+    ,"accounted": "4"
+    ,"growthRate": "3"
+    ,"weigui": "0"
+    ,"weigui1": "0"
+    ,"yisiweigui": "1"
+    ,"yisiweigui1": "0"
+    ,"weiweigui": "3"
+    ,"weiweigui1": "75"
+  },
+  {
+    "id": "10001"
+    ,"orgName": "徐楠"
+    ,"userTimeCost": "病毒性疱疹"
+    ,"userTime": "1"
+    ,"timeCost": "96"
+    ,"accounted": "6"
+    ,"growthRate": "7"
+    ,"weigui": "0"
+    ,"weigui1": "0"
+    ,"yisiweigui": "0"
+    ,"yisiweigui1": "0"
+    ,"weiweigui": "1"
+    ,"weiweigui1": "100"
+  },
+  {
+    "id": "10001"
+    ,"orgName": "刘强"
+    ,"userTimeCost": "慢性支气管炎"
+    ,"userTime": "2"
+    ,"timeCost": "345"
+    ,"accounted": "7"
+    ,"growthRate": "4"
+    ,"weigui": "0"
+    ,"weigui1": "0"
+    ,"yisiweigui": "1"
+    ,"yisiweigui1": "50"
+    ,"weiweigui": "1"
+    ,"weiweigui1": "50"
+  },
+  {
+    "id": "10001"
+    ,"orgName": "李梅"
+    ,"userTimeCost": "高血压"
+    ,"userTime": "7"
+    ,"timeCost": "164"
+    ,"accounted": "6"
+    ,"growthRate": "5"
+    ,"weigui": "1"
+    ,"weigui1": "14"
+    ,"yisiweigui": "0"
+    ,"yisiweigui1": "0"
+    ,"weiweigui": "6"
+    ,"weiweigui1": "86"
+  }]
+}  

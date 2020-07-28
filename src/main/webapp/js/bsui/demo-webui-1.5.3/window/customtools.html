@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Custom Window Tools - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Custom Window Tools</h2>
+	<p>Click the right top buttons to perform actions.</p>
+	
+	<div style="margin:20px 0;">
+		<button type="button" class="btn btn-primary" onclick="$CommonUI.getWindow('#w').window('open')">打开</button>
+		<button type="button" class="btn btn-primary" onclick="$CommonUI.getWindow('#w').window('close')">关闭</button>
+		<button type="button" class="btn btn-primary" onclick="$CommonUI.getWindow('#w').window('setTitle', 'new')">设置标题</button>
+		<!--<a href="javascript:void(0)" class="bsui-linkbutton" onclick="$('#w').window('open')">Open</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="$('#w').window('close')">Close</a>-->
+	</div>
+	
+	<div id="w" class="bsui-window" title="Custom Window Tools" data-options="cls:'panel-info',iconCls:'icon-save',minimizable:false,tools:'#tt'" style="width:500px;height:200px;padding:10px;">
+		The window content.
+	</div>
+	<div id="tt">
+		<!--<a href="javascript:void(0)" class="icon-add" onclick="javascript:alert('add')"></a>
+		<a href="javascript:void(0)" class="icon-edit" onclick="javascript:alert('edit')"></a>
+		<a href="javascript:void(0)" class="icon-cut" onclick="javascript:alert('cut')"></a>
+		<a href="javascript:void(0)" class="icon-help" onclick="javascript:alert('help')"></a>-->
+		<a href="javascript:void(0)" class="icon-add" onclick="javascript:$CommonUI.alert('add')"></a>
+		<a href="javascript:void(0)" class="icon-edit" onclick="javascript:$CommonUI.alert('edit')"></a>
+		<a href="javascript:void(0)" class="icon-cut" onclick="javascript:$CommonUI.alert('cut')"></a>
+		<a href="javascript:void(0)" class="icon-help" onclick="javascript:$CommonUI.alert('help')"></a>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Attaching Other Components - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Attaching Other Components</h2>
+	<p>Any other components can be attached to page bar.</p>
+	
+	<div style="margin:20px 0;"></div>
+	<div class="bsui-panel">
+		<div class="bsui-pagination" data-options="showPageList:false,total:114,buttons:$('#buttons')"></div>
+	</div>
+	<div id="buttons">
+		<table style="border-spacing:0">
+			<tr>
+				<td>
+					<input class="bsui-searchbox" style="width:150px">
+				</td>
+				<td>
+					<a href="javascript:void(0)" class="bsui-linkbutton" data-options="iconCls:'icon-save',plain:true"></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

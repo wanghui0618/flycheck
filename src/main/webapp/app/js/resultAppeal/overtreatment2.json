@@ -1,0 +1,68 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 3
+  ,"data": [{
+    "id": "10001"
+     ,"cityName": "北京"
+    ,"hospitalCode": "545678"
+    ,"hospitalName": "张富贵"
+    ,"diagnose": "高血压3级"
+    ,"age": "55"
+    ,"inTime": "2018-10-14"
+    ,"outTime": "2018-10-25"
+    
+  },
+  {
+   "id": "10002"
+   ,"hospitalCode": "456788"
+   ,"cityName": "北京"
+    ,"hospitalName": "腾旭龙"
+    ,"diagnose": "高血压3级"
+    ,"age": "45"
+    ,"inTime": "2018-10-14"
+    ,"outTime": "2018-10-25"
+  },
+  {
+   "id": "10003"
+   ,"cityName": "上海"
+   ,"hospitalCode": "97654"
+    ,"hospitalName": "任杰"
+    ,"diagnose": "高血压3级"
+    ,"age": "55"
+    ,"inTime": "2018-10-14"
+    ,"outTime": "2018-10-25"
+  },
+  {
+   "id": "10004"
+   ,"cityName": "上海"
+   ,"hospitalCode": "7867876"
+    ,"hospitalName": "赵富"
+    ,"diagnose": "高血压3级"
+    ,"age": "42"
+    ,"inTime": "2018-10-14"
+    ,"outTime": "2018-10-25"
+  },
+    {
+   "id": "10003"
+   ,"cityName": "西安"
+   ,"hospitalCode": "76545678"
+    ,"hospitalName": "刘富贵"
+    ,"diagnose": "高血压3级"
+    ,"age": "65"
+    ,"inTime": "2017-10-14"
+    ,"outTime": "2017-11-25"
+  },
+    {
+   "id": "10003"
+   ,"cityName": "成都"
+   ,"hospitalCode": "654346"
+    ,"hospitalName": "刘富贵"
+    ,"diagnose": "高血压3级"
+    ,"age": "25"
+    ,"inTime": "2018-5-14"
+    ,"outTime": "2018-7-25"
+  }
+  ]
+}  

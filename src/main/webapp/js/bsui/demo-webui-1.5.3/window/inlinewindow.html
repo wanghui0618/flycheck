@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Inline Window - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Inline Window</h2>
+	<p>The inline window stay inside its parent.</p>
+	
+	<div style="margin:20px 0;">
+		<button type="button" class="btn btn-primary" onclick="$CommonUI.getWindow('#w').window('open')">打开</button>
+		<button type="button" class="btn btn-primary" onclick="$CommonUI.getWindow('#w').window('close')">关闭</button>
+		<!--<a href="javascript:void(0)" class="bsui-linkbutton" onclick="$('#w').window('open')">Open</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="$('#w').window('close')">Close</a>-->
+	</div>
+	
+	<div class="bsui-panel" style="position:relative;width:500px;height:300px;overflow:auto;">
+		<div id="w" class="bsui-window" data-options="title:'Inline Window',inline:true" style="width:250px;height:150px;padding:10px">
+			This window stay inside its parent
+		</div>
+	</div>
+
+</body>
+</html>

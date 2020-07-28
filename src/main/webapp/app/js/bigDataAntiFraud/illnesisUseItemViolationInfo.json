@@ -1,0 +1,116 @@
+{
+  "code": 0
+,"msg": ""
+,"count": 3
+,"data": [{
+  "firstResult": "违规",
+   "machineAudit":"疑似违规",
+  "itemNum": "11705021042174711002",
+  "itemName": "粒细胞巨噬细胞刺激因子(里亚尔)",
+  "medicalType": "乙类10%",
+  "itemCost": "348.3",
+  "totalCost": "",
+  "itemAmount": "6",
+  "itemPrice": "58.05",
+  "itemStandards": "150ug/支"
+},{
+  "firstResult": "违规",
+  "machineAudit":"疑似违规",
+  "itemNum": "11799004206105011001",
+  "itemName": "血管内皮抑素(恩度)",
+  "medicalType": "乙类5%",
+  "itemCost": "11443.74",
+  "totalCost": "",
+  "itemAmount": "14",
+  "itemPrice": "817.41",
+  "itemStandards": "15mg 3ml/支"
+},{
+  "firstResult": "违规",
+  "machineAudit":"疑似违规",
+  "itemNum": "11705021042174711002",
+  "itemName": "粒细胞巨噬细胞刺激因子(里亚尔)",
+  "medicalType": "乙类10%",
+  "itemCost": "348.3",
+  "totalCost": "",
+  "itemAmount": "6",
+  "itemPrice": "58.05",
+  "itemStandards": "150ug/支"
+},{
+  "firstResult": "违规",
+  "machineAudit":"违规",
+  "itemNum": "11801003206084910602",
+  "itemName": "5%葡萄糖",
+  "medicalType": "甲类",
+  "itemCost": "3.18",
+  "totalCost": "",
+  "itemAmount": "1",
+  "itemPrice": "3.18",
+  "itemStandards": "5% 100毫升/袋"
+},{
+  "firstResult": "违规",
+  "machineAudit":"疑似违规",
+  "itemNum": "11801003206363210602",
+  "itemName": "10%葡萄糖",
+  "medicalType": "甲类",
+  "itemCost": "27.86",
+  "totalCost": "",
+  "itemAmount": "7",
+  "itemPrice": "3.98",
+  "itemStandards": "10% 500毫升/袋"
+},{
+  "firstResult": "违规",
+  "machineAudit":"疑似违规",
+  "itemNum": "725010300100",
+  "itemName": "粪便常规",
+  "medicalType": "甲类",
+  "itemCost": "1.9",
+  "totalCost": "",
+  "itemAmount": "1",
+  "itemPrice": "1.9",
+  "itemStandards": "次"
+},{
+  "firstResult": "违规",
+  "machineAudit":"疑似违规",
+  "itemNum": "11801003206363210602",
+  "itemName": "Ⅱ级护理",
+  "medicalType": "甲类",
+  "itemCost": "36",
+  "totalCost": "",
+  "itemAmount": "3",
+  "itemPrice": "6",
+  "itemStandards": "次"
+},{
+  "firstResult": "违规",
+  "machineAudit":"疑似违规",
+  "itemNum": "11099027177299230501",
+  "itemName": "伊立替康(开普拓)注射液",
+  "medicalType": "乙类",
+  "itemCost": "6444.96",
+  "totalCost": "",
+  "itemAmount": "3",
+  "itemPrice": "2148.32",
+  "itemStandards": "0.1g 5ml/支"
+},{
+  "firstResult": "违规",
+  "machineAudit":"疑似违规",
+  "itemNum": "11101004177109410101",
+  "itemName": "苯海拉明",
+  "medicalType": "甲类",
+  "itemCost": "3.4",
+  "totalCost": "",
+  "itemAmount": "2",
+  "itemPrice": "1.7",
+  "itemStandards": "20MG 1ML/安瓶"
+},{
+  "firstResult": "违规",
+  "machineAudit":"疑似违规",
+  "itemNum": "11801003206363210602",
+  "itemName": "甲氧氯普胺",
+  "medicalType": "甲类",
+  "itemCost": "2.1",
+  "totalCost": "",
+  "itemAmount": "6",
+  "itemPrice": "0.35",
+  "itemStandards": "10mg 1ml/支"
+}]
+}

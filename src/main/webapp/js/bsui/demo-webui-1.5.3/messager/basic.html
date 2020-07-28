@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Messager - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<link rel="stylesheet" type="text/css" href="../../bootstrap-v4/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../fonts/css/font.min.css"/>
+	<script src="../../bootstrap-v4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../bootstrap-v4/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic Messager</h2>
+	<p>Click on each button to see a distinct message box.</p>
+	
+	<div style="margin:20px 0;">
+		<a href="#" class="bsui-linkbutton btn-primary" onclick="show()">Show</a>
+		<a href="#" class="bsui-linkbutton btn-info" onclick="slide()">Slide</a>
+		<a href="#" class="bsui-linkbutton btn-success" onclick="fade()">Fade</a>
+		<a href="#" class="bsui-linkbutton btn-warning" onclick="progress()">Progress</a>
+	</div>
+	
+	<script type="text/javascript">
+		function show(){
+			$CommonUI.autoCloseRightBottomMessage('Message will be closed after 4 seconds.','My Title', 4000, 'show');
+		}
+		function slide(){
+			$CommonUI.autoCloseRightBottomMessage('Message will be closed after 5 seconds.','My Title', 5000, 'slide');
+		}
+		function fade(){
+			$CommonUI.autoCloseRightBottomMessage('Message never be closed.','My Title', 0, 'fade');
+		}
+		function progress(){
+			$CommonUI.progress({
+				title:'Please waiting',
+				msg:'Loading data...'
+			});
+			/*var win = $.messager.progress({
+				title:'Please waiting',
+				msg:'Loading data...'
+			});*/
+			setTimeout(function(){
+				$CommonUI.progress('close');
+				//$.messager.progress('close');
+			},5000);
+		}
+	</script>
+</body>
+</html>

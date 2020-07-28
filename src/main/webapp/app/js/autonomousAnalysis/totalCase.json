@@ -1,0 +1,79 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 3
+  ,"data": [{
+    "id": "10001"
+    ,"name": "第一医院"
+    ,"totalNumber": "57"
+    ,"number": "100"
+    ,"moneyRait": "48%"
+    ,"money": "1512"
+    ,"rank":"1"
+  },
+  {
+      "id": "10002"
+    ,"name": "第二医院"
+    ,"totalNumber": "57"
+    ,"number": "200"
+    ,"moneyRait": "48%"
+    ,"money": "1512"
+    ,"rank":"2"
+  },
+  {
+      "id": "10003"
+    ,"name": "第三医院"
+    ,"totalNumber": "58"
+    ,"number": "300"
+    ,"moneyRait": "48%"
+    ,"money": "1512"
+    ,"rank":"3"
+  },
+  {
+      "id": "10004"
+    ,"name": "第四医院"
+    ,"totalNumber": "58"
+    ,"number": "400"
+    ,"moneyRait": "48%"
+    ,"money": "1512"
+    ,"rank":"4"
+  },
+  {
+      "id": "10005"
+    ,"name": "第五医院"
+    ,"totalNumber": "58"
+    ,"number": "500"
+    ,"moneyRait": "48%"
+    ,"money": "1512"
+    ,"rank":"5"
+  },
+  {
+      "id": "10006"
+    ,"name": "第六医院"
+    ,"totalNumber": "58"
+    ,"number": "600"
+    ,"moneyRait": "48%"
+    ,"money": "1512"
+    ,"rank":"6"
+  },
+  {
+      "id": "10007"
+    ,"name": "第七医院"
+    ,"totalNumber": "58"
+    ,"number": "700"
+    ,"moneyRait": "48%"
+    ,"money": "1512"
+    ,"rank":"7"
+  },
+  {
+      "id": "10008"
+    ,"name": "第八医院"
+    ,"totalNumber": "58"
+    ,"number": "800"
+    ,"moneyRait": "48%"
+    ,"money": "1512"
+    ,"rank":"8"
+  }
+ ]
+}  

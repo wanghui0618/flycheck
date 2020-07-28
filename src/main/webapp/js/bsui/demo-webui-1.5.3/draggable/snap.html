@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Snap Draggable - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Snap Draggable</h2>
+	<p>This sample shows how to snap a draggable object to a 20x20 grid.</p>
+	<div style="margin:20px 0;"></div>
+	<div class="bsui-panel" style="position:relative;overflow:hidden;width:500px;height:300px">
+		<div class="bsui-draggable" data-options="onDrag:onDrag" style="width:100px;height:100px;background:#fafafa;border:1px solid #ccc;">
+		</div>
+	</div>
+	<script>
+		function onDrag(e){
+			var d = e.data;
+			d.left = repair(d.left);
+			d.top = repair(d.top);
+			
+			function repair(v){
+				var r = parseInt(v/20)*20;
+				if (Math.abs(v % 20) > 10){
+					r += v > 0 ? 20 : -20;
+				}
+				return r;
+			}
+		}
+	</script>
+
+</body>
+</html>

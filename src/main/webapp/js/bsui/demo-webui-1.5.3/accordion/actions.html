@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Accordion Actions - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Accordion Actions</h2>
+	<p>Click the buttons below to add or remove accordion items.</p>
+	<div style="margin:20px 0 10px 0;">
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="selectPanel()">Select</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="addPanel()">Add</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="removePanel()">Remove</a>
+	</div>
+	<div id="aa" class="bsui-accordion" style="width:500px;">
+		<div title="About" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
+			<h3 style="color:#0099FF;">Accordion for jQuery</h3>
+			<p>Accordion is a part of bsui framework for jQuery. It lets you define your accordion component on web page more easily.</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function selectPanel(){
+			$CommonUI.prompt('请输入内容', 'info', '确定', function(s) {
+				if (s){
+					$CommonUI.getAccordion('#aa').accordion('select',s);
+				}
+			},'取消',function(){
+				$CommonUI.alert('取消并退出');
+			},'标题',true);
+			/*$.messager.prompt('Prompt','Please enter the panel title:',function(s){
+				if (s){
+					$('#aa').accordion('select',s);
+				}
+			});*/
+		}
+		var idx = 1;
+		function addPanel(){
+			$CommonUI.getAccordion('#aa').accordion('add',{
+				title:'Title'+idx,
+				content:'<div style="padding:10px">Content'+idx+'</div>'
+			});
+			idx++;
+		}
+		function removePanel(){
+			var pp = $('#aa').accordion('getSelected');
+			if (pp){
+				var index = $CommonUI.getAccordion('#aa').accordion('getPanelIndex',pp);
+				$('#aa').accordion('remove',index);
+			}
+		}
+	</script>
+</body>
+</html>

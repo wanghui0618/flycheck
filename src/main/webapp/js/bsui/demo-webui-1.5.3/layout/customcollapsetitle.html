@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Custom Collapse Title in Layout - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Custom Collapse Title in Layout</h2>
+	<p>Any components can display on the title bar of a collapsed panel.</p>
+	<div style="margin:20px 0;"></div>
+	<div id="cc" class="bsui-layout" style="width:700px;height:350px;">
+		<div data-options="region:'east',split:true,hideCollapsedContent:false" title="East" style="width:100px;"></div>
+		<div data-options="region:'west',split:true,collapsed:true,
+				hideExpandTool: true,
+				expandMode: null,
+				hideCollapsedContent: false,
+				collapsedSize: 135,
+				collapsedContent: function(){
+					return $('#titlebar');
+				}
+				" title="West" style="width:100px;"></div>
+		<div data-options="region:'center',title:'Main Title'">
+			<table class="bsui-datagrid"
+					data-options="url:'datagrid_data1.json',method:'get',border:false,singleSelect:true,fit:true,fitColumns:true">
+				<thead>
+					<tr>
+						<th data-options="field:'itemid'" width="80">Item ID</th>
+						<th data-options="field:'productid'" width="100">Product ID</th>
+						<th data-options="field:'listprice',align:'right'" width="80">List Price</th>
+						<th data-options="field:'unitcost',align:'right'" width="80">Unit Cost</th>
+						<th data-options="field:'attr1'" width="150">Attribute</th>
+						<th data-options="field:'status',align:'center'" width="60">Status</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<div id="titlebar" style="padding:2px">
+		<a href="javascript:void(0)" class="bsui-linkbutton" style="width:100%" data-options="iconCls:'layout-button-right'" onclick="$CommonUI.getLayout('#cc').layout('expand','west')"></a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" style="width:100%" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">Picture</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" style="width:100%" data-options="iconCls:'icon-large-shapes',size:'large',iconAlign:'top'">Shapes</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" style="width:100%" data-options="iconCls:'icon-large-smartart',size:'large',iconAlign:'top'">SmartArt</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" style="width:100%" data-options="iconCls:'icon-large-chart',size:'large',iconAlign:'top'">Chart</a>
+	</div>
+</body>
+</html>

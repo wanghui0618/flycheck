@@ -1,0 +1,49 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 3
+  ,"data": [{
+    "id": "10001"
+    ,"hospitalCode": "7437898"
+    ,"hospitalName": "刘强华"
+    ,"hospitalName1": "商丘市第一人民医院"
+    ,"hospitalName2": "2236.00"
+    ,"hospitalName3": "先天性畸形"
+    ,"hospitalName4": "阑尾炎手术"
+  },
+  {
+    "id": "10002"
+    ,"hospitalCode": "4345654"
+    ,"hospitalName": "张和昌"
+    ,"hospitalName1": "海南市中医院"
+    ,"hospitalName2": "3325.00"
+    ,"hospitalName3": "重症感染"
+    ,"hospitalName4": "地塞米松磷酸钠"
+  },
+  {
+    "id": "10003"
+    ,"hospitalCode": "5876544"
+    ,"hospitalName": "吴永林"
+    ,"hospitalName1": "第一人民医院"
+    ,"hospitalName2": "4842.00"
+    ,"hospitalName3": "腿骨断裂"
+    ,"hospitalName4": "阑尾炎手术"
+  },{
+    "id": "10004"
+    ,"hospitalCode": "975372"
+    ,"hospitalName": "陈刚"
+    ,"hospitalName1": "北京市第一人民医院"
+    ,"hospitalName2": "5328.00"
+    ,"hospitalName3": "脑梗死"
+    ,"hospitalName4": "尿常规"
+  },{
+    "id": "10005"
+    ,"hospitalCode": "285672"
+    ,"hospitalName": "赵晓霞"
+    ,"hospitalName1": "四川省省立医院"
+    ,"hospitalName2": "5249.00"
+    ,"hospitalName3": "直肠癌"
+    ,"hospitalName4": "直肠癌手术"
+  }]
+}  

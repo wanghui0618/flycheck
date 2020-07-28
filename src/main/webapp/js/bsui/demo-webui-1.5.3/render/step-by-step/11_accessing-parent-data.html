@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link href="../resources/demos.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/movielist.css" rel="stylesheet" type="text/css" />
+	<script src="../../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+	pre { font-size:10pt; font-weight:bold; }
+	</style>
+</head>
+<body>
+<h3>Example Scenario: Accessing parent data.</h3>
+
+<!---------------------- First Example ---------------------->
+
+<div class="subhead">Stepping up through the views (tree of nested rendered templates)</div>
+
+<pre>
+var model = {
+    specialMessage: function(...) { ... },
+    theater: "Rialto",
+    movies: [ ... ]
+}
+
+{{for movies}}
+    &lt;tr>
+        &lt;td>'{{>title}}': showing at the '{{>#parent.parent.data.theater}}'&lt;/td>
+</pre>
+
+<table>
+	<thead><tr><th>Title</th><th>Languages (+specialMessage)</th></tr></thead>
+	<tbody id="movieList1"></tbody>
+</table>
+
+<!---------------------- Second Example ---------------------->
+
+<div class="subhead">Setting contextual template parameters, accessible in all nested contexts as <em>~nameOfParameter</em>:</div>
+
+<pre>
+{{for movies ~theater=theater}}
+    &lt;tr>
+        &lt;td>'{{>title}}': showing at the '{{>~theater}}'&lt;/td>
+</pre>
+
+<table>
+	<thead><tr><th>Title</th><th>Languages (+specialMessage)</th></tr></thead>
+	<tbody id="movieList2"></tbody>
+</table>
+
+<!---------------------- Third Example ---------------------->
+
+<div class="subhead">Using the top-level data, accessible in all nested contexts as <em>~root</em>:</div>
+
+<pre>
+{{for movies}}
+    &lt;tr>
+        &lt;td>'{{>title}}': showing at the '{{>~root.theater}}'&lt;/td>
+</pre>
+
+<table>
+	<thead><tr><th>Title</th><th>Languages (+specialMessage)</th></tr></thead>
+	<tbody id="movieList3"></tbody>
+</table>
+
+<!--=================== Demo ===================-->
+
+<!------------------ Templates ------------------>
+
+<script id="movieTemplate1" type="text/x-jsrender">
+	{{for movies}}
+		<tr>
+			<td>'{{>title}}': showing at the '{{>#parent.parent.data.theater}}'</td>
+			<td>
+				{{if languages}}
+					{{for languages}}
+						{{>#data}}{{>#parent.parent.parent.parent.parent.data.specialMessage(#data, #parent.parent.data.title)}}<br/>
+					{{/for}}
+				{{/if}}
+			</td>
+		</tr>
+	{{/for}}
+</script>
+
+<script id="movieTemplate2" type="text/x-jsrender">
+	{{for movies ~theater=theater ~specialMessage=specialMessage}}
+		<tr>
+			<td>'{{>title}}': showing at the '{{>~theater}}'</td>
+			<td>
+				{{for languages ~title=title}}
+					{{>#data}}{{>~specialMessage(#data, ~title)}}<br/>
+				{{/for}}
+			</td>
+		</tr>
+	{{/for}}
+</script>
+
+<script id="movieTemplate3" type="text/x-jsrender">
+	{{for movies}}
+		<tr>
+			<td>'{{>title}}': showing at the '{{>~root.theater}}'</td>
+			<td>
+				{{for languages ~title=title}}
+					{{>#data}}{{>~root.specialMessage(#data, ~title)}}<br/>
+				{{/for}}
+			</td>
+		</tr>
+	{{/for}}
+</script>
+
+<!------------------ Script ------------------>
+
+<script type="text/javascript">
+
+	var model = {
+		specialMessage: function(language, title) {
+			if (language === "French" && title === "City Hunter") { return ": (special offer)"; }
+		},
+		theater: "Rialto",
+
+		movies: [
+			{
+				title: "Meet Joe Black",
+				languages: [
+					"English",
+					"French"
+				]
+			},
+			{
+				title: "City Hunter",
+				languages: [
+					"Mandarin",
+					"French",
+					"Chinese"
+				]
+			}
+		]
+	};
+
+	$CommonUI.jsrender({obj:"#movieList1", tmpl:"#movieTemplate1", data: model});
+	$CommonUI.jsrender({obj:"#movieList2", tmpl:"#movieTemplate2", data: model});
+	$CommonUI.jsrender({obj:"#movieList3", tmpl:"#movieTemplate3", data: model});
+
+</script>
+
+</body>
+</html>

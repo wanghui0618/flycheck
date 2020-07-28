@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Validate On Blur - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/tooltip.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Validate On Blur</h2>
+	<p>Active validation on first blur event.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<div class="bsui-panel" title="Register" style="width:400px;padding:10px 60px 20px 60px">
+		<table cellpadding="5">
+			<tr style="height: 3em;">
+				<td>User Name：</td>
+				<td><input class="bsui-validatebox" data-options="required:true,validType:'length[3,10]',novalidate:true" style="width:100%;"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Email：</td>
+				<td><input class="bsui-validatebox" data-options="required:true,validType:'email',novalidate:true" style="width:100%;"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Birthday：</td>
+				<td><input class="bsui-datebox form-control" data-options="required:true,novalidate:true" style="width:100%;"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>URL：</td>
+				<td><input class="bsui-validatebox" data-options="required:true,validType:'url',novalidate:true" style="width:100%;"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Phone：</td>
+				<td><input class="bsui-validatebox" data-options="required:true,novalidate:true" style="width:100%;"></td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$('.validatebox-text').bind('blur', function(){
+				$CommonUI.getValidateBox(this).validatebox('enableValidation').validatebox('validate');
+			});
+		})
+	</script>
+	<!--<style scoped="scoped">
+		.textbox{
+			height:20px;
+			margin:0;
+			padding:0 2px;
+			box-sizing:content-box;
+		}
+	</style>-->
+
+</body>
+</html>

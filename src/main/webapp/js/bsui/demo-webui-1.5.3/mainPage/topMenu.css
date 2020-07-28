@@ -1,0 +1,401 @@
+@CHARSET "UTF-8";
+
+/* ==============================================
+ * main page style  
+ * @Auth: lifei
+ * @Date: 2017/1/16
+ * ==============================================*/
+
+/* ----------------------------------------------
+ * Core: Genral Layout Style
+ * ---------------------------------------------- */
+html,body {
+	height: 100%;
+}
+body {
+	font-weight: 400;
+	/*overflow: auto;*/
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
+  	overflow-y: auto;
+  	
+}
+/*.wrapper:before,
+.wrapper:after {
+  content: " ";
+  display: table;
+}
+.wrapper:after {
+  clear: both;
+}*/
+
+/*Lauyot*/
+.wrapper header {
+	margin-bottom: 0;
+	border-bottom-width: 0;
+	/*z-index: 9001;*/
+}
+
+.aside-tool {
+	position: fixed;
+	top: 137px;
+	right: 0;
+	width: 35px;
+	height: 43px;
+	padding: 7px 0;
+	font-size: 1.3em;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	z-index: 2;
+	text-align: center;
+	cursor: pointer;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	border-right: 0;
+}
+
+.page-wrapper {
+	position: inherit;
+	margin: 120px 0 0 0;
+	padding: 0 10px/*0 35px 0 30px*/;
+	height: -webkit-calc(100% - 120px);
+	height: -moz-calc(100% - 120px);
+	height: calc(100% - 120px);
+}
+
+.breadcrumb {
+	/*position: fixed;
+	width: 100%;
+	height: 44px;
+	z-index: 1;
+	border-top: 1px solid #dadbdc;*/
+	margin-bottom: 0;
+	margin-left: 14px;
+	padding-left: 0;
+}
+.breadcrumb > li:first-child {
+	font-size: 16px;
+}
+.breadcrumb > li:not(.active) > a {
+	color: #888;
+}
+.breadcrumb > .active {
+	color: #555
+}
+.breadcrumb > li:first-child + li:before {
+	content: "/";
+}
+.breadcrumb > li + li:before {
+	content: "/";
+	color: #888;
+	vertical-align: -webkit-calc(2px);
+	vertical-align: -moz-calc(2px);
+	vertical-align: calc(2px);
+	padding-right: 10px;
+}
+
+.logo {
+    float: left;
+    height: 65px;
+    padding: 18px 0 16px 25px;
+}
+.logo img {
+	height: 31px;
+}
+
+/*Top links*/
+.navbar-top-links {
+	margin-right: 0;
+}
+.navbar-top-links > li {
+	display: inline;
+	float: left;
+}
+.navbar-top-links > li:last-child {
+	margin-right: 15px;
+}
+.navbar-top-links > li > a {
+	min-height: 64px;
+	line-height: 44px;
+	color: #787878;
+}
+.navbar-top-links > li > a > img {
+	height: 2.5em;
+	margin: .3em .5em 0 0;
+}
+.navbar-top-links > li > a .user {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+.navbar-top-links > li > a .icon {
+	font-size: 1.5em;
+}
+.tips {
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	width: 1.4em;
+	height: 1.4em;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	background-color: #f54130;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 10px;
+}
+
+/*Top links dropdown menu*/
+.navbar-top-links > .dropdown-operates > .dropdown-menu {
+	padding: 8px 0;
+}
+.navbar-top-links > .dropdown-operates > .dropdown-menu > li > a {
+	padding: 8px 17px;
+}
+.navbar-top-links > .dropdown-operates > .dropdown-menu > li > a > .fa {
+	color: #757575;
+}
+.navbar-top-links > .dropdown-operates > .dropdown-menu > li > a > span {
+	margin-left: 10px;
+	color: #6e6e6e;
+}
+
+.navbar-top-links > .dropdown-messages > .dropdown-menu {
+	padding: 0;
+}
+
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li {
+	position: relative;
+    width: 310px;
+    min-width: 0;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li.header {
+	padding: 15px 20px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li.header > label {
+	margin-bottom: 0;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li.header > .badge {
+	background-color: #f54130;
+	margin-top: 2px;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li .menu {
+	max-height: 200px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow-x: hidden;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li .menu > li > a {
+	margin: 0;
+	padding: 10px 20px;
+	display: block;
+	white-space: nowrap;
+	border-bottom: 1px solid #e0e0e0;
+	color: #6e6e6e;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li .menu > li > a:hover {
+	background-color: #eee;
+	text-decoration: none;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li .menu > li > a > span {
+	width: 1.8em;
+	height: 1.8em;
+	border-radius: 100%;
+	background-color: #f54130;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	margin-right: .8em;
+	/*font-size: .8em;*/
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li .menu > li > a > p {
+	margin-bottom: 0;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li.footer {
+	padding: 15px 20px;
+	border-top: 1px solid #e0e0e0;
+	background-color: #eee;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li.footer > a {
+	display: inline;
+	padding: 0;
+	color: #888;
+}
+.navbar-top-links > .dropdown-messages > .dropdown-menu > li.footer > a:hover {
+	background-color: transparent;
+}
+
+/*menu*/
+.main-sidebar {
+	position: fixed;
+	top: 65px;
+	height: 55px;
+	width: 100%;
+	z-index: 3;
+}
+
+.main-sidebar > .menu-btn,
+.main-sidebar > .sidebar-menu {
+	position: relative;
+	float: left;
+}
+
+.menu-btn {
+	width: 30px;
+	height: 55px;
+	line-height: 55px;
+	z-index: 1;
+	color: #fff;
+}
+.menu-btn > .fa {
+	cursor: pointer;
+}
+
+.sidebar-menu {
+  	list-style: none;
+  	display: block;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+	width: -webkit-calc(100% - 60px);
+	width: -moz-calc(100% - 60px);
+	width: calc(100% - 60px);
+}
+
+.sidebar-menu > li {
+  	position: relative;
+  	margin: 0;
+  	padding: 0;
+  	display: inline-block;
+}
+
+.sidebar-menu > li+li:before {
+	float: left;
+	content: "";
+	height: 55px;
+}
+
+.sidebar-menu > li > a {
+	height: 55px;
+	line-height: 55px;
+	padding: 0 20px;
+	display: inline-block;
+	text-decoration: none;
+}
+/*.sidebar-menu > li > a > .fa,
+.sidebar-menu > li > a > .glyphicon,
+.sidebar-menu > li > a > .ion {
+  	width: 20px;
+}*/
+.sidebar-menu li > a > .fa-angle-down {
+  	width: auto;
+  	height: auto;
+  	padding: 0;
+  	margin-top: 20px;
+ 	margin-left: 10px;
+}
+/*.sidebar-menu li.sidemenu-active > .treeview-menu {
+  	display: block;
+}*/
+.sidebar-menu li.sidemenu-active > a > .fa-angle-right {
+	-webkit-transform: rotate(90deg);
+  	-ms-transform: rotate(90deg);
+  	-o-transform: rotate(90deg);
+  	transform: rotate(90deg);
+}
+.sidebar-menu .treeview-menu {
+	display: none;
+  	list-style: none;
+  	padding: 0;
+  	margin: 0;
+  	/*padding-left: 5px;*/
+}
+.sidebar-menu > li > .treeview-menu {
+	/*position: fixed;
+	top: 120px;*/
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	margin-top: 2px;
+	width: 200px;
+	border: 1px solid #dadada;
+	border-radius: 4px;
+	color: #555;
+	padding: 10px 0;
+}
+/*.sidebar-menu .treeview-menu .treeview-menu {
+  	padding-left: 20px;
+}*/
+.sidebar-menu .treeview-menu > li {
+  	margin: 0;
+}
+.sidebar-menu .treeview-menu > li > a {
+  	display: block;
+  	font-size: 14px;
+  	text-decoration: none;
+  	padding-top: 10px;
+  	padding-bottom: 10px;
+  	padding-right: 19px;
+  	/*padding: 10px 15px 10px 0;*/
+}
+/*.sidebar-menu .treeview-menu > li > a > .fa,
+.sidebar-menu .treeview-menu > li > a > .glyphicon,
+.sidebar-menu .treeview-menu > li > a > .ion {
+  	width: 20px;
+}*/
+.sidebar-menu .treeview-menu > li > a > .fa-angle-right {
+	position: absolute;
+	right: 0;
+  	margin-top: 3px;
+}
+
+.sidemenu-icon {
+	float: left;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	margin: 19px 9px 0 0;
+}
+
+.sidemenu-name {
+	display: inline-block;
+	font-size: 1.1em;
+}
+.sidebar-menu > li > .treeview-menu .sidemenu-icon{
+	float: left;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	margin: 3px 9px 0 0;
+}
+.sidebar-menu > li > .treeview-menu .sidemenu-name{
+	display: inline-block;
+	font-size: 1.1em;
+}
+.level {
+	padding-left: 1.8em;
+}
+.level-2 {
+	padding-left: 21px;
+}
+.level-3 {
+	padding-left: 33px;
+}
+
+.menu-symbol {
+	display: inline-block;
+	width: 3px;
+	height: 3px;
+	background-color: #6e6e6e;
+	margin-top: 9px;
+}
+li:hover > a > .menu-symbol, .sidemenu-active > a > .menu-symbol {
+	background-color: #499ee9;
+}

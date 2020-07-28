@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic PropertyGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.validatebox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic PropertyGrid</h2>
+	<p>Click on row to change each property value.</p>
+	<div style="margin:20px 0;">
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="showGroup()">ShowGroup</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="hideGroup()">HideGroup</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="showHeader()">ShowHeader</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="hideHeader()">HideHeader</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="getChanges()">GetChanges</a>
+	</div>
+	<table id="pg" class="bsui-propertygrid" style="width:300px" data-options="
+				url:'propertygrid_data1.json',
+				method:'get',
+				showGroup:true,
+				scrollbarSize:0
+			">
+	</table>
+
+	<script type="text/javascript">
+		function showGroup(){
+			$CommonUI.getPropertyGrid('#pg').propertygrid({
+				showGroup:true
+			});
+		}
+		function hideGroup(){
+			$CommonUI.getPropertyGrid('#pg').propertygrid({
+				showGroup:false
+			});
+		}
+		function showHeader(){
+			$CommonUI.getPropertyGrid('#pg').propertygrid({
+				showHeader:true
+			});
+		}
+		function hideHeader(){
+			$CommonUI.getPropertyGrid('#pg').propertygrid({
+				showHeader:false
+			});
+		}
+		function getChanges(){
+			var s = '';
+			var rows = $CommonUI.getPropertyGrid('#pg').propertygrid('getChanges');
+			for(var i=0; i<rows.length; i++){
+				s += rows[i].name + ':' + rows[i].value + ',';
+			}
+			$CommonUI.alert(s)
+		}
+	</script>
+</body>
+</html>

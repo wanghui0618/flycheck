@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Window - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Basic Window</h2>
+		<p>Window can be dragged freely on screen.</p>
+		
+		<div style="margin:20px 0;">
+			<button type="button" class="bsui-linkbutton btn-primary" onclick="$CommonUI.getWindow('#w').window('open')">打开</button>
+			<button type="button" class="bsui-linkbutton btn-primary" onclick="$CommonUI.getWindow('#w').window('close')">关闭</button>
+		</div>
+		
+		<div id="w" class="bsui-window" title="Basic Window" data-options="modal:true,closed:true,iconCls:'icon-save'" style="width:500px;height:200px;padding:10px;">
+			The window content.
+		</div>
+		
+		<button class="btn btn-primary btn-lg" data-toggle="modal" 
+   			data-target="#myModal">
+   			bootstrap模态框
+		</button>
+		
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" backdrop="static"  tabindex="-1" role="dialog" 
+   			aria-labelledby="myModalLabel" aria-hidden="true">
+   			<div class="modal-dialog">
+      			<div class="modal-content">
+         			<div class="modal-header">
+            			<button type="button" class="close" 
+               				data-dismiss="modal" aria-hidden="true">
+                  			&times;
+            			</button>
+            			<h4 class="modal-title" id="myModalLabel">
+               				模态框（Modal）标题
+            			</h4>
+         			</div>
+         			<div class="modal-body">
+            			<button class="btn btn-primary" data-toggle="modal" data-target="#alert">打开提示窗</button>
+         			</div>
+         			<div class="modal-footer">
+            			<button type="button" class="btn btn-default" 
+               				data-dismiss="modal">关闭
+            			</button>
+            			<button type="button" class="btn btn-primary">
+               				提交更改
+            			</button>
+         			</div>
+      			</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+		
+		<div class="modal fade" id="alert" backdrop="false" tabindex="-1" role="dialog" 
+   			aria-labelledby="myLabel" aria-hidden="true">
+   			<div class="modal-dialog">
+      			<div class="modal-content">
+         			<div class="modal-header">
+            			<button type="button" class="close" 
+               				data-dismiss="modal" aria-hidden="true">
+                  			&times;
+            			</button>
+            			<h4 class="modal-title" id="myLabel">
+               				模态框（Modal）标题
+            			</h4>
+         			</div>
+         			<div class="modal-body">
+            			<form role="form">
+            				<fieldset>
+            					<legend>笔记本</legend>
+            					<table>
+            						<tr>
+            							<th>编号：</th>
+            							<td>jd02000001</td>
+            						</tr>
+            						<tr>
+            							<th>名称：</th>
+            							<td>笔记本电脑</td>
+            						</tr>
+            					</table>
+            				</fieldset>
+            			</form>
+         			</div>
+         			<div class="modal-footer">
+            			<button type="button" class="btn btn-default" 
+               				data-dismiss="modal">关闭
+            			</button>
+            			<button type="button" class="btn btn-primary">
+               				提交更改
+            			</button>
+         			</div>
+      			</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+		
+	</div>
+</body>
+</html>

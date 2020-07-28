@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link href="../resources/demos.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/movielist.css" rel="stylesheet" type="text/css" />
+	<script src="../../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<h3>Example Scenario: Using {{props}} tag to iterate through fields</h3>
+
+<pre>
+{{props details}}
+    &lt;b>{{>key}}&lt;/b>: {{>prop}}
+{{/props}}
+</pre>
+
+<table>
+	<thead><tr><th>Title</th><th>Details</th></tr></thead>
+	<tbody id="movieList1"></tbody>
+</table>
+
+<!--=================== Demo ===================-->
+
+<!------------------ Templates ------------------>
+
+<script id="movieTemplate" type="text/x-jsrender">
+	<tr>
+		<td>{{>title}}</td>
+		<td>
+			{{props details}}
+				<div>
+					<b>{{>key}}</b>: {{>prop}}
+				</div>
+			{{/props}}
+		</td>
+	</tr>
+</script>
+
+<!------------------ Script ------------------>
+
+<script type="text/javascript">
+	var movies = [
+		{
+			title: "Meet Joe Black",
+			details: {
+				director: "John",
+				date: "1996",
+				language: "English"
+			}
+		},
+		{
+			title: "Eyes Wide Shut",
+			details: {
+				type: "Comedy",
+				date: "1940"
+			}
+		}
+	];
+	
+	$CommonUI.jsrender({
+		obj: "#movieList1",
+		tmpl: "#movieTemplate",
+		data: movies
+	});
+
+</script>
+
+</body>
+</html>

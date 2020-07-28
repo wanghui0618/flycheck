@@ -1,0 +1,51 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 3
+  ,"data": [{
+    "id": "10001"
+    ,"verifyType": "机审完成"
+    ,"indications": "123"
+    ,"contraindication": "231"
+    ,"sexViolation": "153"
+    ,"hospitalLevelDrug": "145"
+    ,"zhuYuanDrug": "154"
+    ,"birthInsurance": "123"
+    ,"rescueDrug": "46"
+    ,"childDrug": "231"
+    ,"fenJie": "231"
+    ,"repeatCharges": "123"
+    ,"violationPer": "16.54%"
+  },
+  {
+   "id": "10002"
+    ,"verifyType": "人工审完成"
+    ,"indications": "111"
+    ,"contraindication": "222"
+    ,"sexViolation": "143"
+    ,"hospitalLevelDrug": "134"
+    ,"zhuYuanDrug": "143"
+    ,"birthInsurance": "111"
+    ,"rescueDrug": "34"
+    ,"childDrug": "176"
+    ,"fenJie": "198"
+    ,"repeatCharges": "111"
+    ,"violationPer": "14.54%"
+  },
+  {
+   "id": "10003"
+    ,"verifyType": "终审完成"
+    ,"indications": "112"
+    ,"contraindication": "221"
+    ,"sexViolation": "145"
+    ,"hospitalLevelDrug": "122"
+    ,"zhuYuanDrug": "147"
+    ,"birthInsurance": "121"
+    ,"rescueDrug": "44"
+    ,"childDrug": "174"
+    ,"fenJie": "198"
+    ,"repeatCharges": "121"
+    ,"violationPer": "15.54%"
+  }]
+}  

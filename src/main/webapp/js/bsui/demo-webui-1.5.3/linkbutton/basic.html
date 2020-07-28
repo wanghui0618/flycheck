@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic LinkButton - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic LinkButton</h2>
+	<p>Buttons can be created from &lt;a&gt; or &lt;button&gt; elements.</p>
+	
+	<div style="margin:10px 0 40px 0;"></div>
+	<p>Basic Buttons</p>
+	<div style="padding:5px 0;">
+		<a id="btnid" href="#" class="bsui-linkbutton" data-options="authorization:'certCtrl!certList.htm',iconCls:'icon-add'">Add</a>
+		<a href="#" class="bsui-linkbutton" data-options="authorization:'noauthourity',iconCls:'icon-remove'">Remove</a>
+		<a href="#" class="bsui-linkbutton" data-options="iconCls:'icon-save'">Save</a>
+		<a href="#" class="bsui-linkbutton" data-options="iconCls:'icon-cut',disabled:true">Cut</a>
+		<a href="#" class="bsui-linkbutton">Text Button</a>
+	</div>
+	
+	<p>Fixed Width Buttons</p>
+	<div style="padding:5px 0;">
+		<a href="#" class="bsui-linkbutton" data-options="iconCls:'icon-search'" style="width:110px">Search</a>
+		<a href="#" class="bsui-linkbutton" data-options="iconCls:'icon-print'" style="width:100px">Print</a>
+		<a href="#" class="bsui-linkbutton" data-options="iconCls:'icon-reload'" style="width:110px">Reload</a>
+		<a href="#" class="bsui-linkbutton" data-options="iconCls:'icon-help'" style="width:100px">Help</a>
+	</div>
+	
+	<ul class="sidebar-menu" style="margin-top: 2em;">
+		<li class=" treeview" authority="1:L1:userManageCtrl!userManageMain.htm">
+			用户中心
+			<ul class="treeview-menu">
+  				<li authority="1-1:L2:userManageCtrl!userManageSummary.htm">详情</li>
+				<li authority="1-2:L2:praAccountCtrl!praAccountMain.htm">
+					管理员
+        			<ul class="treeview-menu">
+          				<li authority="1-2-1:L3:praAccountCtrl!saveOrUpdatePraAccount.htm"><a href="javascript:void(0);" >添加</a></li>
+          				<li authority="1-2-2:L3:praAccountCtrl!saveOrUpdatePraAccount.htm"><a href="javascript:void(0);" class="triangle">修改</a></li>
+        			</ul>
+				</li>
+    		</ul>
+		</li>
+		<li class="treeview" authority="2:L1:systemManage">系统管理</li>
+	</ul>
+
+	
+</body>
+</html>

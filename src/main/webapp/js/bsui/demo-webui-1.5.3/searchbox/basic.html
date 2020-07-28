@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic SearchBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic SearchBox</h2>
+	<p>Click search button or press enter key in input box to do searching.</p>
+	
+	<div style="margin:20px 0;"></div>
+	<input class="bsui-searchbox" data-options="prompt:'Please Input Value',searcher:doSearch" style="width:300px"></input>
+	<script>
+		function doSearch(value){
+			$CommonUI.alert('You input: ' + value);
+		}
+	</script>
+
+</body>
+</html>

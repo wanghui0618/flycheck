@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Format NumberBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Format NumberBox</h2>
+	<p>Number formatting is the ability to control how a number is displayed.</p>
+	<div style="margin:20px 0;"></div>
+	<table>
+		<tr style="height:3em;">
+			<td>Number in the United States</td>
+			<td><input class="bsui-numberbox value="1234567.89" data-options="precision:2,groupSeparator:','"></input></td>
+		</tr>
+		<tr style="height:3em;">
+			<td>Number in France</td>
+			<td><input class="bsui-numberbox value="1234567.89" data-options="precision:2,groupSeparator:' ',decimalSeparator:','"></input></td>
+		</tr>
+		<tr style="height:3em;">
+			<td>Currency:USD</td>
+			<td><input class="bsui-numberbox value="1234567.89" data-options="precision:2,groupSeparator:',',decimalSeparator:'.',prefix:'$'"></input></td>
+		</tr>
+		<tr style="height:3em;">
+			<td>Currency:EUR</td>
+			<td><input class="bsui-numberbox value="1234567.89" data-options="precision:2,groupSeparator:',',decimalSeparator:' ',prefix:'€'"></input></td>
+		</tr>
+		<tr style="height:3em;">
+			<td></td>
+			<td><input class="bsui-numberbox value="1234567.89" data-options="precision:2,groupSeparator:' ',decimalSeparator:',',suffix:'€'"></input></td>
+		</tr>
+	</table>
+
+</body>
+</html>

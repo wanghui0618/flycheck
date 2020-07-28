@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Window Layout - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Window Layout</h2>
+	<p>Using layout on window.</p>
+	<div style="margin:20px 0;">
+		<button type="button" class="btn btn-primary" onclick="$CommonUI.getWindow('#w').window('open')">打开</button>
+		<button type="button" class="btn btn-primary" onclick="$('#w').window('close')">关闭</button>
+		<!--<a href="javascript:void(0)" class="bsui-linkbutton" onclick="$('#w').window('open')">Open</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="$('#w').window('close')">Close</a>-->
+	</div>
+	
+	<div id="w" class="bsui-window" title="Window Layout" data-options="iconCls:'icon-save'" style="width:600px;height:300px;">
+		<div class="bsui-layout" data-options="fit:true">
+			<div data-options="region:'east',split:true" style="width:100px"></div>
+			<div data-options="region:'center'">
+				jQuery EasyUI framework help you build your web page easily.
+			</div>
+			<div data-options="region:'south'" style="text-align:right;height: 60px;">
+				<!--<button type="button" class="btn btn-primary" onclick="$('#w').window('open')">打开</button>
+				<button type="button" class="btn btn-primary" onclick="$('#w').window('close')">关闭</button>-->
+				<a class="bsui-linkbutton" data-options="iconCls:'icon-ok',size:'xs'" href="javascript:void(0)" onclick="javascript:$CommonUI.alert('ok')" style="width:80px">Ok</a>
+				<a class="bsui-linkbutton" data-options="iconCls:'icon-cancel',size:'xs'" href="javascript:void(0)" onclick="javascript:$CommonUI.alert('cancel')" style="width:80px">Cancel</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

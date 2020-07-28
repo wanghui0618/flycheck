@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Custom ValidateBox Tooltip - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/tooltip.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Custom ValidateBox Tooltip</h2>
+	<p>This sample shows how to display another tooltip message on a valid textbox.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<div class="bsui-panel" title="Register" style="width:400px;padding:10px 60px 20px 60px">
+		<table cellpadding="5">
+			<tr style="height: 3em;">
+				<td>User Name：</td>
+				<td><input class="bsui-validatebox" data-options="prompt:'Enter User Name.',required:true,validType:'length[3,10]'"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Email：</td>
+				<td><input class="bsui-validatebox" data-options="prompt:'Enter a valid email.',required:true,validType:'email'"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Birthday：</td>
+				<td><input class="bsui-datebox" data-options="required:true" style="width:100%"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>URL：</td>
+				<td><input class="bsui-validatebox" data-options="prompt:'Enter your URL.',required:true,validType:'url'"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Phone：</td>
+				<td><input class="bsui-validatebox" data-options="prompt:'Enter your phone number.',required:true"></td>
+			</tr>
+		</table>
+	</div>
+	<!--<style scoped="scoped">
+		.textbox{
+			height:20px;
+			margin:0;
+			padding:0 2px;
+			box-sizing:content-box;
+		}
+	</style>-->
+	<script>
+		$(function(){
+			$CommonUI.getValidateBox('input.bsui-validatebox').validatebox({
+				tipOptions: {	// the options to create tooltip
+					showEvent: 'mouseenter',
+					hideEvent: 'mouseleave',
+					showDelay: 0,
+					hideDelay: 0,
+					zIndex: '',
+					onShow: function(){
+						if (!$(this).hasClass('validatebox-invalid')){
+							if ($(this).tooltip('options').prompt){
+								$(this).tooltip('update', $(this).tooltip('options').prompt);
+							} else {
+								$(this).tooltip('tip').hide();
+							}
+						} else {
+							$(this).tooltip('tip').css({
+								color: '#000',
+								borderColor: '#CC9933',
+								backgroundColor: '#FFFFCC'
+							});
+						}
+					},
+					onHide: function(){
+						if (!$(this).tooltip('options').prompt){
+							$(this).tooltip('destroy');
+						}
+					}
+				}
+			}).tooltip({
+				position: 'right',
+				content: function(){
+					var opts = $(this).validatebox('options');
+					return opts.prompt;
+				},
+				onShow: function(){
+					$(this).tooltip('tip').css({
+						color: '#000',
+						borderColor: '#CC9933',
+						backgroundColor: '#FFFFCC'
+					});
+				}
+			});
+		});
+	</script>
+</body>
+</html>

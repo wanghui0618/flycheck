@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic TextBox - jQuery BsUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Basic TextBox</h2>
+		<p>The textbox allows a user to enter information.</p>
+		<div style="margin:20px 0;"></div>
+	
+		<div style="margin-bottom:20px">
+			<input class="bsui-textbox" label="Email:" labelPosition="top" data-options="prompt:'Enter a email address...',validType:'email'" style="width:100%;">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="bsui-textbox" label="First Name:" labelPosition="top" style="width:100%;">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="bsui-textbox" label="Last Name:" labelPosition="top" style="width:100%;">
+		</div>
+		<div style="margin-bottom:20px">
+			<input id="company" class="bsui-textbox" label="Company:" labelPosition="top" data-options="value:'dhcc'" style="width:100%;">
+		</div>
+		<div style="margin-bottom:20px">
+			<div>Combo</div>
+			<select id="cc" class="bsui-combobox" style="width:30%"></select>
+		</div>
+		
+		<div>
+			<button type="button" class="btn btn-primary">注册</button>
+			<!--<a href="#" class="bsui-linkbutton" iconCls="icon-ok" style="width:100%;height:32px">Register</a>-->
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function() {
+		/*$CommonUI.getTextBox("#company").textbox('initValue', 'dhccccc');
+		var initText = $CommonUI.getTextBox("#company").textbox('getText');
+		var initValue = $CommonUI.getTextBox("#company").textbox('getValue');
+		console.log("\ninitText:" + initText + "\ninitValue:" + initValue);*/
+		
+		/*$CommonUI.getTextBox("#company").textbox('setText', 'tecent');
+		var initText = $CommonUI.getTextBox("#company").textbox('getText');
+		var initValue = $CommonUI.getTextBox("#company").textbox('getValue');
+		console.log("\ninitText:" + initText + "\ninitValue:" + initValue);*/
+		
+		$CommonUI.getTextBox("#company").textbox('setValue', 'tecent');
+		var initText = $CommonUI.getTextBox("#company").textbox('getText');
+		var initValue = $CommonUI.getTextBox("#company").textbox('getValue');
+		console.log("\ninitText:" + initText + "\ninitValue:" + initValue);
+	});
+</script>
+</html>

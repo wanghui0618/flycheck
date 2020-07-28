@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Customize Columns of PropertyGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Customize Columns of PropertyGrid</h2>
+	<p>The columns of PropertyGrid can be changed.</p>
+	<div style="margin:20px 0;"></div>
+	<table class="bsui-propertygrid" style="width:300px" data-options="
+				url: 'propertygrid_data1.json',
+				method: 'get',
+				showGroup: true,
+				scrollbarSize: 0,
+				columns: mycolumns
+			">
+	</table>
+	<script>
+		var mycolumns = [[
+    		{field:'name',title:'MyName',width:100,sortable:true},
+   		    {field:'value',title:'MyValue',width:100,resizable:false}
+        ]];
+	</script>
+</body>
+</html>

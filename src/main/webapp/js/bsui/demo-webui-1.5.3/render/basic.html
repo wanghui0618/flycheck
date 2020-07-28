@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css" />
+		<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body class="container">
+		<!-- Provide container for rendered template output: -->
+		<div id="result"></div>
+
+		<!-- Declare a JsRender template, in a script block: -->
+		<script id="myTmpl" type="text/x-jsrender">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th class="text-center">姓名</th>
+						<th class="text-center">科目</th>
+						<th class="text-center">成绩</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="3" class="text-center" style="vertical-align: middle;">{{:student[0].name}}</td>
+						<td>{{:student[0].items[0].item}}</td>
+						<td>{{:student[0].items[0].score}}</td>
+					</tr>
+					<tr>
+						<td>{{:student[0].items[1].item}}</td>
+						<td>{{:student[0].items[1].score}}</td>
+					</tr>
+					<tr>
+						<td>{{:student[0].items[2].item}}</td>
+						<td>{{:student[0].items[2].score}}</td>
+					</tr>
+					<tr>
+						<td rowspan="3" class="text-center" style="vertical-align: middle;">{{:student[1].name}}</td>
+						<td>{{:student[1].items[0].item}}</td>
+						<td>{{:student[1].items[0].score}}</td>
+					</tr>
+					<tr>
+						<td>{{:student[1].items[1].item}}</td>
+						<td>{{:student[1].items[1].score}}</td>
+					</tr>
+					<tr>
+						<td>{{:student[1].items[2].item}}</td>
+						<td>{{:student[1].items[2].score}}</td>
+					</tr>
+					<tr>
+						<td rowspan="3" class="text-center" style="vertical-align: middle;">{{:student[2].name}}</td>
+						<td>{{:student[2].items[0].item}}</td>
+						<td>{{:student[2].items[0].score}}</td>
+					</tr>
+					<tr>
+						<td>{{:student[2].items[1].item}}</td>
+						<td>{{:student[2].items[1].score}}</td>
+					</tr>
+					<tr>
+						<td>{{:student[0].items[2].item}}</td>
+						<td>{{:student[0].items[2].score}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</script>
+
+		<script>
+			var data = {
+				student: [
+					{name: "张三", items: [
+						{item: "语文", score: 88},
+						{item: "数学", score: 95},
+						{item: "外语", score: 83},
+					]},
+					{name: "王英", items: [
+						{item: "语文", score: 98},
+						{item: "数学", score: 72},
+						{item: "外语", score: 87},
+					]},
+					{name: "赵国武", items: [
+						{item: "语文", score: 64},
+						{item: "数学", score: 92},
+						{item: "外语", score: 77},
+					]}
+				]
+			}; // Define data
+			var html = $CommonUI.jsrender({tmpl:'#myTmpl', data:data});
+			$("#result").html(html); // Insert HTML string into DOM
+		</script>
+	</body>
+
+</html>

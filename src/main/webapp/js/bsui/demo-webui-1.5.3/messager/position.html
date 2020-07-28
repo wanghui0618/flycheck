@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Message Box Position - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<link rel="stylesheet" type="text/css" href="../../bootstrap-v4/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../fonts/css/font.min.css"/>
+	<script src="../../bootstrap-v4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../bootstrap-v4/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Message Box Position</h2>
+	<p>Click the buttons below to display message box on different position.</p>
+	
+	<div style="margin:20px 0;">
+		<p>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-primary" onclick="topLeft();">TopLeft</a>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-primary" onclick="topCenter()">TopCenter</a>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-primary" onclick="topRight()">TopRight</a>
+		</p>
+		<p>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-info" onclick="centerLeft()">CenterLeft</a>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-info" onclick="center()">Center</a>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-info" onclick="centerRight()">CenterRight</a>
+		</p>
+		<p>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-success" onclick="bottomLeft()">BottomLeft</a>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-success" onclick="bottomCenter()">BottomCenter</a>
+			<a href="javascript:void(0)" class="bsui-linkbutton btn-success" onclick="bottomRight()">BottomRight</a>
+		</p>
+	</div>
+	
+	<script>
+		function topLeft(){
+			$CommonUI.autoCloseMessage('The message content','My Title',4000,'show','top-left');
+		}
+		function topCenter(){
+			$CommonUI.autoCloseMessage('The message content','My Title',1000,'slide','top-center');
+		}
+		function topRight(){
+			$CommonUI.autoCloseMessage('The message content','My Title',1000,'fade','top-right');
+		}
+		function centerLeft(){
+			$CommonUI.autoCloseMessage('The message content','My Title',5000,'fade','center-left');
+		}
+		function center(){
+			$CommonUI.autoCloseMessage('The message content','My Title',1000,'show','center');
+		}
+		function centerRight(){
+			$CommonUI.autoCloseMessage('The message content','My Title',1000,'slide','center-right');
+		}
+		function bottomLeft(){
+			$CommonUI.autoCloseMessage('The message content','My Title',1000,'slide','bottom-left');
+		}
+		function bottomCenter(){
+			$CommonUI.autoCloseMessage('The message content','My Title',1000,'show','bottom-center');
+		}
+		function bottomRight(){
+			$CommonUI.autoCloseMessage('The message content','My Title',1000,'fade','bottom-right');
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+[{
+	"text": "常用组件示例",
+	"url": null,
+	"imgUrl": "fa fa-folder-open",
+	"level":"1",
+	"children": [{
+		"text": "表单回填及遍历",
+		 "url": "form.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	}, {
+		"text": "自定义按钮",
+		 "url": "button.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	}, {
+		"text": "公共函数",
+		 "url": "common.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	}, {
+		"text": "$CommonUI",
+		 "url": "commonUI.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	}]
+ }, {
+	 "text": "bsui基础组件",
+	 "url": null,
+	 "imgUrl": "fa fa-folder-open",
+	 "level": "1",
+	 "children": [{
+		 "text": "easyloader",
+		 "url": "../easyloader/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+		 "text": "draggable",
+		 "url": null,
+		 "imgUrl": "fa fa-folder-open",
+		 "level": "2",
+		 "children": [{
+			 "text": "Basic",
+			 "url": "../draggable/basic.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Constrain",
+			 "url": "../draggable/constrain.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Snap",
+			 "url": "../draggable/snap.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }]
+	 }, {
+		 "text": "droppable",
+		 "url": null,
+		 "imgUrl": "fa fa-folder-open",
+		 "level": "2",
+		 "children": [{
+			 "text": "Basic",
+			 "url": "../droppable/basic.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Accept",
+			 "url": "../droppable/accept.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Change Order",
+			 "url": "../droppable/sort.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }]
+	 }, {
+		 "text": "resizable",
+		 "url": "../resizable/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+		 "text": "pagination",
+		 "url": null,
+		 "imgUrl": "fa fa-folder-open",
+		 "level": "2",
+		 "children": [{
+			 "text": "Basic",
+			 "url": "../pagination/basic.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Custom Buttons",
+			 "url": "../pagination/custombuttons.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Attaching",
+			 "url": "../pagination/attaching.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Simple",
+			 "url": "../pagination/simple.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Links",
+			 "url": "../pagination/links.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Layout",
+			 "url": "../pagination/layout.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }]
+	 }, {
+		 "text": "searchbox",
+		 "url": null,
+		 "imgUrl": "fa fa-folder-open",
+		 "level": "2",
+		 "children": [{
+			 "text": "Basic",
+			 "url": "../searchbox/basic.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Category",
+			 "url": "../searchbox/category.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Fluid",
+			 "url": "../searchbox/fluid.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }]
+	 }, {
+		 "text": "progressbar",
+		 "url": null,
+		 "imgUrl": "fa fa-folder-open",
+		 "level": "2",
+		 "children": [{
+			 "text": "Basic",
+			 "url": "../progressbar/basic.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Fluid",
+			 "url": "../progressbar/fluid.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }]
+	 }, {
+		 "text": "tooltip",
+		 "url": null,
+		 "imgUrl": "fa fa-folder-open",
+		 "level": "2",
+		 "children": [{
+			 "text": "Basic",
+			 "url": "../tooltip/basic.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Position",
+			 "url": "../tooltip/position.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Custom Content",
+			 "url": "../tooltip/customcontent.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Custom Style",
+			 "url": "../tooltip/customstyle.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Ajax Tooltip",
+			 "url": "../tooltip/ajax.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Tooltip Dialog",
+			 "url": "../tooltip/tooltipdialog.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "Tooltip as ToolBar",
+			 "url": "../tooltip/toolbar.html",
+			 "imgUrl": null,
+			 "level": "3"
+		 }]
+	 }]
+ }, {
+	 "text": "bsui布局组件",
+	 "url": null,
+	 "imgUrl": "fa fa-folder-open",
+	 "level": "1",
+	 "children": [{
+	 	 "text": "panel",
+		 "url": "../panel/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "tabs",
+		 "url": "../tabs/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "accordion",
+		 "url": "../accordion/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "layout",
+		 "url": "../layout/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	 }]
+ }, {
+	 "text": "bsui菜单和按钮",
+	 "url": null,
+	 "imgUrl": "fa fa-folder-open",
+	 "level": "1",
+	 "children": [{
+	 	 "text": "menu",
+		 "url": "../menu/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "linkbutton",
+		 "url": "../linkbutton/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "menubutton",
+		 "url": "../menubutton/actions.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "splitbutton",
+		 "url": "../splitbutton/actions.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	 
+	 }]
+ }, {
+	 "text": "bsui表单组件",
+	 "url": null,
+	 "imgUrl": "fa fa-folder-open",
+	 "level": "1",
+	 "children": [{
+	     "text": "form",
+		 "url": "../form/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "validatebox",
+		 "url": "../validatebox/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "textbox",
+		 "url": "../textbox/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "passwordbox",
+		 "url": "../passwordbox/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "combo",
+		 "url": "../combo/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "combobox",
+		 "url": "../combobox/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "combogrid",
+		 "url": "../combogrid/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "combotree",
+		 "url": "../combotree/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "combotreegrid",
+		 "url": "../combotreegrid/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "numberbox",
+		 "url": "../numberbox/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "datebox",
+		 "url": "../datebox/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "datetimebox",
+		 "url": "../datetimebox/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "datetimespinner",
+		 "url": "../datetimespinner/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "calendar",
+		 "url": "../calendar/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "numberspinner",
+		 "url": "../numberspinner/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "timespinner",
+		 "url": "../timespinner/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "slider",
+		 "url": "../slider/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "filebox",
+		 "url": "../filebox/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	 }]
+ }, {
+	 "text": "bsui弹窗组件",
+	 "url": null,
+	 "imgUrl": "fa fa-folder-open",
+	 "level": "1",
+	 "children": [{
+	     "text": "window",
+		 "url": "../window/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "dialog",
+		 "url": "../dialog/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "messager",
+		 "url": "../messager/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	 }]
+ }, {
+	 "text": "bsui数据表格组件",
+	 "url": null,
+	 "imgUrl": "fa fa-folder-open",
+	 "level": "1",
+	 "children": [{
+	     "text": "datagrid",
+		 "url": "../datagrid/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "datalist",
+		 "url": "../datalist/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "treegrid",
+		 "url": "../treegrid/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "propertygrid",
+		 "url": "../propertygrid/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	     "text": "tree",
+		 "url": "../tree/basic.html",
+		 "imgUrl": "fa fa-file-archive-o",
+		 "level": "2"
+	 }, {
+	 
+	 }]
+ }, {
+	 "text": "第三方插件",
+	 "url": null,
+	 "imgUrl": "fa fa-folder-open",
+	 "level": "1",
+	 "children": [{
+		 "text": "基础组件",
+		 "url": null,
+		 "imgUrl": "fa fa-folder-open",
+		 "level": "2",
+		 "children": [{
+			 "text": "draggable",
+			 "url": "/sta/staCtrl.htm?BLHMI=patientNum",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "droppable",
+			 "url": "/sta/staCtrl.htm?BLHMI=doctAdviceNum",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "resizable",
+			 "url": "/sta/staCtrl.htm?BLHMI=reportNum",
+			 "imgUrl": null,
+			 "level": "3"
+		 }, {
+			 "text": "pagination",
+			 "url": "/sta/staCtrl.htm?BLHMI=appointNum",
+			 "imgUrl": null,
+			 "level": "3"
+		 }]
+	 }]
+ }]

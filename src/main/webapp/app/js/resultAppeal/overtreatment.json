@@ -1,0 +1,68 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 10
+  ,"data": [{
+    "id": "10001"
+    ,"cityName": "北京"
+    ,"hospitalCode": "466544"
+    ,"hospitalName": "首都市医院"
+       ,"diagnose": "赵富"
+        ,"age": "35"
+        ,"inTime": "2018-10-14"
+    ,"outTime": "2018-10-25"
+    
+  },
+  {
+   "id": "10002"
+   ,"cityName": "北京"
+   ,"hospitalCode": "543348"
+    ,"hospitalName": "北京第一人民医院"
+    ,"diagnose": "何杰"
+     ,"age": "25"
+     ,"inTime": "2018-10-14"
+    ,"outTime": "2018-10-25"
+  },
+  {
+   "id": "10003"
+   ,"cityName": "上海"
+   ,"hospitalCode": "548933"
+    ,"hospitalName": "上海市中医医院"
+       ,"diagnose": "文放"
+        ,"age": "36"
+        ,"inTime": "2018-3-14"
+    ,"outTime": "2018-7-25"
+  },
+  {
+   "id": "10004"
+   ,"cityName": "上海"
+   ,"hospitalCode": "96546"
+    ,"hospitalName": "人民医院"
+       ,"diagnose": "何山"
+        ,"age": "45"
+        ,"inTime": "2018-10-14"
+    ,"outTime": "2018-10-25"
+  },
+  {
+   "id": "10004"
+   ,"cityName": "上海"
+   ,"hospitalCode": "65763"
+    ,"hospitalName": "上海市第一人民医院"
+       ,"diagnose": "蒙山"
+        ,"age": "45"
+        ,"inTime": "2018-5-14"
+    ,"outTime": "2018-8-25"
+  },
+  {
+   "id": "10004"
+   ,"cityName": "上海"
+   ,"hospitalCode": "689034"
+    ,"hospitalName": "上海华东医院"
+       ,"diagnose": "郭湾"
+        ,"age": "39"
+        ,"inTime": "2018-10-14"
+    ,"outTime": "2018-10-25"
+  }
+  ]
+}  

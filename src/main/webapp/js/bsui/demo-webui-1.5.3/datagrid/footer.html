@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Footer Rows in DataGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Footer Rows in DataGrid</h2>
+	<p>The summary informations can be displayed in footer rows.</p>
+	<div style="margin:20px 0;"></div>
+	<table class="bsui-datagrid" title="Footer Rows in DataGrid" style="width:700px;height:400px"
+			data-options="
+				url: 'datagrid_data2.json',
+				method: 'get',
+				fitColumns: true,
+				singleSelect: true,
+				rownumbers: true,
+				showFooter: true
+			">
+		<thead>
+			<tr>
+				<th data-options="field:'itemid',width:80">Item ID</th>
+				<th data-options="field:'productid',width:120">Product ID</th>
+				<th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+				<th data-options="field:'attr1',width:250">Attribute</th>
+				<th data-options="field:'status',width:60,align:'center'">Status</th>
+			</tr>
+		</thead>
+	</table>
+
+</body>
+</html>

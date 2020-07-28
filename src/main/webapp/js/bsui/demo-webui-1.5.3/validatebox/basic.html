@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic ValidateBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/tooltip.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<link rel="stylesheet" type="text/css" href="../../bootstrap-v4/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../fonts/css/font.min.css"/>-->
+	<!--<script src="../../../jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../bootstrap-v4/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic ValidateBox</h2>
+	<p>It's easy to add validate logic to a input box.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<div class="bsui-panel" title="Register" style="width:400px;padding:10px 60px 20px 60px">
+		<table cellpadding="5">
+			<tr style="height: 3em;">
+				<td>User Name：</td>
+				<td><input class="bsui-validatebox" data-options="required:true,validType:'length[3,10]'" style="width:100%;"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Email：</td>
+				<td><input class="bsui-validatebox" data-options="required:true,validType:'email'" style="width:100%;"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Birthday：</td>
+				<td><input class="bsui-datebox form-control" data-options="required:true" style="width:100%;"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>URL：</td>
+				<td><input class="bsui-validatebox" data-options="required:true,validType:'url'" style="width:100%;"></td>
+			</tr>
+			<tr style="height: 3em;">
+				<td>Phone：</td>
+				<td><input class="bsui-validatebox" data-options="required:true" style="width:100%;"></td>
+			</tr>
+		</table>
+	</div>
+	<!--<style scoped="scoped">
+		.textbox{
+			height:20px;
+			margin:0;
+			padding:0 2px;
+			box-sizing:content-box;
+		}
+	</style>-->
+
+</body>
+</html>

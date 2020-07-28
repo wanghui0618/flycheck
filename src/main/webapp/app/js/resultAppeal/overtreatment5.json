@@ -1,0 +1,41 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 3
+  ,"data": [{
+    "id": "10001"
+    ,"time": "2011-05-13"
+    ,"name": "刘富贵"
+    ,"hospital": "北京市海淀医院"
+    ,"num": "22"
+    ,"comName": "A型"
+    ,"itemName": "ABO型"
+    ,"result": "A型"
+    ,"personName": "赵宏辉"
+    
+    
+  },
+  {
+   "id": "10002"
+    ,"time": "2012-12-13"
+    ,"name": "刘富贵"
+    ,"hospital": "北京市第二医院"
+    ,"num": "3"
+    ,"comName": "A型"
+    ,"itemName": "ABO型"
+    ,"result": "AB型"
+     ,"personName": "李强"
+  },
+  {
+   "id": "10003"
+   ,"time": "2016-05-23"
+    ,"name": "刘富贵"
+    ,"hospital": "北京市第一医院"
+    ,"num": "6"
+    ,"comName": "A型"
+    ,"itemName": "ABO型"
+    ,"result": "B型"
+     ,"personName": "陈卫国"
+  }]
+}  

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic DataGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic DataGrid</h2>
+	<p>The DataGrid is created from markup, no JavaScript code needed.</p>
+	
+	<div style="margin:20px 0;">bsui datagrid</div>
+	<div>
+	<table class="bsui-datagrid" title="Basic DataGrid" style="width: 70%;height:300px"
+			data-options="rownumbers:true,singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'itemid',width:'15%'">Item ID</th>
+				<th data-options="field:'productid',width:'15%',formatter:productFormat">Product</th>
+				<th data-options="field:'listprice',width:'15%',align:'right'">List Price</th>
+				<th data-options="field:'unitcost',width:'15%',align:'right'">Unit Cost</th>
+				<th data-options="field:'attr1',width:'22%'">Attribute</th>
+				<th data-options="field:'status',width:'15%',align:'center'">Status</th>
+			</tr>
+		</thead>
+	</table>
+	</div>
+
+<script type="text/javascript">
+	function productFormat(value,row,index) {
+		return value+'<br>'+value;
+	}
+</script>
+</body>
+</html>

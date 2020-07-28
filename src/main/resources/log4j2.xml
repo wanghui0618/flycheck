@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- status=debug 可以查看log4j的装配过程 -->
+<Configuration status="off" monitorInterval="1800">
+	<properties>
+		<!-- <property name="LOG_HOME">${sys:catalina.base}/logs/dhcc</property> -->
+		<property name="LOG_HOME">logs/dhcc</property>
+		<property name="LOG_ALL_NAME">all</property>
+		<property name="LOG_DHCC_NAME">dhcc</property>
+		<property name="LOG_ERROE_NAME">error</property>
+		<property name="LOG_VISIT_NAME">visit</property>
+		<property name="LOG_HIBERNATE_NAME">hibernate</property>
+		<property name="LOG_BUSINESS_NAME">business</property>
+
+		<property name="FILE_SIZE">20 MB</property>
+		<property name="FILE_MAX_NUM">1000</property>
+	</properties>
+
+	<Appenders>
+		<!-- 定义控制台输出 -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss} [%p] %l \: %m%n" />
+		</Console>
+		<!-- 所有日志输出 -->
+		<RollingRandomAccessFile name="AllFile" fileName="${LOG_HOME}/${LOG_ALL_NAME}.log"
+			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${LOG_ALL_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss} [%p] %l \: %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy modulate="true" interval="1" />
+				<SizeBasedTriggeringPolicy size="${FILE_SIZE}" />
+			</Policies>
+			<DefaultRolloverStrategy max="${FILE_MAX_NUM}" />
+		</RollingRandomAccessFile>
+		<!-- DHCC日志输出 -->
+		<RollingRandomAccessFile name="DhccFile" fileName="${LOG_HOME}/${LOG_DHCC_NAME}.log"
+			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${LOG_DHCC_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss} [%p] %l \: %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy modulate="true" interval="1" />
+				<SizeBasedTriggeringPolicy size="${FILE_SIZE}" />
+			</Policies>
+			<DefaultRolloverStrategy max="${FILE_MAX_NUM}" />
+		</RollingRandomAccessFile>
+		<!-- 错误日志输出 -->
+		<RollingRandomAccessFile name="ErrorFile" fileName="${LOG_HOME}/${LOG_ERROE_NAME}.log"
+			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${LOG_ERROE_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss} [%p] %l \: %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy modulate="true" interval="1" />
+				<SizeBasedTriggeringPolicy size="${FILE_SIZE}" />
+			</Policies>
+			<DefaultRolloverStrategy max="${FILE_MAX_NUM}" />
+			<Filters>
+				<ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY" />
+			</Filters>
+		</RollingRandomAccessFile>
+		<!-- Visit日志输出 -->
+		<RollingRandomAccessFile name="VisitFile" fileName="${LOG_HOME}/${LOG_VISIT_NAME}.log"
+			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${LOG_VISIT_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss} [%p] %l \: %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy modulate="true" interval="1" />
+				<SizeBasedTriggeringPolicy size="${FILE_SIZE}" />
+			</Policies>
+			<DefaultRolloverStrategy max="${FILE_MAX_NUM}" />
+		</RollingRandomAccessFile>
+		<!-- Hibernate日志输出 -->
+		<RollingRandomAccessFile name="HibernateFile" fileName="${LOG_HOME}/${LOG_HIBERNATE_NAME}.log"
+			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${LOG_HIBERNATE_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss} [%p] %l \: %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy modulate="true" interval="1" />
+				<SizeBasedTriggeringPolicy size="${FILE_SIZE}" />
+			</Policies>
+			<DefaultRolloverStrategy max="${FILE_MAX_NUM}" />
+		</RollingRandomAccessFile>
+		<!-- Business日志输出 -->
+		<RollingRandomAccessFile name="BusinessFile" fileName="${LOG_HOME}/${LOG_BUSINESS_NAME}.log"
+			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${LOG_BUSINESS_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
+			<Policies>
+				<TimeBasedTriggeringPolicy modulate="true" interval="1" />
+				<SizeBasedTriggeringPolicy size="${FILE_SIZE}" />
+			</Policies>
+			<DefaultRolloverStrategy max="${FILE_MAX_NUM}" />
+		</RollingRandomAccessFile>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="com.dhcc.framework.common.log.BusinessLogUtil" level="INFO" additivity="false">
+			<AppenderRef ref="BusinessFile" />
+		</Logger>
+		<Logger name="com.dhcc.framework.web.context.filter.TraceFilter" level="INFO" additivity="false">
+			<AppenderRef ref="VisitFile" />
+		</Logger>
+		<Logger name="com.dhcc" level="INFO" additivity="false">
+			<AppenderRef ref="DhccFile" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="org.hibernate" level="INFO" additivity="false">
+			<AppenderRef ref="HibernateFile" />
+			<!-- <AppenderRef ref="Console" /> -->
+		</Logger>
+
+		<!-- 调试权限验证时使用 -->
+		<Logger name="com.dhcc.um.common.spring.security" level="INFO" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+
+		<Root level="INFO">
+			<AppenderRef ref="ErrorFile" />
+			<AppenderRef ref="AllFile" />
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>

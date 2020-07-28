@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Editable Tree - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/tree.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Editable Tree</h2>
+	<p>Click the node to begin edit, press enter key to stop edit or esc key to cancel edit.</p>
+	<div style="margin:20px 0;"></div>
+	<div class="bsui-panel" style="padding:5px">
+		<ul id="tt" class="bsui-tree" data-options="
+				url: 'tree_data1.json',
+				method: 'get',
+				animate: true,
+				onClick: function(node){
+					$(this).tree('beginEdit',node.target);
+				}
+			"></ul>
+	</div>
+</body>
+</html>

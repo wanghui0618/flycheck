@@ -1,0 +1,98 @@
+ul.exposureThumbs {
+	background:#111;
+	border:12px solid #111;
+	border-right:none;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+ul.exposureThumbs li {
+	margin:0 0 12px 0;
+	padding:0;
+	text-align:center;
+}
+
+ul.exposureThumbs li img {
+	cursor:pointer;
+}
+
+ul.exposureThumbs li.last {
+	margin:0;	
+}
+
+.exposureTarget {
+	background-color:#111;	
+	background-image:url(images/loader.gif);
+	background-repeat:no-repeat;
+	background-position:center center;
+	float:left;	
+	padding:0;
+	margin:0;
+	border:12px solid #111;
+	position:relative;
+	overflow:hidden; 
+}
+
+.exposureWrapper {
+	position:absolute; 
+	top:0; 
+	left:0;
+}
+
+.exposureWrapper img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.exposureLoaded {
+	background-image:none;	
+}
+
+.exposureData {
+	position:absolute;
+ 	left:0;
+ 	right:0;
+ 	bottom:0;
+	height:60px;
+	padding:7px;
+	background-image:url(images/veil.png);
+	color:#fff;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	display:block;
+}
+
+ul.exposureThumbs li img{
+	width:150px;
+	height:80px;
+}
+
+.exposureControls span,
+.exposureControls a {
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size:11px;
+	padding:8px;
+	background-color:#555;
+	display:block;
+	float:left;
+}
+
+.exposureControls a {
+	color:#ccc;
+	text-decoration:none;
+	outline:none;
+}
+
+.exposureControls a:active,
+.exposureControls a:hover {
+	background-color:#444;
+	color:#ddd;
+}
+
+.exposurePaging .active {
+	color:#fff;
+	background-color:#111;	
+}

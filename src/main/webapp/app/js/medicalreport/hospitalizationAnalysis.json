@@ -1,0 +1,54 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 10
+  ,"data": [{
+    "id": "10001"
+    ,"hospitalGrade": "三级医院"
+    ,"peopleNumber": "1321"
+    ,"totalCost": "1512.97"
+    ,"overallPayment": "1035.41"
+    ,"selfpay": "0.00"
+    ,"selfExpenses": "165.88"
+    ,"drugCost": "426.18"
+    ,"projectCost": "718.04"
+    ,"materialCost": "219.82"
+  },
+  {
+   "id": "10001"
+    ,"hospitalGrade": "二级医院"
+    ,"peopleNumber": "703"
+    ,"totalCost": "421.12"
+    ,"overallPayment": "337.08"
+    ,"selfpay": "0.00"
+    ,"selfExpenses": "12.99"
+    ,"drugCost": "131.58"
+    ,"projectCost": "247.46"
+    ,"materialCost": "23.14"
+  },
+  {
+    "id": "10001"
+    ,"hospitalGrade": "一级医院"
+    ,"peopleNumber": "48"
+    ,"totalCost": "16.98"
+    ,"overallPayment": "13.41"
+    ,"selfpay": "0.00"
+    ,"selfExpenses": "1.09"
+    ,"drugCost": "5.98"
+    ,"projectCost": "7.84"
+    ,"materialCost": "2.90"
+  },
+  {
+    "id": "10001"
+    ,"hospitalGrade": "未定级医院"
+    ,"peopleNumber": "9"
+    ,"totalCost": "0.77"
+    ,"overallPayment": "0.53"
+    ,"selfpay": "0.00"
+    ,"selfExpenses": "0.08"
+    ,"drugCost": "0.30"
+    ,"projectCost": "0.45"
+    ,"materialCost": "0.02"
+  }]
+}  

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tree Context Menu - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Tree Context Menu</h2>
+	<p>Right click on a node to display context menu.</p>
+	<div style="margin:20px 0;"></div>
+	<div class="bsui-panel" style="padding:5px">
+		<ul id="tt" class="bsui-tree" data-options="
+				url: 'tree_data1.json',
+				method: 'get',
+				animate: true,
+				onContextMenu: function(e,node){
+					e.preventDefault();
+					$(this).tree('select',node.target);
+					$('#mm').menu('show',{
+						left: e.pageX,
+						top: e.pageY
+					});
+				}
+			"></ul>
+	</div>
+	<div id="mm" class="bsui-menu" style="width:120px;">
+		<div onclick="append()" data-options="iconCls:'icon-add'">Append</div>
+		<div onclick="removeit()" data-options="iconCls:'icon-remove'">Remove</div>
+		<div class="menu-sep"></div>
+		<div onclick="expand()">Expand</div>
+		<div onclick="collapse()">Collapse</div>
+	</div>
+	<script type="text/javascript">
+		function append(){
+			var t = $('#tt');
+			var node = t.tree('getSelected');
+			t.tree('append', {
+				parent: (node?node.target:null),
+				data: [{
+					text: 'new item1'
+				},{
+					text: 'new item2'
+				}]
+			});
+		}
+		function removeit(){
+			var node = $CommonUI.getTree('#tt').tree('getSelected');
+			$CommonUI.getTree('#tt').tree('remove', node.target);
+		}
+		function collapse(){
+			var node = $CommonUI.getTree('#tt').tree('getSelected');
+			$CommonUI.getTree('#tt').tree('collapse',node.target);
+		}
+		function expand(){
+			var node = $('#tt').tree('getSelected');
+			$CommonUI.getTree('#tt').tree('expand',node.target);
+		}
+	</script>
+</body>
+</html>

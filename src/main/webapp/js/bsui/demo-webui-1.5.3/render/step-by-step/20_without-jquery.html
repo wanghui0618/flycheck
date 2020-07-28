@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link href="../resources/demos.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/movielist.css" rel="stylesheet" type="text/css" />
+	<script src="../../../../render/jsrender.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<h3>JsRender without jQuery</h3>
+
+<pre>
+    (function($) {
+        ...
+        $.templates({
+            movieTemplate: document.getElementById( "movieTemplate" ).innerHTML,
+            ...
+        });
+
+        document.getElementById( "movieList" ).innerHTML = $.render.movieTemplate( movies );
+
+    })(this.jsrender);
+</pre>
+
+<script id="movieTemplate" type="text/x-jsrender">
+	<tr>
+		<td>{{>title}}</td>
+		<td>{{sort languages tmpl="sortedTemplate"/}}</td>
+		<td>{{sort languages reverse=true}}
+				<div>
+					<b>{{>name}}</b>
+				</div>
+			{{/sort}}
+		</td>
+	</tr>
+</script>
+
+<script id="sortedTemplate" type="text/x-jsrender">
+	<div>{{>name}}</div>
+</script>
+
+<div id="movieList"></div>
+
+<script type="text/javascript">
+
+	(function($) {
+
+		$.views.tags({
+
+			sort: function( array ){
+				var ret = "";
+				if ( this.tagCtx.props.reverse ) {
+					// Render in reverse order
+					for ( var i = array.length; i; i-- ) {
+						ret += this.tagCtx.render( array[ i - 1 ] );
+					}
+				} else {
+					// Render in original order
+					ret += this.tagCtx.render( array );
+				}
+				return ret;
+			}
+
+		});
+
+		var movies = [
+			{
+				title: "Meet Joe Black",
+				languages: [
+					{ name: "English" },
+					{ name: "French" }
+				]
+			},
+			{
+				title: "Eyes Wide Shut",
+				languages: [
+					{ name: "French" },
+					{ name: "German" },
+					{ name: "Spanish" }
+				]
+			}
+		];
+
+		$.templates({
+			movieTemplate: document.getElementById( "movieTemplate" ).innerHTML,
+			sortedTemplate: document.getElementById( "sortedTemplate" ).innerHTML
+		});
+
+		document.getElementById( "movieList" ).innerHTML =
+			"<table><thead><tr><th>Title</th><th>Original order</th><th>Reverse order</th></tr></thead><tbody>" + $.render.movieTemplate( movies ) + "</tbody></table>";
+
+	})(this.jsrender);
+
+</script>
+
+</body>
+</html>

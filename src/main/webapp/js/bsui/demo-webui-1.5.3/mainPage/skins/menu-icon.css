@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+/* first level menu */
+.menu-archive {
+	margin-right: 15px!important;
+	background: url(../images/menu-icon/archive.png) no-repeat left center;
+}
+
+.menu-bar-graph {
+	margin-right: 15px!important;
+	background: url(../images/menu-icon/bar-graph.png) no-repeat left center;
+}
+
+.menu-calendar {
+	margin-right: 15px!important;
+	background: url(../images/menu-icon/calendar.png) no-repeat left center;
+}
+
+.menu-check {
+	margin-right: 15px!important;
+	background: url(../images/menu-icon/check.png) no-repeat left center;
+}
+
+.menu-cog {
+	margin-right: 15px!important;
+	background: url(../images/menu-icon/cog.png) no-repeat left center;
+}
+
+.menu-monitor {
+	margin-right: 15px!important;
+	background: url(../images/menu-icon/monitor.png) no-repeat left center;
+}
+
+.menu-suitcase {
+	margin-right: 15px!important;
+	background: url(../images/menu-icon/suitcase.png) no-repeat left center;
+}
+
+.menu-upload {
+	margin-right: 15px!important;
+	background: url(../images/menu-icon/upload.png) no-repeat left center;
+}

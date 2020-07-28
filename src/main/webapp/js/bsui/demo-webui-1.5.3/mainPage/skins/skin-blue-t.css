@@ -1,0 +1,59 @@
+/*
+ * Skin: Blue
+ * ----------
+ */
+.skin-blue {
+  background-color: #f3f4f5;
+}
+.skin-blue header {
+	background-color: #fff;
+}
+.skin-blue .main-sidebar{
+	background-color: #1e88e5;
+}
+.skin-blue .menu-btn {
+	background-color: #1D85E1;
+}
+.skin-blue .sidebar-menu > li > a {
+  color: #dfe8f5;
+}
+.skin-blue .sidebar-menu a {
+  outline: none;
+}
+.skin-blue .sidebar-menu a:hover {
+  text-decoration: none;
+}
+.skin-blue .sidebar-menu > li:hover > a,
+.skin-blue .sidebar-menu > li.sidemenu-active > a {
+  color: #ffffff!important;
+  background-color: #1c7ed5;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.skin-blue .sidebar-menu > li+li:before {
+	border: 1px solid #3493e7;
+}
+.skin-blue .treeview-menu > li.sidemenu-active {
+	background-color: #f5f6f7;
+}
+.skin-blue .treeview-menu > li > a:hover {
+	background-color: #eaf0f6;
+}
+.skin-blue .treeview-menu > li.sidemenu-active > a,
+.skin-blue .treeview-menu > li > a:hover {
+  color: #1e88e5!important;
+}
+.skin-blue .sidebar-menu .treeview-menu > li > a {
+	color: #6e6e6e;
+}
+.skin-blue .breadcrumb {
+	background-color: #f3f4f5;
+}
+.skin-blue .breadcrumb > li:first-of-type > a {
+	color: #1e88e5;
+}
+.skin-blue .aside-tool {
+	color: #1e88e5;
+}

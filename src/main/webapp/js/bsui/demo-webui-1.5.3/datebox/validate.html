@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Validate DateBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/validatebox.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/textbox.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/linkbutton.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/tooltip.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/panel.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/combo.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/calendar.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/datebox.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.validatebox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.textbox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.linkbutton.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.tooltip.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.panel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.combo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.calendar.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.datebox.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Validate DateBox</h2>
+	<p>When the selected date is greater than specified date. The field validator will raise an error.</p>
+	<div style="margin:20px 0;"></div>
+	<input class="bsui-datebox" required data-options="validType:'md[\'10/11/2012\']'"></input>
+	<script>
+		$.extend($.fn.validatebox.defaults.rules, {
+			md: {
+				validator: function(value, param){
+					var d1 = $.fn.datebox.defaults.parser(param[0]);
+					var d2 = $.fn.datebox.defaults.parser(value);
+					return d2<=d1;
+				},
+				message: 'The date must be less than or equals to {0}.'
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 10
+  ,"data": [{
+    "id": "10001"
+    ,"adressName": "重庆"
+    ,"hospitalName":"重庆第一医院"
+    ,"averagePrice": "348"
+    ,"totalRatio": "13.13%"
+  },
+ {
+    "id": "10002"
+    ,"adressName": "成都"
+    ,"hospitalName":"成都博爱医院"
+    ,"averagePrice": "332"
+    ,"totalRatio": "12.52%"
+  },{
+    "id": "10003"
+    ,"adressName": "北京"
+    ,"hospitalName":"北京协和医院"
+    ,"averagePrice": "320"
+    ,"totalRatio": "12.07%"
+  },{
+    "id": "10004"
+    ,"adressName": "上海"
+    ,"hospitalName":"上海新华医院"
+    ,"averagePrice": "280"
+    ,"totalRatio": "10.56%"
+  },{
+    "id": "10005"
+    ,"adressName": "深圳"
+    ,"hospitalName":"深圳市人民医院"
+    ,"averagePrice": "279"
+    ,"totalRatio": "10.52%"
+  },{
+    "id": "10006"
+    ,"adressName": "厦门"
+    ,"hospitalName":"厦门市中医院"
+    ,"averagePrice": "265"
+    ,"totalRatio": "10.00%"
+  },{
+    "id": "10007"
+    ,"adressName": "湖南"
+    ,"hospitalName":"湖南省儿童医院"
+    ,"averagePrice": "259"
+    ,"totalRatio": "9.77%"
+  },{
+    "id": "10008"
+    ,"adressName": "湖北"
+    ,"hospitalName":"宜昌市中医院"
+    ,"averagePrice": "235"
+    ,"totalRatio": "8.86%"
+  },{
+    "id": "10009"
+    ,"adressName": "杭州"
+    ,"hospitalName":"杭州市第一人民医院"
+    ,"averagePrice": "222"
+    ,"totalRatio": "8.37%"
+  },{
+    "id": "100010"
+    ,"adressName": "云南"
+    ,"hospitalName":"云南省中医医院"
+    ,"averagePrice": "210"
+    ,"totalRatio": "7.92%"
+  }]
+}  

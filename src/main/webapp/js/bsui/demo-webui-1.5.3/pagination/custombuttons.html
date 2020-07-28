@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Custom Pagination Buttons - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Custom Pagination Buttons</h2>
+	<p>The customized buttons can be appended to page bar.</p>
+	
+	<div style="margin:20px 0;"></div>
+	<div class="bsui-panel" style="padding-bottom: 8em;">
+		<div class="bsui-pagination" data-options="total:114,dropPos:'dropdown',buttons:buttons"></div>
+	</div>
+	<script>
+		var buttons = [{
+			iconCls:'icon-add',
+			handler:function(){
+				$CommonUI.alert('add');
+			}
+		},{
+			iconCls:'icon-cut',
+			handler:function(){
+				$CommonUI.alert('cut');
+			}
+		},{
+			iconCls:'icon-save',
+			handler:function(){
+				$CommonUI.alert('save');
+			}
+		}];
+	</script>
+</body>
+</html>

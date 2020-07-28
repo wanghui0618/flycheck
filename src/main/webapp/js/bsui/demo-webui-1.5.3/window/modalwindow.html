@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Modal Window - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Modal Window</h2>
+	<p>Click the open button below to open the modal window.</p>
+	<div style="margin:20px 0;">
+		<button type="button" class="btn btn-primary" onclick="$CommonUI.getWindow('#w').window('open')">打开</button>
+		<button type="button" class="btn btn-primary" onclick="$('#w').window('close')">关闭</button>
+		<!--<a href="javascript:void(0)" class="bsui-linkbutton" onclick="$('#w').window('open')">Open</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" onclick="$('#w').window('close')">Close</a>-->
+	</div>
+	<div id="w" class="bsui-window" title="Modal Window" data-options="modal:true,closed:true,iconCls:'icon-save'" style="width:500px;height:200px;padding:10px;">
+		The window content.
+	</div>
+
+</body>
+</html>

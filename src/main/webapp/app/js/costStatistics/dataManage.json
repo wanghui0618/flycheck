@@ -1,0 +1,66 @@
+
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 30
+  ,"data": [{
+    "id": "10001"
+    ,"orgName": "张成"
+    ,"userTimeCost": "男"
+    ,"age": "53"
+    ,"timeCost": "86"
+    ,"accounted": "7"
+    ,"growthRate": "4"
+    ,"weigui": "0"
+    ,"weigui1": "0"
+    ,"yisiweigui": "0"
+  },
+  {
+    "id": "10001"
+    ,"orgName": "孙科"
+    ,"userTimeCost": "男"
+    ,"age": "56"
+    ,"timeCost": "243"
+    ,"accounted": "4"
+    ,"growthRate": "3"
+    ,"weigui": "0"
+    ,"weigui1": "0"
+    ,"yisiweigui": "1"
+  },
+  {
+    "id": "10001"
+    ,"orgName": "徐楠"
+    ,"userTimeCost": "女"
+    ,"age": "61"
+    ,"timeCost": "96"
+    ,"accounted": "6"
+    ,"growthRate": "7"
+    ,"weigui": "0"
+    ,"weigui1": "0"
+    ,"yisiweigui": "0"
+  },
+  {
+    "id": "10001"
+    ,"orgName": "刘强"
+    ,"userTimeCost": "男"
+    ,"age": "60"
+    ,"timeCost": "345"
+    ,"accounted": "7"
+    ,"growthRate": "4"
+    ,"weigui": "0"
+    ,"weigui1": "0"
+    ,"yisiweigui": "1"
+  },
+  {
+    "id": "10001"
+    ,"orgName": "李梅"
+    ,"userTimeCost": "女"
+    ,"age": "59"
+    ,"timeCost": "164"
+    ,"accounted": "6"
+    ,"growthRate": "5"
+    ,"weigui": "1"
+    ,"weigui1": "14"
+    ,"yisiweigui": "0"
+  }]
+}  

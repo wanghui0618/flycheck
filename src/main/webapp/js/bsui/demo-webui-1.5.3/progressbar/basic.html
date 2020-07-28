@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic ProgressBar - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic ProgressBar</h2>
+	<p>Click the button below to show progress information.</p>
+	<div style="margin:20px 0;">
+		<a href="#" class="bsui-linkbutton" onclick="start()">Start</a>
+	</div>
+	<div id="p" class="bsui-progressbar" style="width:400px;"></div>
+	<script>
+		function start(){
+			var value = $CommonUI.getProgressBar('#p').progressbar('getValue');
+			if (value < 100){
+				value += Math.floor(Math.random() * 10);
+				$CommonUI.getProgressBar('#p').progressbar('setValue', value);
+				setTimeout(arguments.callee, 200);
+			}
+		};
+	</script>
+</body>
+</html>

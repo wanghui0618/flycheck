@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Button Align on FileBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Button Align on FileBox</h2>
+	<p>Change the button align to the left or right of filebox.</p>
+	<div style="margin:20px 0 40px 0;"></div>
+	<span>Select Button Align:</span>
+	<select onchange="changeAlign(this.value)">
+		<option value="left">Left</option>
+		<option value="right" selected>Right</option>
+	</select>
+	<div style="margin:20px 0;"></div>
+	<input id="fb" class="bsui-filebox" style="width:400px" data-options="prompt:'Choose a file...'">
+	<script type="text/javascript">
+		function changeAlign(align){
+			$CommonUI.getFileBox('#fb').filebox({buttonAlign:align});
+		}
+	</script>
+</body>
+</html>

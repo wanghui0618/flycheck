@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Context Menu on DataGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Context Menu on DataGrid</h2>
+	<p>Right click on the header of DataGrid to display context menu.</p>
+	<div style="margin:20px 0;"></div>
+	<table id="dg"></table>
+	<script type="text/javascript">
+		$(function(){
+			$CommonUI.getDataGrid('#dg').datagrid({
+				url: 'datagrid_data1.json',
+				method: 'get',
+				title: 'Context Menu on DataGrid',
+				iconCls: 'icon-save',
+				width: 700,
+				height: 250,
+				fitColumns: true,
+				singleSelect: true,
+				columns:[[
+					{field:'itemid',title:'Item ID',width:80},
+					{field:'productid',title:'Product ID',width:120},
+					{field:'listprice',title:'List Price',width:80,align:'right'},
+					{field:'unitcost',title:'Unit Cost',width:80,align:'right'},
+					{field:'attr1',title:'Attribute',width:250},
+					{field:'status',title:'Status',width:60,align:'center'}
+				]],
+				onHeaderContextMenu: function(e, field){
+					e.preventDefault();
+					if (!cmenu){
+						createColumnMenu();
+					}
+					cmenu.menu('show', {
+						left:e.pageX,
+						top:e.pageY
+					});
+				}
+			});
+		});
+		var cmenu;
+		function createColumnMenu(){
+			cmenu = $('<div/>').appendTo('body');
+			$CommonUI.getMenu(cmenu).menu({
+				onClick: function(item){
+					if (item.iconCls == 'icon-ok'){
+						$CommonUI.getDataGrid('#dg').datagrid('hideColumn', item.name);
+						$CommonUI.getMenu(cmenu).menu('setIcon', {
+							target: item.target,
+							iconCls: 'icon-empty'
+						});
+					} else {
+						$CommonUI.getDataGrid('#dg').datagrid('showColumn', item.name);
+						$CommonUI.getMenu(cmenu).menu('setIcon', {
+							target: item.target,
+							iconCls: 'icon-ok'
+						});
+					}
+				}
+			});
+			var fields = $CommonUI.getDataGrid('#dg').datagrid('getColumnFields');
+			for(var i=0; i<fields.length; i++){
+				var field = fields[i];
+				var col = $CommonUI.getDataGrid('#dg').datagrid('getColumnOption', field);
+				$CommonUI.getMenu(cmenu).menu('appendItem', {
+					text: col.title,
+					name: field,
+					iconCls: 'icon-ok'
+				});
+			}
+		}
+	</script>
+</body>
+</html>

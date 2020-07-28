@@ -1,0 +1,274 @@
+@CHARSET "UTF-8";
+
+/* first level menu */
+.account-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/account_manage.png) no-repeat left center;
+}
+li:hover > a > .account-manage, .sidemenu-active > a > .account-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/account_manage_active.png) no-repeat left center;
+}
+
+.tenant-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/tenant_manage.png) no-repeat left center;
+}
+li:hover > a > .tenant-manage, .sidemenu-active > a > .tenant-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/tenant_manage_active.png) no-repeat left center;
+}
+
+.agent-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/agent_manage.png) no-repeat left center;
+}
+li:hover > a > .agent-manage, .sidemenu-active > a > .agent-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/agent_manage_active.png) no-repeat left center;
+}
+
+.content-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/content_manage.png) no-repeat left center;
+}
+li:hover > a > .content-manage, .sidemenu-active > a > .content-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/content_manage_active.png) no-repeat left center;
+}
+
+.settle-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/settle_manage.png) no-repeat left center;
+}
+li:hover > a > .settle-manage, .sidemenu-active > a > .settle-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/settle_manage_active.png) no-repeat left center;
+}
+
+.member-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/member_manage.png) no-repeat left center;
+}
+li:hover > a > .member-manage, .sidemenu-active > a > .member-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/member_manage_active.png) no-repeat left center;
+}
+
+.ad-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/ad_manage.png) no-repeat left center;
+}
+li:hover > a > .ad-manage, .sidemenu-active > a > .ad-manage {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/ad_manage_active.png) no-repeat left center;
+}
+
+.sys-setup {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/sys_setup.png) no-repeat left center;
+}
+li:hover > a > .sys-setup, .sidemenu-active > a > .sys-setup {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/sys_setup_active.png) no-repeat left center;
+}
+
+.data-service {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/data_service.png) no-repeat left center;
+}
+li:hover > a > .data-service, .sidemenu-active > a > .data-service {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/data_service_active.png) no-repeat left center;
+}
+
+.knowledge-base {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/knowledge_base.png) no-repeat left center;
+}
+li:hover > a > .knowledge-base, .sidemenu-active > a > .knowledge-base {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/knowledge_base_active.png) no-repeat left center;
+}
+
+.msg-service {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/msg_service.png) no-repeat left center;
+}
+li:hover > a > .msg-service, .sidemenu-active > a > .msg-service {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/msg_service_active.png) no-repeat left center;
+}
+
+.recommend-syetem {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/recommend_syetem.png) no-repeat left center;
+}
+li:hover > a > .recommend-syetem, .sidemenu-active > a > .recommend-syetem {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/recommend_syetem_active.png) no-repeat left center;
+}
+
+.statistic {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/statistic.png) no-repeat left center;
+}
+li:hover > a > .statistic, .sidemenu-active > a > .statistic {
+	padding-left: 2.3em;
+	background: url(../../images/mainPage/statistic_active.png) no-repeat left center;
+}
+
+/* second level menu */
+.settle-ver {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/settle_ver.png) no-repeat left center;
+}
+li:hover > a > .settle-ver, .sidemenu-active > a > .settle-ver {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/settle_ver_active.png) no-repeat left center;
+}
+
+.settle-ad {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/settle_ad.png) no-repeat left center;
+}
+li:hover > a > .settle-ad, .sidemenu-active > a > .settle-ad {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/settle_ad_active.png) no-repeat left center;
+}
+
+.settle-order {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/settle_order.png) no-repeat left center;
+}
+li:hover > a > .settle-order, .sidemenu-active > a > .settle-order {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/settle_order_active.png) no-repeat left center;
+}
+
+.settle-bonus {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/settle_bonus.png) no-repeat left center;
+}
+li:hover > a > .settle-bonus, .settle-bonus > a > .enter-perform {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/settle_bonus_active.png) no-repeat left center;
+}
+
+.mem-acnt {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/mem_acnt.png) no-repeat left center;
+}
+li:hover > a > .mem-acnt, .sidemenu-active > a > .mem-acnt {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/mem_acnt_active.png) no-repeat left center;
+}
+
+.mem-privilege {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/mem_privilege.png) no-repeat left center;
+}
+li:hover > a > .mem-privilege, .sidemenu-active > a > .mem-privilege {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/mem_privilege_active.png) no-repeat left center;
+}
+
+.sys-role {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sys_role.png) no-repeat left center;
+}
+li:hover > a > .sys-role, .sidemenu-active > a > .sys-role {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sys_role_active.png) no-repeat left center;
+}
+
+.sys-menu {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sys_menu.png) no-repeat left center;
+}
+li:hover > a > .sys-menu, .sidemenu-active > a > .sys-menu {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sys_menu_active.png) no-repeat left center;
+}
+
+.sta-product {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_product.png) no-repeat left center;
+}
+li:hover > a > .sta-product, .sidemenu-active > a > .sta-product {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_product_active.png) no-repeat left center;
+}
+
+.sta-sales-amount {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_sales_amount.png) no-repeat left center;
+}
+li:hover > a > .sta-sales-amount, .sidemenu-active > a > .sta-sales-amount {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_sales_amount_active.png) no-repeat left center;
+}
+
+.sta-store {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_store.png) no-repeat left center;
+}
+li:hover > a > .sta-store, .sidemenu-active > a > .sta-store {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_store_active.png) no-repeat left center;
+}
+
+.sta-member {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_member.png) no-repeat left center;
+}
+li:hover > a > .sta-member, .sidemenu-active > a > .sta-member {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_member_active.png) no-repeat left center;
+}
+
+.sta-staff {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_staff.png) no-repeat left center;
+}
+li:hover > a > .sta-staff, .sidemenu-active > a > .sta-staff {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_staff_active.png) no-repeat left center;
+}
+
+.sta-income {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_income.png) no-repeat left center;
+}
+li:hover > a > .sta-income, .sidemenu-active > a > .sta-income {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_income_active.png) no-repeat left center;
+}
+
+.sta-stock {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_stock.png) no-repeat left center;
+}
+li:hover > a > .sta-stock, .sidemenu-active > a > .sta-stock {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_stock_active.png) no-repeat left center;
+}
+
+.sta-expend {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_expend.png) no-repeat left center;
+}
+li:hover > a > .sta-expend, .sidemenu-active > a > .sta-expend {
+	padding-left: 1.8em;
+	background: url(../../images/mainPage/sta_expend_active.png) no-repeat left center;
+}
+
+/* third level menu */
+.triangle {
+	padding-left: 1.8em;
+	background: url(../images/triangle.png) no-repeat left center;
+}
+.triangle:hover, .sidemenu-active > .triangle {
+	padding-left: 1.8em;
+	background: url(../images/triangle_active.png) no-repeat left center;
+}

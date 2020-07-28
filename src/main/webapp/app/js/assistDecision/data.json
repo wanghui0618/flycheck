@@ -1,0 +1,24 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": "3",
+	"data": [{
+		"id": "1",
+		"simulateStartDate": "2019-01-01",
+		"simulateName": "药品剔除报销范围",
+		"simulateEndDate": "2019-08-25",
+		"simulateDesc": "药品剔除报销范围（吸入用布地奈德混悬液）"
+	},{
+		"id": "2",
+		"simulateStartDate": "2019-01-01",
+		"simulateName": "乙类居民报销比例调整",
+		"simulateEndDate": "2019-08-25",
+		"simulateDesc": "乙类居民报销比例调整（增加10%）"
+	},{
+		"id": "3",
+		"simulateStartDate": "2019-01-01",
+		"simulateName": "乙类职工起付线修正",
+		"simulateEndDate": "2019-08-25",
+		"simulateDesc": "乙类职工起付线修正（增加1000元）"
+	}]
+}

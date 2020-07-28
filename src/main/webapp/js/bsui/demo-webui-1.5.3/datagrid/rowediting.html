@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Row Editing in DataGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/panel.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/combo.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/combobox.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/pagination.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/linkbutton.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/textbox.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/numberbox.css"/>
+	<link rel="stylesheet" type="text/css" href="../../themes/dhcc-ui/datagrid.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.validatebox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.panel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.textbox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.combo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.combobox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.resizable.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.pagination.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.linkbutton.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.numberbox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugins/bsui.datagrid.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Row Editing in DataGrid</h2>
+	<p>Click the row to start editing.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<table id="dg" class="bsui-datagrid" title="Row Editing in DataGrid" style="width:700px;height:auto"
+			data-options="
+				iconCls: 'icon-edit',
+				singleSelect: true,
+				toolbar: '#tb',
+				url: 'datagrid_data1.json',
+				method: 'get',
+				onClickCell: onClickCell
+			">
+		<thead>
+			<tr>
+				<th data-options="field:'itemid',width:80,editor:'textbox'">Item ID</th>
+				<th data-options="field:'productid',width:100,
+						formatter:function(value,row){
+							return row.productname;
+						},
+						editor:{
+							type:'combobox',
+							options:{
+								valueField:'productid',
+								textField:'productname',
+								method:'get',
+								url:'products.json',
+								required:true
+							}
+						}">Product</th>
+				<th data-options="field:'listprice',width:80,align:'right',editor:{type:'numberbox',options:{precision:1}}">List Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right',editor:'numberbox'">Unit Cost</th>
+				<th data-options="field:'attr1',width:250,editor:'textbox'">Attribute</th>
+				<th data-options="field:'status',width:60,align:'center',editor:{type:'checkbox',options:{on:'P',off:''}}">Status</th>
+			</tr>
+		</thead>
+	</table>
+
+	<div id="tb" style="height:auto">
+		<a href="javascript:void(0)" class="bsui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">Append</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">Remove</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">Accept</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">Reject</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton" data-options="iconCls:'icon-search',plain:true" onclick="getChanges()">GetChanges</a>
+	</div>
+	
+	<script type="text/javascript">
+		var editIndex = undefined;
+		function endEditing(){
+			if (editIndex == undefined){return true}
+			if ($CommonUI.getDataGrid('#dg').datagrid('validateRow', editIndex)){
+				var ed = $CommonUI.getDataGrid('#dg').datagrid('getEditor', {index:editIndex,field:'productid'});
+				var productname = $CommonUI.getComboBox(ed.target).combobox('getText');
+				$CommonUI.getDataGrid('#dg').datagrid('getRows')[editIndex]['productname'] = productname;
+				$CommonUI.getDataGrid('#dg').datagrid('endEdit', editIndex);
+				editIndex = undefined;
+				return true;
+			} else {
+				return false;
+			}
+		}
+		function onClickCell(index, field){
+			if (editIndex != index){
+				if (endEditing()){
+					$CommonUI.getDataGrid('#dg').datagrid('selectRow', index)
+							.datagrid('beginEdit', index);
+					var ed = $CommonUI.getDataGrid('#dg').datagrid('getEditor', {index:index,field:field});
+					if (ed){
+						($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
+					}
+					editIndex = index;
+				} else {
+					$CommonUI.getDataGrid('#dg').datagrid('selectRow', editIndex);
+				}
+			}
+		}
+		function append(){
+			if (endEditing()){
+				$CommonUI.getDataGrid('#dg').datagrid('appendRow',{status:'P'});
+				editIndex = $CommonUI.getDataGrid('#dg').datagrid('getRows').length-1;
+				$CommonUI.getDataGrid('#dg').datagrid('selectRow', editIndex)
+						.datagrid('beginEdit', editIndex);
+			}
+		}
+		function removeit(){
+			if (editIndex == undefined){return}
+			$CommonUI.getDataGrid('#dg').datagrid('cancelEdit', editIndex)
+					.datagrid('deleteRow', editIndex);
+			editIndex = undefined;
+		}
+		function accept(){
+			if (endEditing()){
+				$CommonUI.getDataGrid('#dg').datagrid('acceptChanges');
+			}
+		}
+		function reject(){
+			$CommonUI.getDataGrid('#dg').datagrid('rejectChanges');
+			editIndex = undefined;
+		}
+		function getChanges(){
+			var rows = $CommonUI.getDataGrid('#dg').datagrid('getChanges');
+			$CommonUI.alert(rows.length+' rows are changed!');
+		}
+	</script>
+</body>
+</html>

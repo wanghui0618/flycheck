@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Resizable - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Basic Resizable</h2>
+	<p>Click on the edge of box and move the edge to resize the box.</p>
+	<div style="margin:20px 0;"></div>
+	<div class="bsui-resizable" data-options="minWidth:50,minHeight:50" style="width:200px;height:150px;border:1px solid #ccc;">
+		<div style="padding:20px">Resize Me</div>
+	</div>
+	<div id="dd" class="draggable resizable" data-options="handle:'#mytitle'" style="width:200px;height:150px;border:1px solid #ccc">
+		<div id="mytitle" style="background:#ddd;padding:5px;">Title</div>
+		<div style="padding:20px">Drag and Resize Me</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Toolbar and Buttons - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Toolbar and Buttons</h2>
+	<p>The toolbar and buttons can be added to dialog.</p>
+	
+	<div style="margin:20px 0;">
+		<a href="javascript:void(0)" class="bsui-linkbutton btn-primary" onclick="$CommonUI.getDialog('#dlg').dialog('open')">Open</a>
+		<a href="javascript:void(0)" class="bsui-linkbutton btn-danger" onclick="$CommonUI.getDialog('#dlg').dialog('close')">Close</a>
+	</div>
+	
+	<div id="dlg" class="bsui-dialog" title="Toolbar and Buttons" style="width:400px;height:200px;padding:10px"
+			data-options="
+				iconCls: 'icon-save',
+				toolbar: [{
+					text:'Add',
+					iconCls:'icon-add',
+					handler:function(){
+						$CommonUI.alert('add')
+					}
+				},'-',{
+					text:'Save',
+					iconCls:'icon-save',
+					handler:function(){
+						$CommonUI.alert('save')
+					}
+				}],
+				buttons: [{
+					text:'Ok',
+					iconCls:'icon-ok',
+					handler:function(){
+						$CommonUI.alert('ok');
+					}
+				},{
+					text:'Cancel',
+					handler:function(){
+						$CommonUI.alert('cancel');;
+					}
+				}]
+			">
+		The dialog content.
+	</div>
+	
+</body>
+</html>

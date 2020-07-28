@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Pagination Layout - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Pagination Layout</h2>
+	<p>The pagination layout supports various types of pages which you can choose.</p>
+	
+	<div style="margin:20px 0;"></div>
+	<div class="bsui-panel" style="padding-bottom: 8em;">
+		<div id="pp" class="bsui-pagination" data-options="
+					total:114,
+					dropPos: 'dropdown',
+					layout:['first','prev','next','last']
+				"></div>
+	</div>
+	<div style="margin-top:10px">
+		<select onchange="setLayout(this.value)">
+			<option value="1">Previous Next</option>
+			<option value="2">Manual Page Input</option>
+			<option value="3">Numeric Links</option>
+			<option value="4">Previous Links Next</option>
+			<option value="5">Go To Page</option>
+		</select>
+	</div>
+	<script>
+		function setLayout(type){
+			var p = $CommonUI.getPagination('#pp');
+			switch(parseInt(type)){
+			case 1:
+				p.pagination({layout:['first','prev','next','last']});
+				break;
+			case 2:
+				p.pagination({
+					layout:['list','sep','first','prev','sep','manual','sep','next','last','sep','refresh'],
+					beforePageText:'Page',
+					afterPageText:'of {pages}'
+				});
+				break;
+			case 3:
+				p.pagination({layout:['links']});
+				break;
+			case 4:
+				p.pagination({layout:['first','prev','links','next','last']});
+				break;
+			case 5:
+				p.pagination({
+					layout:['first','prev','next','last','sep','links','sep','manual'],
+					beforePageText:'Go Page',
+					afterPageText:''
+				});
+				break;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Button Group - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+	<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container">
+	<h2>Button Group</h2>
+	<p>In a button group only one button can be selected.</p>
+	
+	<div style="margin:10px 0 40px 0;">bsui button group</div>
+	<div class="bsui-panel" style="padding:5px;">
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g1'">Button 1</a>
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g1',selected:true">Button 2</a>
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g1'">Button 3</a>
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g1'">Button 4</a>
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g1'">Button 5</a>
+	</div>
+	<div style="margin:20px 0;">bsui plain button group</div>
+	<div class="bsui-panel" style="padding:5px;">
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g2',plain:true">Button 1</a>
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g2',plain:true,selected:true">Button 2</a>
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g2',plain:true">Button 3</a>
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g2',plain:true">Button 4</a>
+		<a href="#" class="bsui-linkbutton" data-options="toggle:true,group:'g2',plain:true">Button 5</a>
+	</div>
+	
+	<div style="margin:20px 0;">bootstrap basic button group</div>
+	<div class="btn-group">
+  		<button type="button" class="btn btn-default">按钮 1</button>
+  		<button type="button" class="btn btn-default">按钮 2</button>
+  		<button type="button" class="btn btn-default">按钮 3</button>
+	</div>
+	
+	<div style="margin:20px 0;">bootstrap tollbar button group</div>
+	<div class="btn-toolbar" role="toolbar">
+  		<div class="btn-group">
+  			<button type="button" class="btn btn-default">按钮 1</button>
+  			<button type="button" class="btn btn-default">按钮 2</button>
+  			<button type="button" class="btn btn-default">按钮 3</button>
+ 		</div>
+  		<div class="btn-group">
+  			<button type="button" class="btn btn-default">按钮 4</button>
+  			<button type="button" class="btn btn-default">按钮 5</button>
+  			<button type="button" class="btn btn-default">按钮 6</button>
+  		</div>
+  		<div class="btn-group">
+  			<button type="button" class="btn btn-default">按钮 7</button>
+  			<button type="button" class="btn btn-default">按钮 8</button>
+  			<button type="button" class="btn btn-default">按钮 9</button>
+  		</div>
+	</div>
+	
+	<div style="margin:20px 0;">bootstrap size button group</div>
+	<div class="btn-group btn-group-lg">
+  		<button type="button" class="btn btn-default">按钮 1</button>
+  		<button type="button" class="btn btn-default">按钮 2</button>
+  		<button type="button" class="btn btn-default">按钮 3</button>
+ 	</div>
+  	<div class="btn-group btn-group-sm">
+  		<button type="button" class="btn btn-default">按钮 4</button>
+  		<button type="button" class="btn btn-default">按钮 5</button>
+  		<button type="button" class="btn btn-default">按钮 6</button>
+	</div>
+  	<div class="btn-group btn-group-xs">
+  		<a type="button" class="bsui-linkbutton btn btn-default">按钮 7</a>
+  		<a type="button" class="bsui-linkbutton btn btn-default">按钮 8</a>
+  		<a type="button" class="bsui-linkbutton btn-default">按钮 9</a>
+	</div>
+	
+	<div style="margin:20px 0;">bootstrap nest button group</div>
+	<div class="btn-group">
+  		<button type="button" class="btn btn-default">按钮 1</button>
+  		<button type="button" class="btn btn-default">按钮 2</button>
+
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-default dropdown-toggle" 
+      			data-toggle="dropdown">下列
+      			<span class="caret"></span>
+    		</button>
+    		<ul class="dropdown-menu">
+      			<li><a href="#">下拉链接 1</a></li>
+      			<li><a href="#">下拉链接 2</a></li>
+    		</ul>
+  		</div>
+	</div>
+	
+	<div style="margin:20px 0;">bootstrap vertical button group</div>
+	<div class="btn-group-vertical">
+  		<a href="#" class="bsui-linkbutton">按钮 1</a>
+  		<a href="#" class="bsui-linkbutton">按钮 2</a>
+
+  		<div class="btn-group-vertical">
+    		<a type="button" class="btn btn-default dropdown-toggle" 
+      			data-toggle="dropdown">下拉
+      		<span class="caret"></span>
+    		</a>
+    		<ul class="dropdown-menu">
+      			<li><a href="#">下拉链接 1</a></li>
+      			<li><a href="#">下拉链接 2</a></li>
+    		</ul>
+  		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,418 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;
+}
+.input_div{
+	margin-top: 10px;
+}
+.my-input-xingming{
+	background: url(../../images/login/xingming.png) no-repeat;
+	background-position: 4% 45%;
+	background-size:16px 16px;
+}
+.my-input-phone{
+	background: url(../../images/login/phone.png) no-repeat;
+	background-position: 4% 45%;
+	background-size:16px 16px;
+}
+.my-input-email{
+	background: url(../../images/login/email.png) no-repeat;
+	background-position: 4% 45%;
+	background-size:16px 16px;
+}
+.input_div_pic{
+	background: url(../../images/login/btn_queren.png);
+	width: 340px;
+	height: 41px;
+}
+a:focus{outline:none;}
+html, body {
+    height: 100%;
+    font-family: microsoft yahei;
+    background-color:none;
+    min-height: 100%;
+    padding-bottom: 0;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    color: #393939;
+    line-height: 1.5;
+    overflow: hidden;
+}
+.index {
+	width: 100%;
+	height: 100%;
+}
+.login_header {
+    height: 12%;
+    min-height: 80px;
+    min-width: 800px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.login_dhc{
+	float:left;
+	padding:0 0 0 13%;
+}
+.logosize {
+    width: 80%;
+}
+.login_xitong {
+	font-family: PingFangSC-Medium;
+	font-size: 22px;
+	color: #3E3533;
+	letter-spacing: 0;
+}
+.login_welcome {
+    font-size: 18px;
+    float: left;
+    color: #f84b14;
+    padding-left: 30px;
+}
+.loginbox_cq {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 270px;
+	width: 350px;
+	display: block;
+}
+.loginbox_cq .alert-danger i {
+	margin: 0 10px 0 0;
+}
+.loginbox_cq .alert-danger {
+	position: absolute;
+    width: 288px;
+    margin: -29px 0 0 0;
+    height: 26px;
+    border-radius: 0px;
+    padding: 3px 10px 0;
+}
+.loginbox_cq .tcq {
+	/* border-bottom: 1px dashed #ccc;
+    padding: 0 0 18px 0; */
+    font-size: 1.8rem;
+    margin: 0 0 22px 0;
+    width: 85%;
+}
+.loginbox_cq .form-group {
+	margin: 20px 0 20px 0;
+}
+.loginbox_cq .input-group-addon {
+	border-radius: 0px;
+}
+.loginbox_cq .input-group-addon i {
+	font-size: 1.6rem;
+}
+.loginbox_cq input {
+	border-radius: 3px;
+	height: 44px; 
+	border:1px solid #CACCD0;
+	width:298px;
+	padding-left: 40px;
+}
+.loginbox_dhcc{
+	margin:-15px 0 0 0;
+	float:right;
+	font-size:8px;
+}
+.loginbox_check{
+	margin:-5px 0 -20px 0;
+	font-size:10px;
+	line-height: 30px;
+}
+.loginbox_cq button {
+	margin: 20px 0 0 0;
+	width: 340px;
+	height: 40px;
+	background: #2284FF;
+	border-radius: 3px;
+	border: none;
+	color:#fff;
+}
+.forget{
+	float: right;
+	margin:15px 60px 0px 0px;
+}
+
+.loginbox_cq .form-group .input-group .input-group-addon{
+	padding:0;
+	width:30px;
+}
+.loginbox_cq .form-group .input-group .form-control{
+	width: 268px;
+	color:#999;
+	border-color: #D3D3D3;
+}
+.login_contain{
+	height:78%;
+	background: #EEF6FF;
+	border-bottom: 1px solid #eee;
+}
+.login_carousel{
+	height: 320px;
+	background: #fff;
+	display: block;
+	background-size: 100%;
+	width: 700px;
+	margin: auto;  
+    position: absolute;  
+    top: 0; left: 0; bottom: 0; right: 0; 
+}
+.login_footer a{
+	text-decoration:none;
+	color:#666;
+	padding:0 3px;
+}
+li{
+	list-style-type:none;
+}
+
+
+.login_up_color{
+	color:#df5959;
+}
+.login_down_color{
+	color:#369620;
+}
+span{
+	padding:0 3px;	
+}
+
+.login_up{
+	color:#df5959;
+	font-style:normal;
+}
+.login_down{
+	color:#369620;
+	font-style:normal;
+}
+
+.login_footer {
+    height: 5%;
+    clear: both;
+    background: #EEF3FA;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 1% 0;
+}
+
+    .login_footer a {
+        text-decoration: none;
+        color: #666;
+    }
+
+        .login_footer a i {
+            /*margin: 0 4px 0 0;*/
+            margin: 3px 4px 0 0;
+        }
+
+        .login_footer a.red {
+            color: #df5959;
+        }
+
+        .login_footer a.green {
+            color: #369620;
+        }
+
+    .login_footer .log_f {
+        left: 50%;
+        float: left;
+        position: relative;
+        /*margin-left: -420px;*/
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transform: translateX(-50%);
+    }
+
+        .login_footer .log_f div, .login_footer .log_f i, .login_footer .log_f span, .login_footer .log_f a {
+            float: left;
+        }
+
+        .login_footer .log_f .login_logo {
+            float: left;
+            margin: 0px 4px 0 0;
+        }
+
+            .login_footer .log_f .login_logo > img {
+                width: 216px;
+                height: 20px;
+            }
+
+        .login_footer .log_f i, .login_footer .log_f span, .login_footer .log_f a {
+            /*padding-top: 0.5%;*/
+        }
+
+input.loginbox_checkbox{
+	margin-top:-10px;
+}
+
+
+
+
+
+.gritter-item-wrapper {
+    background-image: none !important;
+    box-shadow: 10px 50px 50px rgba(50, 50, 50, 0.5);
+    background: rgba(50, 50, 50, 0.92);
+}
+
+    .gritter-item-wrapper.gritter-info {
+        background: rgba(49, 81, 133, 0.92);
+    }
+
+    .gritter-item-wrapper.gritter-error {
+        background: rgba(153, 40, 18, 0.92);
+    }
+
+    .gritter-item-wrapper.gritter-success {
+        background: rgba(89, 131, 75, 0.92);
+    }
+
+    .gritter-item-wrapper.gritter-warning {
+        background: rgba(190, 112, 31, 0.92);
+    }
+
+    .gritter-item-wrapper.gritter-light {
+        /*background: rgba(245, 245, 245, 0.95);
+        border: 1px solid #BBB;*/
+    }
+
+        .gritter-item-wrapper.gritter-light.gritter-info {
+            background: rgba(232, 242, 255, 0.95);
+        }
+
+            .gritter-item-wrapper.gritter-light.gritter-info .gritter-item {
+                color: #4A577D;
+            }
+
+        .gritter-item-wrapper.gritter-light.gritter-error {
+            background: rgba(255, 235, 235, 0.95);
+        }
+
+            .gritter-item-wrapper.gritter-light.gritter-error .gritter-item {
+                color: #894A38;
+            }
+
+        .gritter-item-wrapper.gritter-light.gritter-success {
+            background: rgba(239, 250, 227, 0.95);
+        }
+
+            .gritter-item-wrapper.gritter-light.gritter-success .gritter-item {
+                color: #416131;
+            }
+
+        .gritter-item-wrapper.gritter-light.gritter-warning {
+            background: rgba(252, 248, 227, 0.95);
+        }
+
+            .gritter-item-wrapper.gritter-light.gritter-warning .gritter-item {
+                color: #946446;
+            }
+
+.gritter-item p {
+    line-height: 1.8;
+}
+
+.gritter-top,
+.gritter-bottom,
+.gritter-item {
+    background-image: none;
+}
+
+.gritter-close {
+    left: auto;
+    right: 3px;
+    background-image: none;
+    width: 18px;
+    height: 18px;
+    line-height: 17px;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    color: #E17B67;
+}
+
+    .gritter-close:before {
+        font-family: FontAwesome;
+        font-size: 16px;
+        content: "\f00d";
+    }
+
+.gritter-info .gritter-close {
+    color: #FFA500;
+}
+
+.gritter-error .gritter-close,
+.gritter-success .gritter-close,
+.gritter-warning .gritter-close {
+    color: #FFEA07;
+}
+
+.gritter-close:hover {
+    color: #FFF !important;
+}
+
+.gritter-title {
+    text-shadow: none;
+}
+
+.gritter-light .gritter-item,
+.gritter-light .gritter-bottom,
+.gritter-light .gritter-top,
+.gritter-light .gritter-close {
+    background-image: none;
+    color: #444;
+}
+
+.gritter-light .gritter-title {
+    text-shadow: none;
+}
+
+.gritter-light .gritter-close:hover {
+    color: #8A3104 !important;
+}
+
+.gritter-center {
+    position: fixed;
+    left: 33%;
+    right: 33%;
+    top: 33%;
+}
+
+@media only screen and (max-width: 767px) {
+    .gritter-center {
+        left: 16%;
+        right: 16%;
+        top: 30%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gritter-center {
+        left: 30px;
+        right: 30px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .gritter-center {
+        left: 10px;
+        right: 10px;
+    }
+}
+.gritter-item {
+    display: block;
+    /* background: url(../images/gritter.png) no-repeat left -40px; */
+    color: #eee;
+    padding: 2px 11px 8px 11px;
+    font-size: 16px;
+    font-family: YaHei;
+}

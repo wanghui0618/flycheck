@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../dhccbs3/dhccbs3.7.css"/>
+		<script src="../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<table id="tt"></table>
+	</body>
+	<script type="text/javascript">
+		$CommonUI.datagriddetail($('#tt'), 'datagrid_data4.json', {}, function(rowIndex, rowData){
+				return '<table><tr>' +
+						'<td rowspan=2 style="border:0"><img src="images/' + rowData.itemid + '.png" style="height:50px;"></td>' +
+						'<td style="border:0">' +
+						'<p>Attribute: ' + rowData.attr1 + '</p>' +
+						'<p>Status: ' + rowData.status + '</p>' +
+						'</td>' +
+						'</tr></table>';
+			}, [[
+				{field:'itemid',title:'Item ID',width:80},
+				{field:'productid',title:'Product ID',width:100,sortable:true},
+				{field:'listprice',title:'List Price',width:80,align:'right',sortable:true},
+				{field:'unitcost',title:'Unit Cost',width:80,align:'right',sortable:true},
+				{field:'attr1',title:'Attribute',width:150,sortable:true},
+				{field:'status',title:'Status',width:60,align:'center'},
+				{field:'operate',width:100,align:'center',formatter:function() {
+					return '<a href="#" >链接</a>';
+				}}
+			]], '', '', {title:'DataGrid - DetailView',
+			width:800,
+			height:450,
+			method: 'get',
+			rownumbers:false,
+			remoteSort:false,
+			nowrap:false,
+			fitColumns:true});
+	</script>
+</html>

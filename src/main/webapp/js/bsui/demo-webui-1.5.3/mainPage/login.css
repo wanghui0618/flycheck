@@ -1,0 +1,140 @@
+@CHARSET "UTF-8";
+
+/* ==============================================
+ * login page style  
+ * @Auth: lifei
+ * @Date: 2017/2/17
+ * ==============================================*/
+
+/* ----------------------------------------------
+ * Core: Genral Layout Style
+ * ---------------------------------------------- */
+html, body {
+	height: 100%;
+}
+
+body {
+	display: table;
+	width: 100%;
+	min-width: 40em;
+}
+
+header, .content, footer {
+	display: table-row;
+}
+
+/* ----------------------------------------------
+ * header
+ * ---------------------------------------------- */
+header {
+	height: 90px;
+}
+
+header > .pull-left {
+	/*margin: 29px auto 29px 220px;*/
+	margin: 28px auto 28px 9%;
+}
+
+header > .pull-right {
+	height: 33px;
+	line-height: 33px;
+	margin: 28px 9% 28px auto;
+}
+
+header span:first-of-type {
+	font-size: 16px;
+	color: #7f8589;
+}
+
+header span:last-of-type {
+	color: #696969;
+	vertical-align: -moz-calc(1px);
+	vertical-align: -webkit-calc(1px);
+	vertical-align: calc(1px);
+}
+
+/* ----------------------------------------------
+ * content
+ * ---------------------------------------------- */
+.content {
+	background: transparent url(images/login.png) no-repeat center center / cover;
+}
+
+.content > .panel {
+	width: 21%;
+	min-width: 15em;
+	margin-top: 5%;
+	margin-right: 15%;
+}
+
+.login-title {
+	font-size: 19px;
+	/*font-weight: bold;*/
+}
+
+.code-in {
+	float: left;
+	display: inline-block;
+	position: relative;
+	width: -webkit-calc(100% - 103px);
+	width: -moz-calc(100% - 103px);
+	width: calc(100% - 103px);
+}
+
+.code-box {
+	width: 90px;
+	height: 34px;
+	float: left;
+	display: inline-block;
+	border: 1px solid #e6e8e9;
+	border-radius: 3px;
+	margin-left: 8px;
+}
+
+.checkbox {
+	margin-top: 4.5em;
+}
+
+.user {
+	background: transparent url(images/user_inactive.png) no-repeat center left .8rem / 1.125rem 1.125rem;
+	padding-left: 2.5rem;
+}
+.user:focus {
+	background-image: url(images/user_active.png);
+}
+
+.password {
+	background: transparent url(images/lock_inactive.png) no-repeat center left .8rem / 1.125rem 1.125rem;
+	padding-left: 2.5rem;
+}
+.password:focus {
+	background-image: url(images/lock_active.png);
+}
+
+.btn-block {
+	margin: 1.3em 0;
+}
+
+.form-control {
+	border-radius: 3px;
+}
+
+.form-control-static {
+	padding-bottom: 0;
+}
+
+/* ----------------------------------------------
+ * footer
+ * ---------------------------------------------- */
+footer {
+	max-height: 147px;
+	text-align: center;
+}
+
+footer p:first-of-type {
+	margin-top: 2%;
+}
+
+footer p {
+	color: #6f6f6f;
+}

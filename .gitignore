@@ -1,0 +1,17 @@
+/target/
+/logs/
+/logs/dhcc/
+/bin/
+.log
+.classpath
+.project
+.settings
+*.mdb
+*.ldb
+*.sln
+##class file##
+*.com
+*.class
+*.dll
+.idea
+flycheck.iml

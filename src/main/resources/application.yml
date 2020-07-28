@@ -1,0 +1,67 @@
+server:
+  port: 8080
+  display-name: FLYCHECK
+  context-path: /flycheck
+  jsp-servlet:
+    init-parameters:
+      development: true
+  session:
+    timeout: 1800
+
+spring:
+  servlet:
+    multipart:
+        max-file-size: 100MB
+        max-request-size: 1000MB
+  profiles:
+    include: devdb
+  application:
+    name: ${server.display-name}
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  jackson:
+    time-zone: GMT+8
+
+security:
+  basic:
+    enabled: false
+  user:
+    name: admin 
+    password: admin
+    role: superAdmin
+
+conf:
+  security:
+    ## default true.set false to not to authentication.
+    enable-authentication: false
+    ## default true. set to false to only to authentication,but not check permissions.
+    enable-authorization: false
+    ## config url antPatterns that not login can access. multi antPatterns use comma to split
+    ignoring: /dhccApi/**,/base/css/**,/base/images/**,/base/js/**,/app/css/**,/app/images/**,/app/js/**,/css/**,/images/**,/js/**,/static/**,/plugins/**,/*.html,/loginFail.jsp,/unauthorized.jsp
+    ## config url antPatterns that just login can access, not check permissions.multi antPatterns use comma to split
+    authenticated: /role/roleCtrl.htm
+    ## default 10 minute, when check user's permissions and last refresh Resource time to now's interval 
+    ##larger than this value,then refresh the Resources.
+    ##set to 0 to not refresh. set to -1 to refresh the Resources everytime the request coming.
+    refresh-resource-interval: 10
+  embeddedTomcat:
+    welcomeFile: /WEB-INF/jsp/index.jsp
+    errorPage:
+      302: /WEB-INF/jsp/error/404.jsp
+      403: /WEB-INF/jsp/error/404.jsp
+      404: /WEB-INF/jsp/error/404.jsp
+      401: /WEB-INF/jsp/error/401_1.jsp
+      500: /WEB-INF/jsp/error/500.jsp
+  redis:
+    enable: false
+  avatar-path: "Upload/photo/avatar/"
+endpoints:
+  health:
+    sensitive: false
+management:
+  security:
+    enabled: false
+logo:
+  version: picc

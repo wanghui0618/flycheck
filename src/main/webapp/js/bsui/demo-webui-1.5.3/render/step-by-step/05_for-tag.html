@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link href="../resources/demos.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/movielist.css" rel="stylesheet" type="text/css" />
+	<script src="../../../dhccbs3/dhccbs3.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonUI.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../commonValidate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<h3>Using {{for}} to render hierarchical data - inline nested template.</h3>
+
+<script id="movieTemplate" type="text/x-jsrender">
+	<tr>
+		<td>{{>title}}</td>
+		<td>
+			{{for languages}}
+				<div class="{{:#index%2 ? 'even' : 'odd'}}"></div>
+				<div>
+					<em>{{>name}}</em>
+				</div>
+			{{else}}
+				No alternate languages
+			{{/for}}
+		</td>
+	</tr>
+</script>
+
+<table>
+	<thead><tr><th>Title</th><th>Languages</th></tr></thead>
+	<tbody id="movieList"></tbody>
+</table>
+
+<script type="text/javascript">
+
+	var movies = [
+		{
+			title: "Meet Joe Black",
+			languages: [
+				{ name: "English" },
+				{ name: "French" }
+			]
+		},
+		{
+			title: "Eyes Wide Shut",
+			languages: [
+				{ name: "French" },
+				{ name: "Mandarin" },
+				{ name: "Spanish" }
+			]
+		},
+		{
+			title: "The Inheritance",
+			languages: [
+				{ name: "English" },
+				{ name: "German" }
+			]
+		},
+		{
+			title: "Local Story",
+			languages: []
+		},
+		{
+			title: "My Home Video"
+		}
+	];
+
+	$CommonUI.jsrender({
+		obj: "#movieList",
+		tmpl: "#movieTemplate",
+		data: movies
+	});
+
+</script>
+
+</body>
+</html>
+
+
