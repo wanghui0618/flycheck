@@ -4,14 +4,15 @@ import com.dhcc.framework.common.codegen.CodeGenUtils;
 
 
 /**
- * <p>标题: ScadaCodeGen.java</p>
- * <p>业务描述:数据采集系统</p>
- * <p>公司:东华软件股份公司</p>
- * <p>版权:dhcc2016</p>
- * @author 寇祥
- * @date 2018年9月10日
+ * <p>鏍囬: ScadaCodeGen.java</p>
+ * <p>涓氬姟鎻忚堪:鏁版嵁閲囬泦绯荤粺</p>
+ * <p>鍏徃:涓滃崕杞欢鑲′唤鍏徃</p>
+ * <p>鐗堟潈:dhcc2016</p>
+ * @author 瀵囩ゥ
+ * @date 2018骞�9鏈�10鏃�
  * @version V1.0 
  */
+/* fmsfjskdnflsdkfnslknv */
 public class PiccbidCodeGen {
 	public static void main(String[] args) {		 				 
 		CodeGenUtils.createCode("com.dhcc.piccbid", "dataComparison", "DataComparison", "xukeyong");
